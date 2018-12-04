@@ -1,0 +1,249 @@
+#Copyright (c) 2016 by Qualcomm Technologies Incorporated. All Rights Reserved. 
+
+#<Diag String Database>
+
+3229071875:hcd restore done
+
+994539013:Invalid len=%d
+
+679437:STUCK
+
+530298382:Custom_Platform_Tunable_Init(): error
+3870355478:sdio error: %d
+
+540202007:malloc fail
+
+1054291485:
+PKT Buffer TX successful: %d
+2626024482:TSENS: Failed to alloc client ctxt
+1388469289:Net: IP stack init failed
+
+1146649437:SSL: Handshake not complete
+
+4045254709:MAC PROGRAM ERROR: the firmware failed to program the mac address.
+
+1623012918:data = %d
+
+2236077117:
+
+2891686974:Command Failed
+
+1797171266:driver ioctl error
+
+568518218:ATH_REG_OP_WRITE: Driver_WriteRegDiag fail %d
+
+1505080397:
+wmi_control_rx(): bad packet 1
+
+803606541:ADC: conv for chan %u, code %u, uV %d
+4147283029:invalid max profiles value
+
+88497750:
+ RSSI Value = %d dBm
+2425867869:hcd init done
+
+801573471:Power Mode : %x, %d, %d
+
+3851100773:
+Buffer TX failed, bytes:%d
+3101465195:
+Custom_Platform_Assert_Handler(): driver assert at line: %d Error: %d 
+
+411745389:SSL: Sent alert, level %d, description %d
+
+4033816689:Net: Socket handle alloc failed. max# %d
+
+2209944690:ADC: No free handle
+328253558:MAC PROGRAM ERROR: unknown driver error
+
+1726784631:Net: NS info alloc failed
+
+4271267962:Invalid result
+
+1728297085:SSL: Certificate error
+
+2453505665:
+DBGLOGS dropped in FW: %d
+201632902:ATH_REG_OP_RMW: Driver_ReadRegDiag fail %d
+
+2850077321:TSENS: Reading timed out
+3388457109:0x%08X
+
+1656209046:Driver_ReadRegDiag(): 1. fail %d
+
+905735321: Pool updated : %d
+
+2701181595:SSL: Mem alloc error
+
+1393949343:
+PKT Buffer TX failed, bytes:%d
+2576769185:0x%08X 
+512800933:Crypto: Init failed
+
+2021387946:Net: Socket command %d timed out
+
+887562923:
+wmi_control_rx_xtnd(): bad packet 1
+
+1495539229:
+ Range = %d dBm
+1015469749:text = %d
+
+3048478397:diag_cli_process_pkt: received invalid command 
+
+482048190:SSL: Out of network buffers
+
+3665909621:ATH_REG_OP_RMW: Driver_WriteRegDiag fail %d
+
+3855901393:Internal Error
+
+28887250:
+wmi_control_rx(): bad packet 2
+
+2886712537:
+Api_HostDsetCreateEvent(): Host Dset create failed: status=%d,dset_id=%d
+1449662685:Net: Socket function alloc failed
+
+3014689505: possibly the same MAC address is already programmed.
+
+3394544867:SSL: Recv alert, level %d, description %d
+
+3267899109:len=%d,media=%d
+
+1162576102:SetCountry status:%d
+
+2361855211:Net: DNSc socket open failed
+
+1783007983:GLINK Q rx intent failed %d
+
+1194273521:
+Api_HostDsetWriteEvent(): Host Dset create failed: status=%d,dset_id=%d
+2025813746:Invalid character
+
+2746250793:Illegal State
+
+2516950265:Mcc Stats 
+
+3881020545:GLINK open failed
+
+380221709:channel number is invalid
+
+1487273742:
+sdio_fn_unmask_irq(): error: %d
+
+2360976659:ATH_REG_OP_READ: Driver_ReadRegDiag fail %d
+
+242174741:TX status WIFI Pending 
+
+1466410775:
+Write error at Addr = 0x%06x len = 0x%x blocks = %d
+
+1869392157:SSL: Init failed
+
+1276090143:
+wmi_control_rx2(): Unknown id %x
+3579269921:Device will remain MAX_PERF
+
+3019058981:
+PKTLOG pkt size: %d
+1333515049:ADC: Failed to alloc client ctxt
+1623134509:DIAG:RSP 0
+
+1908831026:Num Channel Switches %d 
+
+1350359862:value=%08x
+
+3288320313:TX Idle
+
+4257767741:
+wmi_dix_2_dot3(): packet already 802.3
+
+1630884673:heap remaining = %d
+
+1743646022:
+wmi_control_rx_xtnd(): Unknown id 0x%x
+
+2213559115:MAC PROGRAM ERROR: Device unknown failure.
+
+923109197:
+ Diag print failed...!!
+3370581327:invalid index value
+
+1377626962:Programming Error: cmd=%d 
+499178331:bss = %d
+
+30488413:Illegal Parameter
+
+3859435881:total = %d   buff len=%d
+
+2396175213:SSL: Oops
+
+3734280765:Net: NS alloc failed
+
+1200190835:Custom_Sdio_CompleteTransfer(): fail Arg: %x sz %d ret %d
+
+2223214453:
+wmi_control_rx(): WMI_BSSINFO_EVENTID
+655963001:literals = %d
+
+1099217557:Net: Socket info alloc failed
+
+749809027:rodata = %d
+
+2265955717:
+wmi_control_rx_xtnd(): bad packet 2
+
+1013354375:
+sdio_fn_mask_irq(): error: %d
+
+4107333003:Net: Tunables not found. Falling back to defaults.
+
+1683116429:Atheros ERROR: mediactl command not valid. command_id=0x%x
+
+1956315026:SSL: SSL_send_alert level %d desc %d
+
+4214398359:
+Diag print failed for pktlog...!!
+3356571546:MAC PROGRAM ERROR: the driver was unable to complete the request.
+
+2446506397:last chan switch time %d 
+
+544864678:TX status Host Pending
+
+2242098601:MAC PROGRAM SUCCESS.
+
+3930499503:
+Buffer TX successful: %d
+1142784945:
+DBGLOG pkt size: %d
+1321387993:Invalid MAC address length
+
+2308610035:HCD restore sdio error: %d
+
+1838980033:
+Read error at Addr = 0x%06x len = 0x%x blocks = %d
+
+2891087821:ns_store_recall_resume: Restore data len Error for callback 0x%x: len: %d
+
+1123038163:firmware memory stats:
+
+2446157785:Core Test3 - failed! Should call the patch function in RAM!
+3692451663:TCP/IP stack not present on Target
+
+1129029285:offset=%d len=%d media=%d
+
+2153867235:Crypto: Tunables not found. Falling back to defaults.
+
+3937964005:avg_chan_switch_time %d 
+
+3343372778:SSL: Internal failure
+
+3029531629:
+sdio_Hcd_Request(): Status: 0x%04x
+1951389169:
+Done!
+
+1371142643:TSENS: Sensor %u reads %d deg C
+3585259510:DIAG:no rsp buf match
+
+4044718590:ADC: Failed to alloc buffering ctxt

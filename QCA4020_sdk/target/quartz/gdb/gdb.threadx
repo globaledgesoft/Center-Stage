@@ -1,0 +1,21 @@
+# Copyright (c) 2017-2018 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+# $QTI_LICENSE_QDN_SH$
+
+# Top-level script to include all useful scripts for ThreadX.
+#
+# This script assumes that python is available in gdb. Subordinate
+# scripts may be designed to work with or without python.
+
+python
+import posixpath
+if not SDK:
+  SDK = os.getenv("SDK")
+  if not SDK:
+    print "You must set the SDK environment variable"
+    gdb.execute("quit")
+
+threadx_thread_macros = posixpath.join(SDK, "quartz", "gdb", "gdb.threadx.thread")
+gdb.execute("source " + threadx_thread_macros)
+end

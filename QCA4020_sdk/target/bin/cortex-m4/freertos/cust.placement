@@ -1,0 +1,31 @@
+mom_patch_table_ARNFRI_qcm.o RAM AON SYS PATCH
+som_patch_table_ARNFRI_qcm.o RAM SOM SYS PATCH
+fom_patch_table_ARNFRI_qcm.o RAM FOM SYS PATCH
+ram_function_table_som.o RAM SOM SYS ROM2RAM
+mom.o(.text) RAM SOM SYS RO VENEER
+mom.o(.constdata)  RAM SOM SYS RO VENEER
+mom.o(.conststring)  RAM SOM SYS RO VENEER
+openthread.o(.bss)  RAM FOM APPS ZI NORMAL
+message.o(.bss) RAM FOM APPS ZI NORMAL
+tasklet.o(.bss) RAM FOM APPS ZI NORMAL
+timer.o(.bss) RAM FOM APPS ZI NORMAL
+mac.o(.bss) RAM FOM APPS ZI NORMAL
+icmp6.o(.bss) RAM FOM APPS ZI NORMAL
+ip6.o(.bss) RAM FOM APPS ZI NORMAL
+ip6_routes.o(.bss) RAM FOM APPS ZI NORMAL
+netif.o(.bss) RAM FOM APPS ZI NORMAL
+udp6.o(.bss) RAM FOM APPS ZI NORMAL
+topology.o(.bss) RAM FOM APPS ZI NORMAL
+alarm.o(.bss) RAM FOM APPS ZI NORMAL
+atomic.o(.bss) RAM FOM APPS ZI NORMAL
+otcrypto.o(.bss) RAM FOM APPS ZI NORMAL
+otmac.o(.bss) RAM FOM APPS ZI NORMAL
+qapi_twi.o(.bss) RAM FOM APPS ZI NORMAL
+boot_config.o(.bss) SYS XIP SBL FIRST
+patch_clock_mom.o SYS AON RAM PATCH
+patch_quadspi_osal_qurt.o SYS AON RAM PATCH
+patch_quadspi.o SYS AON RAM PATCH
+patch_flash_common.o SYS AON RAM PATCH
+qurt_power_shutdown.o(.text)   APP SOM RAM
+qurt_power_shutdown.o(.constdata)  APP SOM RAM
+qurt_power_shutdown.o(.conststring)  APP SOM RAM

@@ -1,0 +1,318 @@
+# ========================================================================================
+# Copyright (c) 2017-2018 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+# $QTI_LICENSE_QDN_SH$
+
+# gdb macros for thread management with ThreadX
+#
+# bpot [tcb_addr]: brief print one thread (one line); default is brief display of CURRENT thread
+# vpot [tcb_addr]: verbose print one thread; default is verbose display of CURRENT thread
+# bpat: brief print ALL threads (one line per thread)
+# vpat: verbose print ALL threads
+# switchthread <XXX_addr>: switch current register context to a specified thread
+# switchback: return to original thread context after a switchthread
+# btthread <XXX_addr>: backtrace for the specified thread
+# bt_busfault: prints backtrace when there was a bus fault (assuming the coredump contains valid values)
+#
+# Typical usage:
+# Stop the debugger and use bpat to see a list of all threads.
+# Then use btthread to see what a particular thread is doing.
+#
+
+
+#Prints backtrace when there was a bus fault (assuming the coredump contains valid values)
+define bt_busfault
+    if ( coredump && coredump->arch.regs.name.exception_pc ) 
+        set $temp_r0 = $r0
+        set $temp_r1 = $r1
+        set $temp_r2 = $r2
+        set $temp_r3 = $r3
+        set $temp_r12 = $r12
+        set $temp_lr = $lr
+        set $temp_pc = $pc
+        set $temp_sp = $sp
+
+        set $r0 = coredump->arch.regs.name.exception_r0
+        set $r1 = coredump->arch.regs.name.exception_r1
+        set $r2 = coredump->arch.regs.name.exception_r2
+        set $r3 = coredump->arch.regs.name.exception_r3
+        set $r12 = coredump->arch.regs.name.exception_r12
+        set $lr = coredump->arch.regs.name.exception_lr
+        set $pc = coredump->arch.regs.name.exception_pc
+        set $sp = $PSP
+
+        bt
+
+        set $r0 = $temp_r0
+        set $r1 = $temp_r1
+        set $r2 = $temp_r2
+        set $r3 = $temp_r3
+        set $r12 = $temp_r12
+        set $lr = $temp_lr
+        set $pc = $temp_pc
+        set $sp = $temp_sp
+    else
+        printf "WARNING: coredump is empty, cannot display backtrace\n"
+    end
+end
+
+
+# Print information about a specified thread
+define print_one_thread
+    set $verbose_flag=$arg0
+    set $tmp_thread = (TX_THREAD * volatile) $arg1
+
+    set $top_of_stack = (uint8_t *) ($tmp_thread->tx_thread_stack_start)    
+    set $byte_index = 0
+    set $is_stack_corrupted = 0
+    while ( ($byte_index < 32) && !$is_stack_corrupted )
+        if ( $top_of_stack[$byte_index] != 0xef )
+            set $is_stack_corrupted = 1
+        end
+        set $byte_index = $byte_index + 1
+    end
+
+    
+    if $verbose_flag
+        p * $tmp_thread
+        if $is_stack_corrupted
+            printf "WARNING: STACK IS CORRUPTED\n"
+        end
+    else
+        if $tmp_thread == _tx_thread_current_ptr
+            set $star_if_curr = '*'
+        else
+            set $star_if_curr = ' '
+        end
+        if ( $is_stack_corrupted )
+            printf "thread = 0x%x    name = %-10s   prio = %d %c   WARNING: STACK IS CORRUPTED\n", $tmp_thread, $tmp_thread->tx_thread_name, $tmp_thread->tx_thread_priority, $star_if_curr
+        else
+            printf "thread = 0x%x    name = %-10s   prio = %d %c\n", $tmp_thread, $tmp_thread->tx_thread_name, $tmp_thread->tx_thread_priority, $star_if_curr
+        end
+    end
+end
+
+# Alias for "brief print_one_thread"
+# Usage:
+#   bpot thread_address
+define bpot
+   if $argc == 0
+      print_one_thread 0 _tx_thread_current_ptr
+   else
+      print_one_thread 0 $arg0
+   end
+end
+
+# Alias for "verbose print_one_thread"
+# Usage:
+#   vpot thread_address
+define vpot
+   if $argc == 0
+      print_one_thread 1 _tx_thread_current_ptr
+   else
+      print_one_thread 1 $arg0
+   end
+end
+
+# Print a list of all threads in a ready list
+define print_thread_ready_list
+    set $verbose_flag=$arg0
+    set $thread_first = $arg1
+    print_one_thread $verbose_flag $thread_first
+    set $thread_next = $arg1->tx_thread_ready_next
+    while $thread_next != $thread_first
+        print_one_thread $verbose_flag $thread_next
+        set $thread_next = $thread_next->tx_thread_ready_next
+    end
+end
+
+# Print the list of all READY threads
+define print_ready_threads
+    set $verbose_flag=$arg0
+    set $max_thread_priorities = 32
+    set $thread_priority = 0
+    set $total_ready_threads = 0
+    printf "Ready Threads:\n"
+    set $thread_priority = 0
+    while $thread_priority < $max_thread_priorities
+        if _tx_thread_priority_list[$thread_priority] != 0
+            printf "Priority %d Ready Threads:\n", $thread_priority
+            print_thread_ready_list $verbose_flag _tx_thread_priority_list[$thread_priority]
+        end
+        set $thread_priority = $thread_priority + 1
+    end
+end
+
+# Print the list of all non-ready non-current threads
+define print_stopped_threads
+    set $verbose_flag=$arg0
+    printf "Stopped threads:\n"
+    set $current_thread = _tx_thread_created_ptr
+    set $thread_count = 0
+    set $num_created_threads = _tx_thread_created_count
+    while $thread_count < $num_created_threads
+        if $current_thread->tx_thread_state != 0
+            print_one_thread $verbose_flag $current_thread
+        end
+        set $current_thread = $current_thread->tx_thread_created_next
+        set $thread_count = $thread_count + 1
+    end
+end
+
+# Print information about the CURRENTLY-EXECUTING thread.
+define print_current_thread
+    set $verbose_flag=$arg0
+    printf "Current Thread:\n"
+    print_one_thread $verbose_flag _tx_thread_current_ptr
+end
+
+# Print information about all threads, regardless of state
+
+define print_all_threads
+    set $verbose_flag=$arg0
+    print_ready_threads $verbose_flag
+    printf "\n\n"
+    print_stopped_threads $verbose_flag
+    printf "\n\n"
+end
+
+# Brief print_all_threads
+define bpat
+    print_all_threads 0
+end
+
+# Verbose print_all_threads
+define vpat
+    print_all_threads 1
+end
+
+define save_regs
+   if $regs_are_saved == 0
+      flushregs
+      set $regs_are_saved=1
+      set $save_sp=$sp
+      set $save_pc=$pc
+      set $save_lr=$lr
+      set $save_r0=$r0
+      set $save_r1=$r1
+      set $save_r2=$r2
+      set $save_r3=$r3
+      set $save_r4=$r4
+      set $save_r5=$r5
+      set $save_r6=$r6
+      set $save_r7=$r7
+      set $save_r8=$r8
+      set $save_r9=$r9
+      set $save_r10=$r10
+      set $save_r11=$r11
+      set $save_r12=$r12
+   end
+end
+
+define restore_regs
+   if $regs_are_saved == 1
+      flushregs
+      set $reg_owner_thread->tx_thread_stack_ptr=$sp - 0x48
+      set *(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x38)=$pc
+      set *(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x34)=$lr
+      set *(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x20)=$r0
+      set *(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x24)=$r1
+      set *(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x28)=$r2
+      set *(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x2c)=$r3
+      set *(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x00)=$r4
+      set *(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x04)=$r5
+      set *(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x08)=$r6
+      set *(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x0c)=$r7
+      set *(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x10)=$r8
+      set *(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x14)=$r9
+      set *(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x18)=$r10
+      set *(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x1c)=$r11
+      set *(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x30)=$r12
+      set $sp=$save_sp
+      set $pc=$save_pc
+      set $lr=$save_lr
+      set $r0=$save_r0
+      set $r1=$save_r1
+      set $r2=$save_r2
+      set $r3=$save_r3
+      set $r4=$save_r4
+      set $r5=$save_r5
+      set $r6=$save_r6
+      set $r7=$save_r7
+      set $r8=$save_r8
+      set $r9=$save_r9
+      set $r10=$save_r10
+      set $r11=$save_r11
+      set $r12=$save_r12
+      set $regs_are_saved=0
+   end
+end
+
+# Switch active gdb register context to the registers of a specified thread.
+# Save current register context before doing this so that register values
+# may be restored later by "switchback". This enables a developer to inspect
+# the stack easily by using gdb's "frame" command, and to change values of
+# registers in the context of a non-running thread.
+#
+# Note1: Only gdb's notion of register values are changed; in-memory
+# state such as _tx_thread_current_ptr is not altered by this gdb macro.
+#
+# Note2: If you alter a register's value, the new value is pushed back
+# to the thread's thread structure when you "switchback" (or when you resume execution).
+#
+define switchthread
+   if $reg_owner_thread != (TX_THREAD *volatile)0
+      switchback
+   end
+   save_regs
+   set $reg_owner_thread = (TX_THREAD * volatile) $arg0
+   set $sp=(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x48)
+   set $pc=*(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x38)
+   set $lr=*(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x34)
+   set $r0=*(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x20)
+   set $r1=*(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x24)
+   set $r2=*(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x28)
+   set $r3=*(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x2c)
+   set $r4=*(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x00)
+   set $r5=*(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x04)
+   set $r6=*(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x08)
+   set $r7=*(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x0c)
+   set $r8=*(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x10)
+   set $r9=*(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x14)
+   set $r10=*(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x18)
+   set $r11=*(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x1c)
+   set $r12=*(int *)((char *)($reg_owner_thread->tx_thread_stack_ptr) + 0x30)
+end
+
+define switchback
+   restore_regs
+   set $reg_owner_thread = (TX_THREAD * volatile) 0
+end
+
+# Works for stopped/ready threads; but not for the current thread
+define btthread
+   set $tmp_thread = (TX_THREAD * volatile) $arg0
+   switchthread $tmp_thread
+   bt
+   switchback
+end
+
+set $regs_are_saved=0
+set $reg_owner_thread = (TX_THREAD * volatile) 0
+
+define hook-continue
+   switchback
+end
+
+define hook-step
+   switchback
+end
+
+define hook-stepi
+   switchback
+end
+
+define hook-next
+   switchback
+end

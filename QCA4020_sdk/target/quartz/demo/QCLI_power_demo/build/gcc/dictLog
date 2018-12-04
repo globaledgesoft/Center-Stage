@@ -1,0 +1,4 @@
+diagMsgCompact: Failed to open ../../../../../bin/cortex-m4/diag_msg.pkl
+diagMsgCompact: Removing Diag debug strings segment from elf: RAM_DIAG_STRING_RO_REGION
+diagMsgCompact: Saving the elf output/Quartz.elf
+{3881020545: 'GLINK open failed\n', 4107333003: 'Net: Tunables not found. Falling back to defaults.\n', 2021387946: 'Net: Socket command %d timed out\n', 2361855211: 'Net: DNSc socket open failed\n', 1623134509: 'DIAG:RSP 0\n', 1783007983: 'GLINK Q rx intent failed %d\n', 4033816689: 'Net: Socket handle alloc failed. max# %d\n', 1449662685: 'Net: Socket function alloc failed\n', 2153867235: 'Crypto: Tunables not found. Falling back to defaults.\n', 1099217557: 'Net: Socket info alloc failed\n', 3585259510: 'DIAG:no rsp buf match\n', 1726784631: 'Net: NS info alloc failed\n', 3734280765: 'Net: NS alloc failed\n', 3048478397: 'diag_cli_process_pkt: received invalid command \n'}

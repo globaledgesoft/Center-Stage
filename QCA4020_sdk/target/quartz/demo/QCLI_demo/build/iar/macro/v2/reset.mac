@@ -1,0 +1,63 @@
+/*******************************************************************
+*
+* execUserPreload()- called before Image load
+*/
+execUserPreload() {
+  __message "QUARTZ PRELOAD: RESET CHIP";
+  //Reset the chip
+ //__writeMemory32(4, 0x50742094, "Memory");
+ //Clear AIRCR
+//__writeMemory32(0x05fa0003, 0xe000ed0c, "Memory");
+//__hwReset(0);
+
+//__writeMemory32(1, 0x50680020, "Memory");
+}
+
+
+/*******************************************************************
+*
+* execUserSetup()- called after first Image load
+*/
+execUserSetup()
+{
+   __message "QUARTZ USER SETUP";
+  // __hwReset(0);
+
+ //   __setCodeBreak("0x1c5c", 0, "breaklog()", "TRUE", "breaklog()");
+    __setCodeBreak("sbl1_main_ctl", 0, "breaklog()", "TRUE", "breaklog()");
+}
+
+
+/*******************************************************************
+*
+* execUserReset()- called before Reset
+*/
+execUserReset()
+{
+//__hwReset(0);
+
+// __writeMemory32(4, 0x50742094, "Memory");
+__message "QUARTZ CLEAR SYSTICK";
+
+__message "QUARTZ USER RESET";
+}
+
+breaklog() {
+ __message "QUARTZ: Setting R0 register to 0x7E";
+// #R0=0x7E;
+   __writeMemory32(0xDADBEDAD,0x10000484,"Memory");
+ return 0;
+}
+
+
+enablem0() {
+ __message "QUARTZ: enable M0";
+//__writeMemory32(0x7, 0x50310000, "Memory");
+// __gdbserver_exec_command("set *((int*)0x50310000)=0x7");
+  __message "QUARTZ: enable M0 1";
+ __gdbserver_exec_command(" monitor sleep 1000");
+ __gdbserver_exec_command("target extended-remote localhost:2331");
+  __message "QUARTZ: enable M0 2";
+ __gdbserver_exec_command("monitor jtagconf 4 1");
+}
+

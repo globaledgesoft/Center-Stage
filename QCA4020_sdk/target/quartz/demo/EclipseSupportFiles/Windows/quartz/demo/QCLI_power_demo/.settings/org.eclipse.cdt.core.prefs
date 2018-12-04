@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.1053878554/PATH/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.1053878554/PATH/operation=replace
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.1053878554/PATH/value=/bin\:/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/usr/games\:/usr/local/games\:/usr/lib/jvm/java-8-oracle/bin\:/usr/lib/jvm/java-8-oracle/db/bin\:/usr/lib/jvm/java-8-oracle/jre/bin\:/opt/gcc-arm-none-eabi-5_4-2016q3/bin
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.1053878554/append=true
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.1053878554/appendContributed=true

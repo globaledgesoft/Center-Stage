@@ -1,0 +1,7 @@
+#Copyright (c) 2016 by Qualcomm Technologies Incorporated. All Rights Reserved. 
+
+#<Diag String Database>
+
+2850077321:TSENS: Reading timed out
+2626024482:TSENS: Failed to alloc client ctxt
+1371142643:TSENS: Sensor %u reads %d deg C

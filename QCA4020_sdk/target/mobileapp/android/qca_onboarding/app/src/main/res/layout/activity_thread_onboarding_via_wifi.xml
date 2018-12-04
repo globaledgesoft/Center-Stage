@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context="com.qualcomm.qti.qca40xx.Activity.WifiOnboardingViaWifiActivity">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        style="@style/textViewStyle"
+        android:orientation="vertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tool_bar">
+
+        <LinearLayout
+            style="@style/textViewStyle"
+            android:background="@drawable/background_rect"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/textViewRowStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginRight="@dimen/margin_right"
+                android:text="@string/textViewThreadDeviceOBInfo"
+                android:textColor="@color/irisBlue"
+                android:textSize="@dimen/text_size" />
+
+
+        </LinearLayout>
+
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:layout_marginTop="@dimen/margin_top"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow style="@style/textViewStyle">
+
+                <TextView
+
+                    style="@style/textViewRowStyle"
+                    android:text="@string/textViewDeviceName" />
+
+                <TextView
+                    android:id="@+id/ThreadWifiTextViewDeviceName"
+                    style="@style/textViewRowStyle" />
+            </TableRow>
+
+            <TableRow style="@style/textViewStyle">
+
+                <TextView
+
+                    style="@style/textViewRowStyle"
+                    android:text="@string/textViewMacAddress" />
+
+                <TextView
+                    android:id="@+id/ThreadWifiTextViewMacAddress"
+                    style="@style/textViewRowStyle" />
+            </TableRow>
+
+
+            <TableRow style="@style/textViewStyle">
+
+                <TextView
+                    style="@style/textViewRowStyle"
+                    android:text="@string/textViewOnboardingMode" />
+
+                <TextView
+                    android:id="@+id/ThreadWifiTextViewOnboardingMode"
+                    style="@style/textViewRowStyle" />
+            </TableRow>
+
+            <TableRow style="@style/textViewStyle">
+
+                <TextView
+
+                    style="@style/textViewRowStyle"
+                    android:text="@string/textViewBatteryMode" />
+
+                <TextView
+                    android:id="@+id/ThreadWifiTextViewBatteryMode"
+                    style="@style/textViewRowStyle" />
+            </TableRow>
+
+            <TableRow style="@style/textViewStyle">
+
+                <TextView
+
+                    style="@style/textViewRowStyle"
+                    android:text="@string/textViewChipSet" />
+
+                <TextView
+                    android:id="@+id/ThreadWifiTextViewChipset"
+                    style="@style/textViewRowStyle" />
+            </TableRow>
+
+            <TableRow style="@style/textViewStyle">
+
+                <TextView
+
+                    style="@style/textViewRowStyle"
+                    android:text="@string/textViewFwVersion" />
+
+                <TextView
+                    android:id="@+id/ThreadWifiTextViewFversion"
+                    style="@style/textViewRowStyle" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ThreadWifilinearLayoutCapability"
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:layout_marginBottom="@dimen/wifi_linear_layout_credentials_margin_bottom"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/zigbeeWifilinearLayoutButtons"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            style="@style/textViewStyle"
+            android:layout_marginStart="3dp"
+            android:text="@string/zigbeeWifiCapability"
+            android:textColor="@color/irisBlue"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="-63dp" />
+
+        <Spinner
+            android:id="@+id/ThreadWifiSpinnerCapabilityList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/irisBlue"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ThreadWifiDeviceList"
+            style="@style/textViewStyle"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="@dimen/margin_top"
+            android:text="@string/zigbeeWifiDeviceList"
+            android:textColor="@color/irisBlue" />
+
+        <Spinner
+            android:id="@+id/ThreadWifiSpinnerDeviceList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/irisBlue"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:id="@+id/ThreadWifilinearLayoutButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:id="@+id/ThreadWifibtnCancel"
+            style="@style/whiteButtonStyle"
+            android:layout_weight="1"
+            android:text="@string/buttonCancel"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/ThreadWifibtnOnboard"
+            style="@style/irisBlueButtonStyle"
+            android:layout_weight="1"
+            android:text="@string/buttonOnBoard"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ThreadWifilinearLayoutOnBoarded"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/ThreadWifiimageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/on_boarded_image" />
+
+        <TextView
+            style="@style/textViewStyle"
+            android:gravity="center_horizontal"
+            android:text="@string/textViewOnBoardingSuccess"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/ThreadWifiButtonOnBoardOk"
+            style="@style/irisBlueButtonStyle"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+

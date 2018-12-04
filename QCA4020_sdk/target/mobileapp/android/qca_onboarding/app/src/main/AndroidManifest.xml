@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qualcomm.qti.qca40xx">
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".Util.MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.BleWifiListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.WifiOnboardingViaWifiActivity">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.WifiOnboardingViaBleActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activity.QRCodeScanningActivity" />
+
+        <service
+            android:name=".Service.BLEService"
+            android:enabled="true" />
+
+        <activity android:name=".Activity.ZigBeeOnBoardingViaBleActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.ZigbeeOnboardingViaWifiActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.ThreadOnboardingViaWifiActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.ThreadOnboardingViaBleActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.OfflineDeviceListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.SensorThermostatActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activity.ListOfCoordinatorActivity"
+            android:screenOrientation="portrait"
+           />
+        <activity android:name=".Activity.SettingActivity"
+            android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

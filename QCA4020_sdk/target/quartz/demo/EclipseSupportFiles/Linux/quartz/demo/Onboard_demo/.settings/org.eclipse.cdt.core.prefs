@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.1646611424/BOARD_VARIANT/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.1646611424/BOARD_VARIANT/operation=append
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.1646611424/BOARD_VARIANT/value=cdb
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.1646611424/ECOSYSTEM/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.1646611424/ECOSYSTEM/operation=append
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.1646611424/ECOSYSTEM/value=offline
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.1646611424/append=true
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.1646611424/appendContributed=true

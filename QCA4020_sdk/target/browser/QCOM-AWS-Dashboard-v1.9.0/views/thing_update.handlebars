@@ -1,0 +1,130 @@
+<main class="mdl-layout__content">
+	<div class="mdl-grid container">
+		<!-- Breadcrumb -->
+		{{> breadcrumb crumbs=crumbs }}
+		{{> loader}}
+
+		<div class="mdl-cell mdl-grid mdl-cell--12-col mdl-color--white mdl-shadow--4dp">
+			<div class="mdl-cell mdl-cell--6-col  mdl-color--grey-200 mdl-shadow--2dp">
+				<div class="centered">
+					 <h4>Enter the value</h4>
+				</div> 
+			
+				<div class="updateform">				
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" placeholder=" " id="thingNameId" readonly>
+						<label class="mdl-textfield__label" for="thingNameId">Thing Name</label>
+					</div>
+			
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height deviceSelect">
+						<input type="text" value="" class="mdl-textfield__input" id="DeviceId" readonly>
+						<input type="hidden" value="li.textContent" name="DeviceId"> 
+						<i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>       
+						<label for="DeviceId" class="mdl-textfield__label">Select Device ID</label>
+						<ul id="deviceInputId" for="DeviceId" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+								
+						</ul>
+					</div>
+
+					<div id="thermostat-update" class="mdl-color--white mdl-shadow--4dp">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height sensorSelect">
+							<input type="text" value="" class="mdl-textfield__input" id="sensorId" readonly>
+							<input type="hidden" value="li.textContent" name="sensorId"> 
+							<i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>       
+							<label for="sensorId" class="mdl-textfield__label">Select Sensor ID</label>
+							<ul id="selectSensorId" for="sensorId" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+									
+							</ul>
+						</div>
+
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+							<input type="text" value="" class="mdl-textfield__input" id="selectOperatingModeId" readonly>
+							<input type="hidden" value="" name="selectOperatingModeId">  
+							<i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>      
+							<label for="selectOperatingModeId" class="mdl-textfield__label">Select Operating Mode</label>
+							<ul for="selectOperatingModeId" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+									<li class="mdl-menu__item" data-val="AC" data-selected="true">AC</li>
+									<li class="mdl-menu__item" data-val="AUTO" >AUTO</li>
+									<li class="mdl-menu__item" data-val="HEATER">HEATER</li>
+									<li class="mdl-menu__item" data-val="OFF">OFF</li>								
+							</ul>
+						</div>
+
+						<div>
+							<label class="mdl-label">Select Temperature</label>
+							<p style="width:300px">
+								<input class="mdl-slider mdl-js-slider" type="range" id="temperatureId" min="15" max="35" value="15" onchange="showChangedValue(this.value, 'tempValueId')">
+								<span id="tempValueId"></span>
+							</p>						
+						</div>
+					
+						<div>
+							<label class="mdl-label">Select Threshold</label>
+							<p style="width:300px">
+								<input class="mdl-slider mdl-js-slider" type="range" id="thresholdId" min="0" max="5" value="0" onchange="showChangedValue(this.value, 'tempThresholdId')">
+								<span id="tempThresholdId"></span>
+							</p>						
+						</div>
+					</div>
+
+					<div id="dimmer-update" class="mdl-color--white mdl-shadow--4dp">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height dimmerSelect">
+							<input type="text" value="" class="mdl-textfield__input" id="dimmerSelectId" readonly>
+							<input type="hidden" value="li.textContent" name="dimmerSelectId"> 
+							<i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>       
+							<label for="dimmerSelectId" class="mdl-textfield__label">Select Dimmer </label>
+							<ul id="dimmerSelectId" for="dimmerSelectId" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+									
+							</ul>
+						</div>
+					
+						<div>
+							<label class="mdl-label">Select Dim value </label>
+							<p style="width:300px">
+								<input class="mdl-slider mdl-js-slider" type="range" id="dimmerId" min="0" max="254" value="0" onchange="showChangedValue(this.value, 'dimvalue')">
+								<span id="dimvalue"></span>
+							</p>						
+						</div>					
+					</div>
+
+
+
+				
+					<div id="light-update" class="mdl-color--white mdl-shadow--4dp">
+						<label class="mdl-label">Select Light Status</label>
+						<div id='lightId' class="mdl-layout__content"></div>
+					</div>
+
+					<div>
+						<button id="updateButton" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored pull-right" name="updateButton" onclick="payloadData()">Update</button>	
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="mdl-cell mdl-cell--6-col mdl-card mdl-color--grey-200 mdl-shadow--2dp">	
+				<div class="centered">
+					 <h4>Current status of the actuator</h4>
+				</div> 
+
+				<div align="center" id='reportedDataHeader'>
+						Last updated : <b id="timeId"></b>
+				</div>
+
+				<div class="mdl-grid mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+						<div class="mdl-cell mdl-cell--12-col centered">
+							<h4 id="deviceName"></h4>
+						</div>		
+						<div class="mdl-card mdl-cell mdl-cell--12-col " id="reportedDataBody">	
+						</div>
+				</div>								
+			</div>
+		</div>		
+	</div>
+	<div id="update-toast" class="mdl-js-snackbar mdl-snackbar">
+ 	 	<div class="mdl-snackbar__text"></div>
+  	<button class="mdl-snackbar__action" type="button"></button>
+	</div>	
+</main>			
+
+<script src="/js/thing_update.js"></script>

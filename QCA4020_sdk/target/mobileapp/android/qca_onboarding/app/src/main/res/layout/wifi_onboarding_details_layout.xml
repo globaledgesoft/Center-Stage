@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qualcomm.qti.qca40xx.Activity.WifiOnboardingViaWifiActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        style="@style/textViewStyle"
+        android:orientation="vertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tool_bar">
+
+        <LinearLayout
+            style="@style/textViewStyle"
+            android:background="@drawable/background_rect"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/textViewRowStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginRight="@dimen/margin_right"
+                android:text="@string/textViewWifiDeviceOBInfo"
+                android:textColor="@color/irisBlue"
+                android:textSize="@dimen/text_size" />
+
+
+        </LinearLayout>
+
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:layout_marginTop="@dimen/margin_top"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow style="@style/textViewStyle">
+
+                <TextView
+
+                    style="@style/textViewRowStyle"
+                    android:text="@string/textViewDeviceName" />
+
+                <TextView
+                    android:id="@+id/textViewDeviceName"
+                    style="@style/textViewRowStyle" />
+            </TableRow>
+
+            <TableRow style="@style/textViewStyle">
+
+                <TextView
+
+                    style="@style/textViewRowStyle"
+                    android:text="@string/textViewMacAddress" />
+
+                <TextView
+                    android:id="@+id/textViewMacAddress"
+                    style="@style/textViewRowStyle" />
+            </TableRow>
+
+
+            <TableRow style="@style/textViewStyle">
+
+                <TextView
+                    style="@style/textViewRowStyle"
+                    android:text="@string/textViewOnboardingMode" />
+
+                <TextView
+                    android:id="@+id/textViewOnboardingMode"
+                    style="@style/textViewRowStyle" />
+            </TableRow>
+
+            <TableRow style="@style/textViewStyle">
+
+                <TextView
+
+                    style="@style/textViewRowStyle"
+                    android:text="@string/textViewBatteryMode" />
+
+                <TextView
+                    android:id="@+id/textViewBatteryMode"
+                    style="@style/textViewRowStyle" />
+            </TableRow>
+
+            <TableRow style="@style/textViewStyle">
+
+                <TextView
+
+                    style="@style/textViewRowStyle"
+                    android:text="@string/textViewChipSet" />
+
+                <TextView
+                    android:id="@+id/textViewChipset"
+                    style="@style/textViewRowStyle" />
+            </TableRow>
+
+            <TableRow style="@style/textViewStyle">
+
+                <TextView
+
+                    style="@style/textViewRowStyle"
+                    android:text="@string/textViewFwVersion" />
+
+                <TextView
+                    android:id="@+id/textViewFversion"
+                    style="@style/textViewRowStyle" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCredentials"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutButtons"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            style="@style/textViewStyle"
+            android:layout_marginStart="3dp"
+            android:text="@string/textViewSsid"
+            android:textColor="@color/irisBlue"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="-63dp" />
+
+        <Spinner
+            android:id="@+id/spinnerWifiScanList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/irisBlue"
+            android:gravity="left"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text_size" />
+
+        <TextView
+            android:id="@+id/textviewWifiPassword"
+            style="@style/textViewStyle"
+            android:layout_marginStart="3dp"
+            android:text="@string/textViewPassword"
+            android:textColor="@color/irisBlue" />
+
+        <EditText
+
+            android:id="@+id/editTextPassword"
+            style="@style/textViewStyle"
+            android:hint="@string/editTextHintForPassword"
+            android:inputType="textPassword"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/small_text_size" />
+
+        <CheckBox
+            android:id="@+id/chk_paswd_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/show_paswd" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:id="@+id/linearLayoutButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/whiteButtonStyle"
+            android:layout_weight="1"
+            android:text="@string/buttonCancel"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnOnboard"
+            style="@style/irisBlueButtonStyle"
+            android:layout_weight="1"
+            android:text="@string/buttonOnBoard"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutOnBoarded"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/on_boarded_image" />
+
+        <TextView
+            style="@style/textViewStyle"
+            android:gravity="center_horizontal"
+            android:text="@string/textViewOnBoardingSuccess"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/ButtonOnBoardOk"
+            style="@style/irisBlueButtonStyle"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+#####################################################
+# -b                Basic authentication
+# -d                Digest authentication
+# -cgi <func>       <func> is an CGI routine
+#
+#####################################################
+# Request_URI   Options
+#------------   -------
+index.iws       -d
+iot_banner.png
+setintf             -cgi cgi_setintf
+showintf            -cgi cgi_showintf
+cgidemo             -cgi cgi_demo
+cgidemobasic    -b  -cgi cgi_demo
+cgidemomd5      -d  -cgi cgi_demo

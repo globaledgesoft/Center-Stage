@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="progress_loading_frame_duration">28</integer>
+
+    <dimen name="text_size">20sp</dimen>
+
+    <dimen name="margin">5dp</dimen>
+    <dimen name="margin_left">10dp</dimen>
+    <dimen name="margin_right">10dp</dimen>
+    <dimen name="margin_top">10dp</dimen>
+    <dimen name="margin_bottom">10dp</dimen>
+    <dimen name="card_view_margin">5dp</dimen>
+
+    <dimen name="wifi_linear_layout_credentials_margin_bottom">50dp</dimen>
+    <dimen name="ble_linear_layout_credentials_margin_bottom">140dp</dimen>
+    <dimen name="zigbee_linear_layout_credentials_margin_bottom">170dp</dimen>
+
+    <dimen name="toolbar_elevation">2dp</dimen>
+    <dimen name="corner_button_radius">2dp</dimen>
+
+
+    <dimen name="card_view_width">160dp</dimen>
+    <dimen name="card_view_height">130dp</dimen>
+    <dimen name="layout_margin_top">17dp</dimen>
+    <dimen name="small_text_size">14sp</dimen>
+    <dimen name="bigTextSize">60sp</dimen>
+    <dimen name="cardview_margin_bottom">100dp</dimen>
+    <dimen name="smalTextSize">14sp</dimen>
+    <dimen name="textSize">20sp</dimen>
+    <dimen name="image_height">25dp</dimen>
+
+
+
+
+</resources>

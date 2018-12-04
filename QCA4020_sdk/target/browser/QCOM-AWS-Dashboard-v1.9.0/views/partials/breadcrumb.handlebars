@@ -1,0 +1,10 @@
+<!-- Breadcrumbs -->
+<div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+	<nav>
+		<ol class="breadcrumbs">
+			{{#each crumbs as |crumb|}}					
+				{{> breadcrumb_single crumb=crumb}}
+			{{/each}}
+		</ol>
+	</nav>
+</div>

@@ -1,0 +1,62 @@
+<div class="mdl-tabs__panel is-active" id="devices">
+	<div id="update_time_header" align="center">
+		Device last updated at <b id="timeId"></b>
+	</div>			
+
+	<div class="mdl-grid">
+		<div class="mdl-cell mdl-cell--3-col mdl-card mdl-color--grey-200 mdl-shadow--2dp">	
+			<div class="mdl-card__title">
+				<h2 class="mdl-card__title-text">Devices</h2>
+			</div> 	
+			<nav>
+				<ul id="deviceTabId" class="nav tabs-left"></ul>
+			</nav>							
+		</div>
+
+		<div class="mdl-cell mdl-cell--9-col mdl-card mdl-color--grey-200 mdl-shadow--2dp tab-content" id="tabContentId">
+		</div>  		
+	</div>		
+</div>
+
+<div class="mdl-tabs__panel" id="charts">
+	<div class="mdl-grid mdl-cell mdl-cell--12-col  mdl-color--grey-200 mdl-shadow--2dp">
+		<div class=" mdl-cell mdl-cell--5-col">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height deviceSelect">
+				<input type="text" value="li.textContent" class="mdl-textfield__input" id="DeviceId" readonly>
+				<input type="hidden" value="li.textContent" name="DeviceId">
+				<i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>        
+				<label for="DeviceId" class="mdl-textfield__label">Select DeviceID</label>
+				<ul id="deviceList" for="DeviceId" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+						
+				</ul>
+			</div>
+		</div>
+		
+		<div class=" mdl-cell mdl-cell--5-col">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+				<input type="text" value="" class="mdl-textfield__input" id="sensor" readonly>
+				<input type="hidden" value="" name="sensor">
+				<i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>        
+				<label for="sensor" class="mdl-textfield__label">Select Sensor</label>
+				<ul for="sensor" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+						<li class="mdl-menu__item" data-val="base" data-selected="true">All</li>
+						<li class="mdl-menu__item" data-val="temperature" >Temperature</li>
+						<li class="mdl-menu__item" data-val="ambient">Ambient</li>
+						<li class="mdl-menu__item" data-val="pressure">Pressure</li>
+						<li class="mdl-menu__item" data-val="humidity">Humidity</li>
+						<li class="mdl-menu__item" data-val="accelerometer">Accelerometer</li>	
+						<li class="mdl-menu__item" data-val="Gyroscope">Gyroscope</li>	
+						<li class="mdl-menu__item" data-val="compass">Compass</li>	
+				</ul>
+			</div>
+		</div>
+
+		<div class="mdl-cell mdl-cell--2-col loadButton">
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="loadGraph()">
+				Load Graph
+			</button>				
+		</div>			 
+	</div>
+
+	<div class="mdl-cell mdl-cell--12-col mdl-grid " id="chartsDiv" style="clear:both;"> </div>   
+</div>	
