@@ -1,0 +1,47 @@
+
+<div id="sidenav">
+   <!--  <div class="row">
+        <div class="col">
+            <i class="material-icons close-dashboard-icon" ng-click="closeDashboard()">clear</i>
+        </div>
+    </div> -->
+    <div class="row dashboard">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="card card1">
+                <div class="card-body">
+                    <i class="material-icons close-dashboard-icon" ng-click="closeDashboard()">clear</i>
+                    <h5 class="card-title">Music Genres</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Selected by Booth Visitors</h6>
+                    <div class="row">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 music_col">
+                            <canvas id="music_chart" ></canvas>
+                            <span class="noData" ng-if="musicSelected">No Data</span>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 music_chart_legend">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="legend legend1"><img src="../images/pie-chart-hip hop.png" class="legend_icon"><span class="legend_text_hiphop">Hip Hop</span></div> 
+                                    <div class="legend"><img src="../images/pie-chart-pop.png" class="legend_icon legend_icon_pop"><span class="legend_text_pop">Pop</span></div> 
+                                    <div class="legend"><img src="../images/pie-chart-edm.png" class="legend_icon"><span class="legend_text_edm">EDM</span></div> 
+                                    <div class="legend"><img src="../images/pie-chart-rock.png" class="legend_icon legend_icon_rock"><span class="legend_text_rock">Rock</span></div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="card card2">
+                <div class="card-body">
+                    <h5 class="card-title">Crowd Engagement</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Motion Levels Over Time</h6>
+                    <span class="noDataMovement" ng-if="movementsDetected">No Data</span>
+                    <canvas id="crowd_chart">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

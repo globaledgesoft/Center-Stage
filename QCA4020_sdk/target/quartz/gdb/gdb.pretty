@@ -1,0 +1,22 @@
+#===============================================================================
+# Copyright (c) 2017-2018 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+# $QTI_LICENSE_QDN_SH$
+
+# Recommended gdb one-time setup to debug C code
+
+define hookpost-stepi
+x/1i $pc
+end
+
+set history filename gdb_history.log
+set history save on
+
+set print pretty on
+set pagination off
+set output-radix 16
+
+# Not needed for C debug
+# set print object on
+# set print vtbl on

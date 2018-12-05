@@ -1,0 +1,15 @@
+<main class="mdl-layout__content">
+	<div class="mdl-grid container">
+		<!-- breadcrumb -->
+		{{> breadcrumb crumbs=crumbs }}
+					
+		<div class="mdl-cell mdl-cell--12-col mdl-color--white mdl-shadow--4dp">			
+			<!-- Device data tabs -->
+			{{> devices_root_tabs}}		
+		</div>		
+	</div>
+</main>			
+
+<!-- Plotly Imports -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="/js/device_data.js"></script>

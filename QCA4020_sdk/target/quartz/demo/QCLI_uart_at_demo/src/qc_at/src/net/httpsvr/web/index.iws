@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>IOE Quartz</title>
+</head>
+
+<body>
+<div>
+<img src="iot_banner.png" alt="" style="margin&#58;5px;width&#58;900px;height&#58;124px;" />
+</div>
+
+<!--
+<form action="ABCD" method="post">
+-or-
+<form> /* "Get" method is used! */
+-->
+<form method="post">
+  <br>
+  Interface name: <input type="text" name="Intfname" maxlength="8" size="8"> <br>
+  IPv4 addr: <input type="text" name="Ipv4addr" maxlength="16" size="16"> <br>
+  Subnet mask: <input type="text" name="Subnetmask" maxlength="16" size="16"> <br>
+  Default gateway: <input type="text" name="Gateway" maxlength="16" size="16">
+  <input type="submit" value="Submit"> <br>
+</form>
+
+<br>
+<# setintf; #>
+<br>
+
+<br>
+<h2>
+<# showintf; #>
+</h2>
+
+</body>
+</html>

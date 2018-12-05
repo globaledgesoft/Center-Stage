@@ -1,0 +1,5 @@
+node_modules/*
+config/global.js
+config/aws.json
+package-lock.json
+random_data_updater.js

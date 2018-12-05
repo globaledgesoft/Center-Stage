@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+===============================================================================
+Copyright (c) 2013-2018 Qualcomm Technologies, Inc.
+All Rights Reserved.
+===============================================================================
+-->
+<!--
+Copyright (c) 2018 Qualcomm Technologies, Inc.
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted (subject to the limitations in the disclaimer below)
+provided that the following conditions are met:
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+Neither the name of Qualcomm Technologies, Inc. nor the names of its contributors may be used to endorse or promote products derived
+from this software without specific prior written permission.
+NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS LICENSE.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING,
+BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<tns:iot xmlns:tns="http://www.qualcomm.com/iot"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.qualcomm.com/iot ../xsd/iot.xsd">
+
+    <!-- This is for QCA4020 target -->
+    <metadata>
+        <chipset>4020</chipset>
+    </metadata>
+
+    <general_properties>
+        <msm_part>0x000160E1</msm_part>
+        <in_use_soc_hw_version>1</in_use_soc_hw_version>
+        <soc_hw_version>0x40030000</soc_hw_version>
+        <debug>0x0000000000000002</debug>
+    </general_properties>
+
+    <parsegen>
+        <image_types_list>
+            <image_type id='elf_has_ht'>
+                <elf_properties></elf_properties>
+            </image_type>
+        </image_types_list>
+    </parsegen>
+
+    <data_provisioning></data_provisioning>
+
+    <images_list>
+        <image sign_id="m4" name="m4.mbn" image_type="elf_has_ht">
+            <general_properties_overrides>
+                <sw_id>0x0000000000000000</sw_id>
+            </general_properties_overrides>
+        </image>
+
+        <image sign_id="kf" name="kf.mbn" image_type="elf_has_ht">
+            <general_properties_overrides>
+                <sw_id>0x0000000000000001</sw_id>
+            </general_properties_overrides>
+        </image>
+
+        <image sign_id="m0" name="m0.mbn" image_type="elf_has_ht">
+            <general_properties_overrides>
+                <sw_id>0x0000000000000002</sw_id>
+            </general_properties_overrides>
+        </image>
+
+        <image sign_id="m4_golden" name="m4_golden.mbn" image_type="elf_has_ht">
+            <general_properties_overrides>
+                <sw_id>0x0000000000000003</sw_id>
+            </general_properties_overrides>
+        </image>
+
+        <image sign_id="kf_golden" name="kf_golden.mbn" image_type="elf_has_ht">
+            <general_properties_overrides>
+                <sw_id>0x0000000000000004</sw_id>
+            </general_properties_overrides>
+        </image>
+
+        <image sign_id="m0_golden" name="m0_golden.mbn" image_type="elf_has_ht">
+            <general_properties_overrides>
+                <sw_id>0x0000000000000005</sw_id>
+            </general_properties_overrides>
+        </image>
+
+        <image sign_id="otp_patch_update" name="otp_patch_update.mbn" image_type="elf_has_ht">
+            <general_properties_overrides>
+                <sw_id>0x0000000000000006</sw_id>
+            </general_properties_overrides>
+        </image>
+    </images_list>
+
+</tns:iot>

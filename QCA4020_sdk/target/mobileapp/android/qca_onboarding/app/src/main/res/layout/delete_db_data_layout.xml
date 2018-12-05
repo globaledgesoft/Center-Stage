@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardSettings"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/card_view_margin"
+    android:layout_marginRight="@dimen/card_view_margin"
+    android:layout_marginTop="@dimen/card_view_margin"
+    card_view:cardCornerRadius="@dimen/card_view_margin">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/settings_cardview_textview_ble_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="Hellooo"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/small_text_size"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/settings_cardview_textview_device_configuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="@string/textViewAWSConfiguration"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/small_text_size"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/settings_cardview_textview_ble_mac_addr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="Hellooo"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/settings_cardview_imageview_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/delete"
+                android:padding="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </android.support.v7.widget.CardView>

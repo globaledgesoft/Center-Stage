@@ -1,0 +1,152 @@
+#
+#
+#    Tag Listfile
+#
+#
+
+[General]
+Signature = windows
+FormatVersion = 1.0
+
+[Tag]
+Num = 28
+
+[Tag0]
+TagNum = 1
+TagLength = 13
+TagValue = 51 00 72 06 04 10 10 14 14 10 04 FB 00
+
+[Tag1]
+TagNum = 3
+TagLength = 32
+TagValue = B8 F5 DA F6 C3 F7 80 F8 80 F9 4D FA 00 FC 45 FC F3 FC D7 FD CF FE 70 FF C5 01 8E 02 85 03 4D 04
+
+[Tag2]
+TagNum = 5
+TagLength = 6
+TagValue = 00 00 00 00 00 00
+
+[Tag3]
+TagNum = 7
+TagLength = 2
+TagValue = 04 04
+
+[Tag4]
+TagNum = 8
+TagLength = 2
+TagValue = F4 01
+
+[Tag5]
+TagNum = 10
+TagLength = 4
+TagValue = 00 00 00 00
+
+[Tag6]
+TagNum = 17
+TagLength = 24
+TagValue = 00 00 00 00 00 00 00 00 FF 00 FF 00 00 10 00 10 00 10 00 10 FF 00 FF 00
+
+[Tag7]
+TagNum = 18
+TagLength = 24
+TagValue = 00 00 00 00 00 00 00 00 FF 00 FF 00 FF 00 FF 00 FF 00 FF 00 FF 00 FF 00
+
+[Tag8]
+TagNum = 27
+TagLength = 40
+TagValue = 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14
+
+[Tag9]
+TagNum = 52
+TagLength = 8
+TagValue = 00 00 00 00 00 00 00 00
+
+[Tag10]
+TagNum = 54
+TagLength = 3
+TagValue = 04 04 04
+
+[Tag11]
+TagNum = 55
+TagLength = 2
+TagValue = 06 02
+
+[Tag12]
+TagNum = 56
+TagLength = 1
+TagValue = 02
+
+[Tag13]
+TagNum = 57
+TagLength = 1
+TagValue = 03
+
+[Tag14]
+TagNum = 58
+TagLength = 1
+TagValue = 09
+
+[Tag15]
+TagNum = 62
+TagLength = 2
+TagValue = 02 80
+
+[Tag16]
+TagNum = 63
+TagLength = 5
+TagValue = 00 02 08 04 08
+
+[Tag17]
+TagNum = 73
+TagLength = 24
+TagValue = 00 00 00 00 00 00 00 00 FF 00 FF 00 00 10 00 10 00 10 00 10 FF 00 FF 00
+
+[Tag18]
+TagNum = 74
+TagLength = 24
+TagValue = 00 00 00 00 00 00 00 00 FF 00 FF 00 FF 00 FF 00 FF 00 FF 00 FF 00 FF 00
+
+[Tag19]
+TagNum = 80
+TagLength = 32
+TagValue = 00 F1 00 04 00 05 00 05 00 07 00 08 00 08 00 09 00 0A 00 0A 00 0B 00 0B 00 0B 00 0B 00 0C 00 0C
+
+[Tag20]
+TagNum = 81
+TagLength = 16
+TagValue = 0F 13 13 13 13 13 12 13 12 13 13 13 13 13 0E 04
+
+[Tag21]
+TagNum = 82
+TagLength = 1
+TagValue = 01
+
+[Tag22]
+TagNum = 101
+TagLength = 14
+TagValue = E1 01 00 00 02 00 00 01 01 14 02 05 00 04
+
+[Tag23]
+TagNum = 102
+TagLength = 6
+TagValue = 00 09 14 00 07 05
+
+[Tag24]
+TagNum = 103
+TagLength = 15
+TagValue = 12 0A 3B 2C 2A 2B 39 3A 38 29 3C 14 13 15 2D
+
+[Tag25]
+TagNum = 104
+TagLength = 18
+TagValue = 01 00 7F C6 7F C6 7F C6 00 C0 00 C0 00 C0 00 C0 00 C0
+
+[Tag26]
+TagNum = 152
+TagLength = 3
+TagValue = 00 00 00
+
+[Tag27]
+TagNum = 190
+TagLength = 6
+TagValue = 44 44 22 10 00 00

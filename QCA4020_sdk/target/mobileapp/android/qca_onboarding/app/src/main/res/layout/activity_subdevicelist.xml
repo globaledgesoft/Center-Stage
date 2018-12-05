@@ -1,0 +1,63 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/devicelist_coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.BleWifiListActivity">
+
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_margin="10dp"
+            android:id="@+id/text"
+            android:gravity="center"
+            android:layout_below="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="List of devices"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            />
+        <View
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:id="@+id/view"
+            android:layout_below="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/white"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_margin="15dp"
+            android:layout_below="@+id/view"
+            android:id="@+id/device_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/emptyDataTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/nosubdevice"
+            android:textColor="@color/irisBlue"
+            android:textSize="@dimen/small_text_size"
+            />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

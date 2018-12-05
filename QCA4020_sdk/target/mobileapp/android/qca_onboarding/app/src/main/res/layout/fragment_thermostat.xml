@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/thermostat_coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/noThermoDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/noThermodetail"
+        android:textColor="@color/irisBlue"
+        android:textSize="@dimen/small_text_size"
+        android:visibility="gone" />
+
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:id="@+id/thermolayt"
+        android:visibility="visible"
+        tools:context="com.rubyquartz.sensor.app.testsensors.Activity.ThermostatDetailsActivity">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCardViews"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="@dimen/card_view_width"
+                android:layout_height="@dimen/card_view_height"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/brownBlack"
+                card_view:cardCornerRadius="1dp">
+
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/textViewOperatingState"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/smalTextSize"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageViewOperatingState"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/layout_margin_top"
+                        android:src="@drawable/standby" />
+
+                    <TextView
+                        android:id="@+id/textViewOperatingState"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin_top"
+                        android:gravity="center"
+                        android:text="STAND BY"
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/smalTextSize" />
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view1"
+                android:layout_width="@dimen/card_view_width"
+                android:layout_height="@dimen/card_view_height"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/brownBlack"
+                app:layout_constraintLeft_toLeftOf="parent"
+                card_view:cardCornerRadius="1dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/textViewCurrentTemprature"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/smalTextSize" />
+
+                    <TextView
+                        android:id="@+id/textViewCurrentTemp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/bigTextSize" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCredentials"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/cardview_margin_bottom"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="75dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayoutButtons"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCardViews">
+
+            <TextView
+                style="@style/textViewStyle"
+                android:text="@string/textViewOperatingMode"
+                android:textColor="@color/white"
+                android:textSize="@dimen/smalTextSize"
+                tools:layout_editor_absoluteX="6dp"
+                tools:layout_editor_absoluteY="-63dp" />
+
+            <Spinner
+                android:id="@+id/spinnerTempModeList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/irisBlue"
+                android:padding="@dimen/margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/smalTextSize"
+                android:textStyle="bold" />
+
+
+            <TextView
+
+                style="@style/textViewStyle"
+                android:layout_marginTop="@dimen/margin"
+                android:text="@string/textViewDesiredTemp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/smalTextSize" />
+
+            <TextView
+                android:id="@+id/textViewDesiredTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/margin"
+                android:textSize="@dimen/textSize" />
+
+            <SeekBar
+
+                android:id="@+id/seekBar"
+                style="@style/textViewStyle"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginTop="@dimen/margin"
+                android:max="100"
+                android:padding="3dp"
+                android:progress="0"
+                android:textSize="@dimen/smalTextSize" />
+
+            <TextView
+
+                style="@style/textViewStyle"
+                android:layout_marginTop="@dimen/margin"
+                android:text="Threshold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/smalTextSize" />
+
+            <TextView
+                android:id="@+id/textViewThreshold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/margin"
+                android:textSize="@dimen/textSize" />
+
+            <SeekBar
+                android:id="@+id/seekBarThreshold"
+                style="@style/textViewStyle"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginTop="@dimen/margin"
+                android:max="100"
+                android:padding="3dp"
+                android:progress="0"
+                android:textSize="@dimen/smalTextSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/linearLayoutButtons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <Button
+
+                android:id="@+id/buttonCancel"
+                style="@style/whiteButtonStyle"
+                android:layout_weight="1"
+                android:text="@string/buttonCancel"
+                android:textColor="@color/black" />
+
+            <Button
+
+                android:id="@+id/buttonApply"
+                style="@style/irisBlueButtonStyle"
+                android:layout_weight="1"
+                android:text="@string/buttonApply"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>
+

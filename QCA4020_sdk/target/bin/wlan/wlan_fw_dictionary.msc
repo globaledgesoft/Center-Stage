@@ -1,0 +1,1242 @@
+0,,athos_linkage_check failure!
+1,S,Athos/Xt BSP version AR6K: Date: %s
+2,S,Time: %s
+3,II,Fatal exception (%d): pc=0x%x
+4,II,badvaddr=0x%x dump area=0x%x
+5,II,epc1=0x%x, epc2=0x%x
+6,II,epc3=0x%x, epc4=0x%x
+7,I,alloc rem: %d
+8,I,RAM allocation (%d bytes) failed!
+9,II,>>>READ MEMORY at 0x%x, length 0x%x
+10,I,Segmented file set app_start to 0x%x
+11,II,Segmented file Board Data. addr=0x%x length=0x%x
+12,,Segmented file DONE
+13,I,Ignoring the BMI_SGMT_EXEC,with file addr %p
+14,,Start Segment File download
+15,,Segmented file segments are compressed
+16,,Segmented file segments are not compressed
+17,II,Segmented file load segment to addr=0x%x length=0x%x
+18,II,>>>WRITE MEMORY at 0x%x, length 0x%x
+19,II,>>>EXECUTE at 0x%x with arg=0x%x
+20,I,>>>Set APP_START to 0x%x
+21,I,>>>Read register at 0x%x
+22,II,>>>Write register at 0x%x with 0x%x
+23,I,>>>LZ-uncompress stream to 0x%x
+24,I,>>>LZ data input length=0x%x
+25,S,>>>BMI NVRAM SEGMENT NAME=%s
+26,I,cmnos_bmi_dispatch: Unknown command, 0x%X
+27,,Invalid ISR err
+28,II,epc1=0x%x, epc2=0x%x
+29,II,epc3=0x%x, epc4=0x%x
+30,II,epc1=0x%x, epc2=0x%x
+31,II,epc3=0x%x, epc4=0x%x
+32,,Addr err: NULL ptr deref
+33,III,err_valid=0x%x AHB_err=0x%x APB_err=0x%x
+34,,WatchDog Timer expired...!!
+35,II,epc1=0x%x, epc2=0x%x
+36,II,epc3=0x%x, epc4=0x%x
+37,,Bogus LF tmr intr
+38,II,>>>byte_push(%d): 0x%x
+39,III,>>>byte_pop(%d) %d: 0x%x
+40,III,Misaligned load: pc=0x%x badvaddr=0x%x dump area=0x%x
+41,III,assertion failed? pc=0x%x, line=%d, dump area=0x%x
+42,II,Target ID: 0x%x (%d)
+43,,Debug Info:
+44,,
+45,I,0x%08x
+46,,
+47,II, Buffer:0x%X Length:%d
+48,I,%4.4X :
+49,I,%2.2X
+50,,
+51,,
+52,III,Free: %d HTC: cur_cnt %d reaped %d
+53,II,MAC: cur_cnt %d reaped %d
+54,II,FW: cur_cnt %d reaped %d
+55,I,DataSet asynchronous initialization done (%d)
+56,,dset_pending_alloc failed
+57,II,Hdset: cmd=0x%x, pending=0x%x
+58,I,HdsetWrt delivered: remaining len=%d
+59,II,Hdset open: id=%d, media=%d
+60,IIII,Hdset rd: id=%d, len=%d, offset=%d, media=%d
+61,I,Hdset size:%d
+62,III,Hdset close: id=%d, media=%d, status=%d
+63,III,Hdset create: id=%d,len=%d,media=%d
+64,,ERROR: DSET Event buffer NULL
+65,II,Hdset wrt: id=%d, offset=%d
+66,II,len=%d, media=%d
+67,III,Hdset commit: id=%d, media=%d, status=%d
+68,III,Hdset delete: id=%d, media=%d, status=%d
+69,I,Hdset init: media=%d
+70,II,Hdset continue: op=%d, media=%d
+71,I,Hdset(RAM): op=%d
+72,I,Hdset(NVRAM): op=%d
+73,,ram_dset_init
+74,,rom_dset_init
+75,,mem_dset_init
+76,,otp_dset_init
+77,I,pin %d has no handler...!!!
+78,II,Config not found for peripheral %d on requested pin %d
+79,II,Peripheral config not found %d on requested pin %d
+80,II,Active Config exists for peripheral %d on pin %d
+81,I,Multiple add configs for pin %d, not supported
+82,II,Update active config failed for periph id %d, pin %d
+83,I,GPIO update config not allowed for pin %d
+84,I,ar6000AniOfdmErrTrigger(): raise noise immunity level to %u
+85,I,ar6000AniOfdmErrTrigger(): raise spur immunity level %u
+86,I,ar6000AniOfdmErrTrigger(): weak sig detect is already off, raise first step level to %u
+87,,ar6000AniOfdmErrTrigger(): rssi in mid range, need ofdm weak signal detect
+88,I,ar6000AniOfdmErrTrigger(): at the mean time, raise first step level to %u
+89,,ar6000AniOfdmErrTrigger(): rssi is low, turn off ofdm weak sig detect for 11G cahnnel
+90,,ar6000AniOfdmErrTrigger(): at the mean time, zero first step level
+91,I,ar6000AniCckErrTrigger(): raise noise immunity level to %u
+92,I,ar6000AniCckErrTrigger(): rssi in mid range, raise first step level to %u
+93,,ar6000AniCckErrTrigger(): rssi is low, zero first step level
+94,,ar6000AniLowerImmunity(): rssi in mid range, need ofdm weak signal detect
+95,I,ar6000AniLowerImmunity(): rssi in mid range, reduce FIR step level to %d
+96,I,ar6000AniLowerImmunity(): rssi in low range, will reduce FIR step level to %d
+97,I,ar6000AniLowerImmunity(): rssi in mid range,reduce first step level to %d
+98,I,ar6000AniLowerImmunity(): reduce spur immunity level to %d
+99,I,ar6000AniLowerImmunity(): reduce noise immunity level to %d
+100,,tx stopped but training not completed
+101,II,WHAL_PAPRD_PA_IN Info: %d %d
+102,,WHAL_ERROR_CREATE_PA_CURVE
+103,II,WHAL_ERROR_PAPRD_MAXGAIN_ABOVE_WINDOW %d %d
+104,II,WHAL_ERROR_PAPRD_MAXGAIN_ABOVE_WINDOW %d %d
+105,II,ar6000WriteMacBBRegs(): freqIndex = %d modeIndex = %d 
+106,,WHAL_ERROR_POWER_AWAKE
+107,S,ar6000SetPowerMode(): mode =%s 
+108,I,WHAL_ERROR_POWER_SET %d
+109,,Incorrect PHY_BB_PLL_CTL value
+110,II,WHAL_ERROR_RECV_STOPDMA %x %d
+111,II,WHAL_ERROR_RECV_STOPDMA %x %d
+112,II,WHAL_ERROR_RECV_STOPPCU %x %d
+113,II,WHAL_ERROR_RECV_STOPPCU %x %d
+114,I,ar6000Reset(): chan = %d
+115,,WHAL_ERROR_RESET_PM
+116,I,ar6000ChannelChange(): channel =%d
+117,,WHAL_ERROR_RESET_PM
+118,,WHAL_ERROR_RESET_STOPDMA
+119,,WHAL_ERROR_RESET_RFGRANT
+120,,WHAL_ERROR_RESET_CHANNF1
+121,II,WHAL_ERROR_RESET_CHANNF2 %d %d
+122,,WHAL_ERROR_RESET_OFFSETCAL
+123,,WHAL_ERROR_RESET_NOISEFLOORCAL
+124,,WHAL_ERROR_RESET_OFFSETCAL1
+125,,WHAL_ERROR_RESET_RFGRANT
+126,,WHAL_ERROR_RESET_OFFSETCAL2
+127,,ar6000Get11nExtBusy(): cycle counter wrap. ExtBusy = 0
+128,,Temperature Value Could NOT been got !
+129,II,WHAL_ERROR_XMIT_COMPUTE %d %d
+130,II,WHAL_ERROR_XMIT_STOPDMA %x %d
+131,,WHAL_ERROR_XMIT_NOQUEUE
+132,I,WHAL_ERROR_XMIT_BADTYPE %d
+133,I,WHAL_ERROR_XMIT_ACTIVEQUEUE %d
+134,I,WHAL_ERROR_EEPROM_MACADDR %x
+135,III,Mac address is : %02x:%02x:%02x:
+136,III,%02x:%02x:%02x
+137,I,ar6000SetPowerCalTable(): chan 0x%x
+138,I,PHY_BB_POWERTX_RATE1 = 0x%x 
+139,I,PHY_BB_POWERTX_RATE2 = 0x%x 
+140,I,PHY_BB_POWERTX_RATE3 = 0x%x 
+141,I,PHY_BB_POWERTX_RATE4 = 0x%x 
+142,I,PHY_BB_POWERTX_RATE5 = 0x%x 
+143,I,PHY_BB_POWERTX_RATE6 = 0x%x 
+144,I,PHY_BB_POWERTX_RATE7 = 0x%x 
+145,I,PHY_BB_POWERTX_RATE8 = 0x%x 
+146,I,PHY_BB_POWERTX_RATE9 = 0x%x 
+147,II,ar6000EnableInterrupts(): 0x%x => 0x%x
+148,I,ar6000EnableInterrupts(): Interrupt Mask = %x
+149,II,ar6000DisableInterrupts(): 0x%x => 0x%x
+150,I,ar6000DisableInterrupts(): Interrupt Mask = %x
+151,I,ar6000ResetKeyCacheEntry(): entry = %d 
+152,III,ar6000SetKeyCacheEntry(): entry = %d keytype = %d length = %d 
+153,,start _HTC_RcvDataClassifierInit ...
+154,I,Bad HTC hdr: htcbuf: %p 
+155,,Cannot open Regulatory Database DataSet
+156,,RegDB opened
+157,,SUCCESS...
+158,S,Skipping MODE - %s
+159,I,_wreg_countryString_to_regcode(): regCode = %x
+160,S,_wreg_countryString_to_regcode(): ERROR: No regCode forcountry string : %s
+161,I,Cannot fetch addrs for WHAL INI table (0x%x)
+162,I,Cannot fetch values for WHAL INI table (0x%x)
+163,I,Compatilbity mode: %d
+164,I,wmi: sending scan complete event, status: %d
+165,I,rssi_inDB(SNR) event, %d
+166,I,rssi_inDBm event, %d
+167,,wmi: sending link quality threshold event
+168,,wmi: sending error report event
+169,,wmi: sending channel change event
+170,,wmi: sending CAC event
+171,II,wmi: sending GPIO INTR event, intr=0x%x in=0x%x
+172,,wmi: sending GPIO ACK event
+173,,wmi: sending GPIO DATA event
+174,,wmi_target: get tx pwr cmd
+175,,_wmi_dfs_queue_phyerr(): Ran out of buffers
+176,II,diag evbuf empty, eventid=%d seq_num=%d
+177,III,WMI Free Evt: EventClass:%d, (%d,%d)
+178,I,WMI Free Evt: buffered evts : %d 
+179,II,WMI Recv: TOO SHORT cmd: 0x%X  length:%d 
+180,II,WMI Recv: cmd: 0x%X  length:%d not HANDLED! 
+181,III,WMI Recv: dispatching cmd: 0x%X  length:%d to 0x%X 
+182,I,WMI Recv: HTC length:%d 
+183,,WMIRecvMessageHandler(): Cmd recevied too short..!!
+184,II,WMI Recv: cmd: 0x%4.4X  length:%d 
+185,I,Wmi Extension Cmd = 0x%x
+186,,WMI Recv: done 
+187,III,WMI Send Complete: EventClass:%d EventID: 0x%4.4X (Pending:%d) 
+188,I,WMI Send Complete: calling direct-buffer completion : 0x%X 
+189,II,WMI_init: buffered:%d, direct:%d 
+190,I,WMI_AllocEvent: Class:%d  
+191,III,WMI_AllocEvent: pool:%d (%d,%d)  
+192,I,WMI_AllocEvent: buffered: %d 
+193,III,WMI_AllocEvent: after alloc, pool:%d (%d,%d)  
+194,III,WMI_SendEvent: EventID: 0x%4.4X, class:%d action:%d
+195,I,(pending wmi events:%d)
+196,I,UMBOX Error: 0x%X 
+197,,UMBOX TX OVERFLOW ERROR
+198,,UMBOX RX UNDERFLOW ERROR
+199,,UMBOX SYNC ERROR
+200,,UMBOX FRAMER UNDERFLOW ERROR
+201,,UMBOX FRAMER OVERFLOW ERROR
+202,II,TLPM_ON Idle_Period:%x Wakeup_Period:%x
+203,I,TLPM_OFF %d
+204,II,TLPM_FILTER_POWER_STATE Current_State:%d New_State:%d
+205,I,TLPM_NOTIFY_NOT_IDLE %d
+206,I,TLPM_IDLE_TIMER_NOT_RUNNING %d
+207,,TLPM_TIMEOUT_IDLE_HANDLER
+208,I,TLPM_BREAK_OFF_NOT_RECIVED_ERROR %x
+209,,TLPM_TIMEOUT_WAKEUP_HANDLER
+210,I,TLPM_BREAK_ON_NOT_RECEIVED_ERROR %d
+211,I,TLPM_TX_BREAK_RECIVED %d
+212,,TLPM_WAKEUP_FROM_BT
+213,,TLPM_WAKEUP_FROM_HOST
+214,,TLPM_ACK_GPIO_INTR
+215,I,TLPM_UNEXPECTED_GPIO_INTR_ERROR %x
+217,,M1 and M3 Nonce's don't match..
+218,,_suppl_process_m1_evt(): No buffer..
+219,,PMK = 
+220,,PTK = 
+221,,Buf acting on MIC(for generation in M2)
+222,,MIC added in M2
+223,I,sending M2...len = %d
+224,I,_suppl_process_m3_evt(): [M3]No buffer..at line:%d
+225,I,_suppl_process_m3_evt(): [M3]No buffer..at line:%d
+226,,Error in suppl_process_m3_evt
+227,,sending M4...
+228,,[M5]No buffer..
+229,,[INIT]No buffer..
+230,,sending M1...
+231,,auth_process_sent_m5 
+232,,[M5]No buffer..
+233,,[M5]No buffer..
+234,,after eap_m3
+235,,after key mic
+236,,auth_process_m2_evt 
+237,,[M2]No buffer..
+238,,[M2]No buffer..
+239,,after eap_m3
+240,,after key mic
+241,II,NUM_DEV=%d FWMODE=%x
+242,II,FWSUBMODE=%x FWBR_BUF %d
+243,,**HCI bridge enabled**
+244,I,IE IEEE80211_PWR_CONSTRNT is malformed.IE len = %d
+245,I,IE IEEE80211_CSA is malformed. IE len = %d
+246,III,new_ch_number = %d, ch_switch_cnt %d ch_switch_mode %d
+247,I,CSA Timeout = %d
+248,I,wlan_80211h_timeout: Changing Channel to %d
+249,,wlan_80211h_stop_channel_change: Cancel Channel change
+250,II,RX_DIAG_RECV_ICMP  dev_id:%d icmp_seq:%x
+251,II,TX_DIAG_SEND_ICMP  dev_id:%d icmp_seq:%x
+252,I,Unknown category code %d in ACTION frame
+253,I, Default tx key index %d
+254,I,Key Management Info : 0x%x
+255,II,Key Management Connection Complete Info : 0x%x  Mac Address : 0x%x
+256,I,Key Management Connection Info : 0x%x
+257,I,Key Management Key Info : 0x%x
+258,I,Key Management Key Add Info : 0x%x
+259,I,PK_INST Cleared flags is 0x%x
+260,III,KeyIndex:%d  KeyUsage:%d  KeyLength:%d
+261,I,Key Index %d is a Group Usage Key
+262,I,Key Index %d (Group Usage Key) for Tx 
+263,I,Counter Measure %d
+264,,
+265,II,GREENTX_DBG_BACKOFF_DECR  currBackOff:%d retries:%d
+266,II,GREENTX_DBG_BACKOFF_INCR  currBackOff:%d retries:%d
+267,II,GREENTX_DBG_BACKOFF_DECR  Info:%x forceBackOff:%d
+268,II,GREENTX_DBG_BACKOFF_DECR  Info:%x currBackOff:%d
+269,II,GREENTX_DBG_FORCE_BACKOFF  forceBackOff:%x tpc:%d
+270,II,GREENTX_DBG_HIGH_RATE_TPC currBackOff:%x tpc:%d
+271,II,GREENTX_DBG_WMI_PARAMS_COMMAND Info:%d enable:%d
+272,II,GREENTX_DBG_WMI_PARAMS_COMMAND Info:%d nextProbeCount:%d
+273,II,GREENTX_DBG_WMI_PARAMS_COMMAND Info:%d maxBackOff:%d
+274,II,GREENTX_DBG_WMI_PARAMS_COMMAND Info:%d minGtxRssi:%d
+275,II,GREENTX_DBG_WMI_PARAMS_COMMAND Info:%d forceBackOff:%d
+276,I,GreenTx Debug WMI Params Command %x
+277,II,Mgmt buffer: 0x%x @line: %d
+278,II,WMI_CMD_PARAMS_DUMP_START %x %d
+279,II,WMI_CMD_PARAMS %d %d
+280,,WMI_CMD_PARAMS_DUMP_END
+281,,WMI_IN_SYNC
+282,,wmi_target: wmi sync cmd
+283,,wmi_target: get available channels cmd
+284,,wmi_htc_rx: recving PAL pkt, without PAL
+285,,wmi_htc_rx: discarding error data packet - rejected by WLAN!
+286,I,wmi_htc_rx: sync pausing htc rx for ac  %d
+287,,incorrect wmi data hdr - dropping packet
+288,,WMI_SETPOWER_MDOE_TO_MAXPERF
+289,,WMI_SETPOWER_MDOE_TO_REC
+290,,wmi_target: get mcc stats cmd 
+291,,wmi_target: get stats cmd
+292,,wmi_target: get roam table cmd
+293,,Recvd HCI cmd, PAL NOT supported
+294,,No PAL available.
+295,,wmi_target: get PMKID List cmd
+296,I,P2P FW mode is disbled %x
+297,,WMI_CMD_RX_XTND_PKT_TOO_SHORT
+298,I,WMI_CMD_RX_XTND %x
+299,I,wmi diagnostic cmd %d not handled
+300,,Option not supported in 2.1
+301,II,Command option not supported in 2.0: 0x%p(%d)
+302,I,ccmp_decap(): Called with tid %d
+303,,Dropping Frame due to  no ext IV
+304,III,Dropping Frame due to replay violation pn is %xstored keyrsc is %x for tid %d 
+305,,BC/MC MGMT frame MMIE MIC check Failed
+306,III,rmic: %02X %02X %02X
+307,III,%02X %02X %02X
+308,II,%02X %02X
+309,III,cmic: %02X %02X %02X
+310,III,%02X %02X %02X
+311,II,%02X %02X
+312,I,waide hdrl %d
+313,I,pnL %ld
+314,I,pnH %ld
+315,,Drop Even PN unicast packet
+316,,Drop ODD PN pkt
+317,III,wapide: L %ld H %ld TID %d
+318,II,:put tid:%d seq_no:%d
+319,II, seq_next:%d win_sz:%d
+320,II,Tx Diag Add Data to HoldQ  dev_id:%d seq_no2:%d
+321,II,Tx Diag Add Data To HoldQ  bfdata_len:%d  frms_in_freq:%x
+322,I,TX Aggregation NOT allowed on tid %d
+323,I,NO Tx aggr,ni_flags: 0x%x
+324,,Non QoS association.
+325,III,Start Timer:0x%x with value %d at line:%d
+326,II,Stop Timer:0x%x at line:%d
+327,II,Stop Timer:0x%x at line:%d
+328,,no mem in aggtx_tid_alloc
+329,,release an RX reorder frame due to timeout on earlier frames
+330,III,refuse aggrx tid=%d flags=0x%x allowedset=0x%x
+331,I,unexpected AddBA Req on tid %d
+332,II,aggrx start on Tid=%d, RxBuf Size=%d
+333,III,aggrx stop for tid %d as %d reason: %d
+334,,no mem in aggrx_tid_alloc
+335,III,aggrx_buffer_size=%d aggrx_reorder_buffer_timeout=%d aggrx_session_timeout_val=%d
+336,II,aggrx_reorder_cfg=%d aggrx_session_timeout_cfg=%d
+337,,AMSDU enabled
+338,III,Init Timer:0x%x with Callback func=0x%x at line: %d
+339,III,Init Timer:0x%x with Callback func=0x%x at line: %d
+340,III,Init Timer:0x%x with Callback func=0x%x at line: %d
+341,,Out of Sm Buffers
+342,II,Mgmt buffer = 0x%x, cb_flags = 0x%x
+343,II,waitTime = 0x%x, id = %d
+344,II,Stop Timer:0x%x at line:%d
+345,II,Stop Timer:0x%x at line:%d
+346,III,Start Timer:0x%x with value %d at line:%d
+347,I,Tx Pause Pause %x %x
+348,I,unvalid pause type: line no:%d
+349,II,Tx Pause UnPause %x %x
+350,I,unvalid pause type: line no: %d
+351,I,Tx Pause After UnPause %d
+352,I,Tx Pause MGMT1 %x
+353,I,Tx Pause PS Data1 %x
+354,I,Tx Pause PS Data2 %x
+355,I,Tx Pause PS UAPSD Trigger Data %x
+356,I,Tx Pause PS Polled Data %x
+357,I,Tx Pause UAPSD Triggered Data %x
+358,I,Tx Pause UAPSD Triggered Data %x
+359,II,TxBuf = 0x%x, txq->axq_qnum = %d
+360,I,txq->axq_depth = %d
+361,II,txq->axq_qnum = %d, txq->axq_depth = %d
+362,,Failed to send frame over air
+363,I,rxFilter = 0x%x
+364,II,wlanResetCount = %d, __builtin_return_address = 0x%x
+365,,Buffers unavailable to handle data..!!
+366,II,TxBuffer = 0x%x, txq->axq_qnum = %d
+367,I,Tx Pause Drain Peer HoldQ %x
+368,I,Tx Pause Drain Peer HWQ %x
+369,I,_TXRXWaitForTxqDrainTimeout: line %d
+370,II,Stop Timer:0x%x at line:%d
+371,I,waitForTxqDrainRequested = 0x%x
+372,II,Tx Diag Send Data Complete tsStatus:%x Seq_num:%x
+373,II,Tx Diag Send Data Time Long seq_num2:%d time:%d
+374,II,Tx Diag Send Null Data Complete tsStatus:%x seq_num:%x
+375,II,Tx Diag Send Management Complete tsStatus:%x seq_num_mask:%x
+376,II,Rx Diag Receive Packet Sequence Length Type %x %x
+377,II,Rx Diag Receive Beacon Sequence dev_id:%d  seq_num:%d
+378,III,Init Timer:0x%x with Callback func=0x%x at line: %d
+379,III,Init Timer:0x%x with Callback func=0x%x at line: %d
+380,III,Init Timer:0x%x with Callback func=0x%x at line: %d
+381,II,Stop Timer:0x%x at line:%d
+382,III,Start Timer:0x%x with value %d at line:%d
+383,III,Start Timer:0x%x with value %d at line:%d
+384,II,Stop Timer:0x%x at line:%d
+385,III,Start Timer:0x%x with value %d at line:%d
+386,,Arming the periodic T-Spec timer for medium time...
+387,III,Start Timer:0x%x with value %d at line:%d
+388,,Disarming the TSPEC medium time timer...
+389,II,Stop Timer:0x%x at line:%d
+390,II,Medium time changed. Periodic T-SPEC timer still ON.current mediumTime %d new mediumTime %d
+391,II,Stop Timer:0x%x at line:%d
+392,II,up %d ac %d
+393,II,mediumTime %d, status code %d
+394,,throttle ON
+395,I,TXRX_RXBUF_ALLOCATE_BUF tbf = 0x%x
+396,I,Mgmt buf = 0x%x
+397,I,smmbf = 0x%x
+398,I,tx_drain_pending_count = 0x%x
+399,III,Tx id = %d tx_seq = %d at line:%d
+400,III,Tx id = %d tx_seq = %d at line: %d
+401,II,MAC_HW_WLAN_OPMODE hwOpMode:%d newMode:%d
+402,II,MAC_UPDATE_TBTT_TSF dev_id:%d tbttOffset:%d
+403,II,MAC_UPDATE_TBTT_TSF tsfOffset Info:%d %d
+404,I,Time to switch to channel %d
+405,II,MLME ShortSlotTime info : 0x%x, dev_id : %d
+406,I,MLME Connection Init Info : 0x%x
+407,II,MLME Connection Complete Info : 0x%x, 0x%x
+408,II,MLME Device Info : 0x%x, 0x%x
+409,I,Starting BSS on Channel %d
+410,I, MLME Auth ostate %d
+411,I,MLME Assoc ostate %d
+412,II,MLME newstate %d old state %d
+413,II,MLME State Info : 0x%x, 0x%x
+414,II,MLME Halt with state %d, reason %d 
+415,II,MLME Connection State : 0x%x, %d
+416,II, MLME Receive Info : 0x%x, 0x%x
+417,,Open Auth Failed
+418,,Shared Auth Failed
+419,I,Unsupported Algorithm %d
+420,II,Wrong Seq Number %d %d
+421,,Assoc Req Failed
+422,II,Assoc Resp Received with Status %d(0x%x) 
+423,,Changing State to RUN
+424,,MLME Received DEAUTH
+425,,MLME Received DISASSOC
+426,,Received ACTION_CODE_TSPEC_ADDTS from AP!
+427,,Received ACTION_CODE_TSPEC_ADDTS_RESP from AP!
+428,I,statusCode = %x
+429,,Received ACTION_CODE_TSPEC_DELTS from AP!
+430,II,tx delba Tid=%d initiator=%d
+431,I,MLME Starting Timer for %d ms
+432,II,MLME Receive Management Info : 0x%x, %d
+433,,UMLME Auth Frame Received
+434,,UMLME Assoc Req Frame Received
+435,,UMLME Assoc Resp Frame Received
+436,,UMLME DeAuth Frame Received
+437,,UMLME Disassoc Frame Received
+438,,UMLME Action Frame Received
+439,II,PM Infra STA Update APSD State %x %x
+440,II,PM Infra STA APSD Enable %x %d
+441,II,PM Infra STA Set PM Params1 %x %x
+442,II,PM Infra STA Set PM Params2 %x %x
+443,I,PM_ADHOC Unknown IBSS Attribute ID %d
+444,II,PM Adhoc State2 %d %d
+445,II,PM Adhoc Connection Map %d %x
+446,II,PM Adhoc Connection Map %d %x
+447,II,PM Adhoc State1 %x %x
+448,II,PM Adhoc Set PM Params %x %x
+449,II,PM AP State1 %x %d
+450,II,PM AP Set PM Params %x %x
+451,II,PM Channel Operation Request %x %d
+452,II,PM REF Count Negative %d %d
+453,II,PM Fake Sleep %x %x
+454,II,PM Enable %x %d
+455,II,PM Set Beacon Policy %x %d
+456,II,PM Set All Beacon Policy %d %d
+457,II,PM Set State %x %x
+458,II,PM Connection Notify %x %x
+459,II,PM P2P State1 %x %d
+460,II,PM P2P State1 %x %d
+461,II,_co_set_state(): devid=%d state = 0x%x
+462,II,_co_clear_state(): devid=%d state = 0x%x
+463,II,_co_self_cts_comp(): Value: 0x%x status: %d
+464,II,_co_check_set_postpone(): devId=%d home_high_starved = %d
+465,II,_co_gen_periodic_noa(): Offset=%d Duration: 0x%x
+466,II,Interval: 0x%x Count: %d
+467,II,NOA Index map: %d NOA index: %d
+468,II,_co_p2p_go_pause_comp(): devId = %d status=%d
+469,I,co_wait_for_cts_timeout(): CTS Timeout: 0x%x
+470,,_co_init()....!!!
+471,II,_co_acquire_offchannel_lock(): Priority = %d Callback : 0x%x
+472,II,_co_release_offchannel(): Return addr=0x%x Valid = %d
+473,II,_co_drain_tx_complete(): devId=%d co_dev=%d
+474,II,_co_pm_event_callback(): devId=%d status=%d
+475,,_co_finish_op_timeout....!!!!
+476,II,_co_start_op(): dev_op_type=%d Start CB=0x%x
+477,II,_co_start_op(): Start time=0x%x Value:0x%x
+478,III,_co_op_end(): Value=0x%x Calback = 0x%x at line = %d
+479,III,_co_op_end(): Value=0x%x Calback = 0x%x at line=%d
+480,II,_co_cancel_op_with_status(): 0x%x 0x%x
+481,II,co_op = 0x%x pending_op = 0x%x
+482,I,_co_canel_op_with_status: Current Op: 0x%x
+483,II,_co_change_channel(): Freq=%d extMode=%d
+484,II,_co_chanop_state_schedule(): Event=0x%x Prev state=%d
+485,,_co_chanop_state_tx_drain....!!!
+486,II,_co_chanop_state_dev_pause(): Value = 0x%x BT DutyCycle = 0x%x
+487,II,_co_chanop_state_Dev_pause(): Offset = %d Duration=0x%x
+488,II,Interval: 0x%x Count:%d
+489,I,_co_chanop_state_dev_pause(): NOA index = %d
+490,II,_co_chanop_state_run(): Value=0x%x Duration=0x%x
+491,II,_co_chanop_state_run(): Last Start Time=0x%x Now = 0x%x
+492,II,devId=%d Next State:%d
+493,II,_co_chanop_event(): Curr SM state=%d Event=%d
+494,I,_co_chanop_event(): Scheduler curr SM state =%d
+495,I,_co_add_bt_dev_op(): Duration: 0x%x
+496,,_co_cancel_bt_dev_op....!!!
+497,I,_co_pause_bt_dev_op(): Pause Timeout: 0x%x
+498,II,_co_select_bt_dev_schedule(): Value=0x%x Allocated Duration=0x%x
+499,,NLO timeout
+500,,maxNLOProfiles is exceeding maximum configurable profiles
+501,,Index value is invalid or max profile limit not set
+502,I,RO_BMISS_STATE2  RSSI:%d BmissCount:%d
+503,I,RO_BMISS_STATE2 RSSI:%d
+504,II,RO_BMISS_STATE1  RSSI:%d BMissCount:%d
+505,I,RO_BMISS_STATE1 RSSI:%d
+506,I,RO_HIGH_SIGNAL_QUALITY_EVENT  Signal_Quality_Metric:0x%x
+507,II,RO_CONFIGURE_SQ_THRESHOLD1 %p Threshold Info %x
+508,II,RO_CONFIGURE_SQ_THRESHOLD2  Threshold Info %x  Params %x
+509,I,RO_LOW_SIGNAL_QUALITY_EVENT  Signal_Quality_Metric:0x%x
+510,II,RO_CONFIGURE_SQ_PARAMS %p %x
+511,I,RO_DISABLE_SQ_THRESHOLD %p
+512,I,RO_ENABLE_SQ_THRESHOLD %p
+513,II,RO_LOWRSSI_SCAN_CANCEL  SigQlty:%d LowRssiScanThreshold:%d
+514,I,RO_LOWRSSI_ROAM_CANCEL  SigQlty:%d
+515,I,RO_LOWRSSI_SCAN_START  SigQlty:%d
+516,II,RO_REFRESH_ROAM_CANDIDATE Info %d %p
+517,II,RO_REFRESH_ROAM_TABLE Info %d %p
+518,II,RO_UPDATE_ROAM_CANDIDATE  Status:%d OperationalChannelState:%d
+519,II,RO_UPDATE_ROAM_CANDIDATE_CB Info %x %d
+520,II,RO_UPDATE_ROAM_CANDIDATE_FINISH  Status:%d OperationalChannelState:%d
+521,II,RO_REFRESH_ROAM_TABLE_DONE  Status:%d OperationalChannelState:%d
+522,I,RO_PERIODIC_SEARCH_CB  Status:%d
+523,II,RO_LOWRSSI_SCAN_END  ScanFlags:%x RSSI:%d
+524,I,RO_PERIODIC_SEARCH_TIMEOUT  ScanType:%d
+525,II,RO_SET_PERIODIC_SEARCH_MODE Info %x %x
+526,II,RO_UPDATE_ROAM_CANDIDATE CurrentAntenna:%d RSSI:%d
+527,II,RO_UPDATE_ROAM_CANDIDATE CurrentAntenna:%d RSSI:%d
+528,II,RO_UPDATE_ROAM_CANDIDATE CurrentAntenna:%d RSSI:%d
+529,II,RO_LOWRSSI_SCAN_PARAMS %x %x
+530,I,RO_ADD_BSS_TO_ROAM_TABLE  BSSID:%x
+531,II,RO_REMOVE_BSS_FROM_ROAM_TABLE BSSID:%x %p
+532,,CM Initiate Handoff
+533,I,CM Initiate Handoff Callback Status: %d
+534,I,CM Continue Scan Callback Status: %d
+535,II,CM Connect Request Callback Status:%d BSSID:%x
+536,II,In CM Connect Event. Listen Interval: %d Beacon Interval: %d
+537,II,CM Roaming State Stats. ReasonStatus: %d Network Type: 0x%x
+538,II,CM Connection Info. ConnectionState: %d ReasonStatus: %d
+539,II,CM Disconnect Event Reason:%d ReasonStatus:%d
+540,,Bogus Disconnect
+541,II,%d %d
+542,II,CM Set Handoff Trigger. TriggerSource: 0x%x Enable:0x%x
+543,II,CM Handoff Info. Source:0x%x ValidSource:%d
+544,,dfs_attach_target(): pDfs was not NULL
+545,,dfs_attach_target(): ath_dfs allocation failed
+546,,dfs_attach_target(): Disabling Channel NOL
+547,,dfs_attach_target(): Radar Filter Intialization Failed 
+548,,dfs_detach_target(): dfs is NULL
+549,,dfs_radar_enable(): dfs is NULL
+550,,WARNING!!! 10 minute CAC period as channel is a weather radar channel
+551,I,dfs_radar_enable(): Enabled radar detection on channel %d
+552,,: No more radar states left
+553,,dfs_control(): dfs is NULL
+554,,dfs_control(): disable detects
+555,,dfs_control(): enable detects
+556,I,dfs_control(): debug level now = 0x%x 
+557,,dfs_set_thrsholds: dfs is NULL
+558,I,Channel %d needs DFS, start CAC timer
+559,I,No DFS on channel %d
+560,,dfs_wait_time_over(): End of CAC time.. Start AP now
+561,III,cycles=%d rxclear=%d rxframe=%d
+562,II,txframe=%d extchanbusy=%d
+563,,dfs_check_chirping(): FFT buffer pointer is null or size is 0
+564,II,datalen = %d, num_fft_packets = %d, too few packets... (exiting)
+565,III,i=%d, max_index[i]=%d, max_index_lower[i]=%d,
+566,I,max_index_upper[i]=%d
+567,III,i=%d, delta_peak[i]=%d, delta_diff=%d
+568,,dfs_check_chirping(): CHIRPING_BEFORE_STRONGBIN_YES
+569,,dfs_check_chirping(): CHIRPING_BEFORE_STRONGBIN_NO
+570,II,i=%d, computed bin_count=%d
+571,,dfs_check_chirping(): CHIRPING_YES
+572,,dfs_check_chirping(): CHIRPING_NO
+573,,dfs_init_rader_filters_target(): dfs is NULL
+574,I,DFS domain=%d
+575,I,Overriding DFS domain with %d
+576,I,DFS min filter rssiThresh = %d
+577,I,DFS max pulse dur = %d ticks
+578,,dfs_getchanstate(): dfs is NULL
+579,,dfs_getchanstate(): No more radar states left.
+580,,dfs_print_nol(): dfs is NULL
+581,III,nol:%d channel=%d time left=%u
+582,II,seconds tsf=%llu, tsfree=%llu 
+583,,dfs_nol_addchan(): dfs is NULL
+584,,dfs_nol_addchan(): No memory for nol entry
+585,I,dfs_nol_addchan(): new NOL channel %d
+586,,dfs_check_nol(): dfs is NULL
+587,I,dfs_check_nol(): remove channel=%d from NOL
+588,I,ath_process_phyerr(): rs_phyer=0x%x not a radar error
+589,,ath_process_phyerr(): dfs is NULL
+590,I,datalen mod4=%d
+591,III,EARLY ext channel dur=%u rssi=%u datalen=%d
+592,III,ERROR channel dur=%u rssi=%u pulse_bw_info=0x%x
+593,I,datalen MOD 4 = %d
+594,III,RAW RSSI: rssi=%u ext_rssi=%u at line:%d
+595,III,RAW RSSI: rssi=%u ext_rssi=%u at line:%d
+596,III,pulse_bw_info=0x%x pulse_length_ext=%u pulse_length_pri=%u
+597,III,rssi=%u ext_rssi=%u phyerr=0x%x
+598,II,old dur %d slope =%d
+599,I,new dur %d
+600,II,is_chirping = %d dur=%d 
+601,,ath_process_phyerr(): DFS_RADAR_EN not enabled
+602,I, PRI Use cached copy of ext_chan_busy extchanbusy=%d 
+603,,ath_process_phyerr(): phyerr on ext channel
+604,I,Radar found on channel %d
+605,I,Changing to channel %d
+606,,dfs_action_channel_change(): Cannot change to any channel
+607,,pktlog buffer empty
+608,I,pktlog buffer empty seq_num=%d
+609,I,pktlog buffer empty seq_num=%d
+610,I,Pktlog stopped and has seen %d TCP SACK packets
+611,III,Pktlog stopped: seen %d bad packets out of %d in past %dms
+612,II,Pktlog stopped: only %d bytes thruput in past %dms
+613,II,Reached Throughput threshold(%d bytes) in %dms
+614,II,DiV set Antenna moduleID:%d newAntenna:%d
+615,,No Tx Buf pulled 
+616,,No Rx Buf pulled 
+617,,TX_DBG_TX_CUR_ADDR:
+618,II,[%d] = 0x%08x
+619,,RX_DBG_RX_CUR_ADDR:
+620,II,[%d] = 0x%08x
+621,,TX EP:
+622,II,[%d] = 0x%x
+623,,RX EP:
+624,II,[%d] = 0x%x
+625,II,TX EP %d
+626,II,RX EP %d
+627,,
+628,I,wps send failure packet failed =%d:
+629,I,WPS: Unsupported state %d for building a message
+630,,WPS: PBC overlap - deny PBC negotiation
+631,,WPS: Reject negotiation due to PBC session overlap
+632,,WPS: Received M5
+633,I,WPS: Unexpected state (%d) for receiving M5
+634,,WPS: Reject negotiation due to PBC session overlap
+635,,WPS: Failed to decrypted Encrypted Settings attribute
+636,,WPS: Processing decrypted Encrypted Settings attribute
+637,,WPS: Received M7
+638,I,WPS: Unexpected state (%d) for receiving M7
+639,,WPS: Reject negotiation due to PBC session overlap
+640,,WPS: Failed to decrypt Encrypted Settings attribute
+641,,WPS: Processing decrypted Encrypted Settings attribute
+642,,WPS: Received WSC_Done
+643,I,WPS: Unexpected state (%d) for receiving WSC_Done
+644,,WPS: No Message Type attribute
+645,I,WPS: Invalid Message Type %d
+646,,WPS: Mismatch in registrar nonce
+647,,WPS: Mismatch in enrollee nonce
+648,,WPS: Negotiation completed successfully
+649,,WPS: No Message Type attribute
+650,,WPS: Mismatch in registrar nonce
+651,I,WPS: Unsupported Message Type %d
+652,I,WPS: Unsupported op_code %d
+653,,WPS: Building Message M2
+654,,WPS: Building Message M2D
+655,,WPS: Building Message M4
+656,,WPS: Building Message M6
+657,,WPS: Building Message M8
+658,,WPS: No Authenticator attribute included
+659,,WPS: Last message not available for validating authenticator
+660,,WPS: Incorrect Authenticator
+661,,WPS: No KWA in decrypted attribute
+662,,WPS: KWA not in the end of the decrypted attribute
+663,,WPS: Invalid KWA
+664,,WPS: Credential did not include Network Index
+665,,WPS: Credential did not include SSID
+666,,WPS: Credential did not include Authentication Type
+667,,WPS: Credential did not include Encryption Type
+668,,WPS: Credential did not include Network Key
+669,,WPS: Workaround - Allow missing mandatory Network Key attribute for open network
+670,,WPS: Credential did not include MAC Address
+671,,WPS: Workaround - remove NULL termination from ASCII passphrase
+672,,No Registrar Nonce received
+673,,WPS: No Enrollee Nonce received
+674,,WPS: Invalid Enrollee Nonce received
+675,,WPS: No E-Hash1 received
+676,,WPS: No E-Hash2 received
+677,,WPS: No UUID-R received
+678,,WPS: No UUID-E received
+679,,WPS: No MAC Address received
+680,,WPS: No Authentication Type flags received
+681,I,WPS: Enrollee Authentication Type flags 0x%x
+682,II,WPS: No match in supported authentication types (own 0x%x Enrollee 0x%x)
+683,,WPS: No Encryption Type flags received
+684,I,WPS: Enrollee Encryption Type flags 0x%x
+685,,WPS: No Connection Type flags received
+686,I,WPS: Enrollee Connection Type flags 0x%x
+687,,WPS: No Config Methods received
+688,,WPS: Prefer PSK format key due to Enrollee not supporting display
+689,,WPS: No RF Bands received
+690,I,WPS: Enrollee RF Bands 0x%x
+691,,WPS: No Association State received
+692,I,WPS: Enrollee Association State %d
+693,,WPS: No Configuration Error received
+694,I,WPS: Enrollee Configuration Error %d
+695,,WPS: No Device Password ID received
+696,I,WPS: Device Password ID %d
+697,,WPS: No Wi-Fi Protected Setup State received
+698,I,WPS: Enrollee Wi-Fi Protected Setup State %d
+699,,WPS: No Public Key received
+700,,WPS: No R-Hash1 received
+701,,WPS: No R-Hash2 received
+702,,WPS: No R-SNonce1 received
+703,,WPS: R-Hash1 derived from R-S1 does not match with the pre-committed value
+704,,WPS: Registrar proved knowledge of the first half of the device password
+705,,WPS: No E-SNonce1 received
+706,,WPS: E-Hash1 derived from E-S1 does not match with the pre-committed value
+707,,WPS: Enrollee proved knowledge of the first half of the device password
+708,,WPS: No R-SNonce2 received
+709,,WPS: R-Hash2 derived from R-S2 does not match with the pre-committed value
+710,,WPS: Registrar proved knowledge of the second half of the device password
+711,,WPS: No E-SNonce2 received
+712,,WPS: E-Hash2 derived from E-S2 does not match with the pre-committed value
+713,,WPS: Enrollee proved knowledge of the second half of the device password
+714,S,WPS: MAC Address in the Credential (%s):
+715,S,does not match with own address (%s)
+716,,WPS: Reject Credential due to WEP configuration
+717,I,WPS: Reject Credential due to invalid encr_type 0x%x
+718,,WPS: No Credential attributes received
+719,,WPS: WEP credential skipped
+720,,WPS: Supports RF Single Band!
+721,,WPS: No valid Credential attribute received
+722,,**WARNING: host did not distribute all HTC buffers!
+723,III,Bad HTC Buffer : %p Data buffer : %p Len : %d
+724,II,Bad HTC hdr: htcbuf: %p ActualLen: %d
+725,,storerecall_configure_cmd
+726,I,analog config:0x%08X
+727,I,#2 analog config:0x%08X
+728,I,init event status:%08x
+729,I,status: %d
+730,,Wakeup event detected
+731,I,wakeup mgr status event = %08X
+732,II,nv clock = %08X  ticks=%08X
+733,I,_WAKEMGR_Register():  item:%p
+734,I,first cb:%p
+735,,_WAKEMGR_SetTestValue():
+736,I,0x%08X
+737,,
+738,I,Radio State Change Event:RADIO STATE %d
+739,I,RF Kill Interrupt registration failed at line no: %d
+740,,_wlan_set_led_state(): ON
+741,,_wlan_set_led_state(): OFF
+742,, MAX SESSIONS for TCP KEEPALIVE Exceeded
+743,,
+744,II,arp %x %x
+745,,ns
+746,S,buf dump: %s
+747,S,buf dump: %s
+748,S,buf dump: %s
+749,,arp+
+750,,ns+
+751,,TCP reass bad state
+752,,No route
+753,I,Socket %x max retries
+754,II,PENDING_WITH_ARP inuse %d pkt %p
+755,,Allocation failed m_buff
+756,I,PKT retry exceeded: %p
+757,II,PENDING_WITH_ARP inuse %d pkt %p
+758,,Allocation failed m_buff
+759,I,PKT retry exceeded: %p
+760,II,PKT state %d %p
+761,I,No FD for Socket %x
+762,II,write of %d bytes failed; cb_writex () returned %d
+763,II,PKT in-use already zero %x state:%d
+764,I,Unknown flags: %x
+765,I,PKT %x send failed
+766,I,PKT %x send failed
+767,I,PKT length overflow: %d
+768,I,PKT length overflow: %d
+769,I,Socket close error %d
+770,,No space to store
+771,I,Error creating socket %x
+772,S,Error starting task %s
+773,,Invalid sock type, dropping frame
+774,I,tcp_xout failed, closing socket %x
+775,I,Send failed: %d
+776,S,panic: %s
+777,II,BTCOEX_FRAME_PRI_LOW_RATE_THRES %x %x
+778,II,BTCOEX_SET_WEIGHTS %x %x
+779,I,SetCoexState: OS_REG_READ(MAC_PCU_BLUETOOTH_MODE_ADDRESS) 0x%x
+780,II,BTCOEX_DBG_INIT AntennaType:%d %x
+781,III,mode=%x mode2=%x mode3=%x
+782,II,mode4=%x mode5=%x
+783,II,BTCOEX_DBG_INIT Mode_Address:%x Mode2_Address:%x
+784,II,BTCOEX_DBG_INIT Mode3_Address:%x BtCoex_CtrlAddress:%x
+785,I,BTCOEX_DBG_INIT  Time1_Address:%x
+786,II,BTCOEX_DBG_ADDBA_INDICATION %x %x
+787,II,BTCOEX_CURR_AGGR_PROP Rate:%d SubFrames:%d
+788,,BTCOEX_RTS_RECEPTION
+789,II,BTCOEX_DBG_UPLINK_DATA %x %d
+790,I,BTCOEX_DBG_UPLINK_DATA %d
+791,,BTCOEX_DBG_NULL_FRAME_SLEEP
+792,,BTCOEX_DBG_NULL_FRAME_AWAKE
+793,II,BTCOEX_DBG_UPLINK_DATA Flags:%x btCoexFlags:%x
+794,II,BTCOEX_DBG_SCAN_REQUEST btCoexBtState:%x scanRequestEnabled:%x
+795,II,BTCOEX_DBG_ALLOW_SCAN  btCoexBtState:%x retStatus:%x
+796,I,BTCOEX_BDG_FIRST_BMISS BTCoex_Flags:%x
+797,I,BTCOEX_BDG_FIRST_BMISS %x
+798,I,BTCOEX_BDG_BMISS %x
+799,II,BTCOEX_TIM_NOTIFICATION %x %x
+800,II,BTCOEX_DBG_UPDATE_DATA_RECEIVE_STATS %x %x
+801,II,BTCOEX_DBG_UPDATE_DATA_RECEIVE_STATS %d %x
+802,II,BTCOEX_DBG_UPDATE_DATA_RECEIVE_STATS %x %d
+803,II,BTCOEX_DBG_DATA_RECV_SLEEPING_PENDING %x %x
+804,II,BTCOEX_DATARECEIVE %d %d
+805,I,BTCOEX_DBG_DATA_RECV_WAKEUP_TIM %x
+806,II,BTCOEX_DATARECEIVE %d %x
+807,I,BTCOEX_DBG_DATA_RECV_WAKEUP_TIM %x
+808,I,BTCOEX_RECV_NULL %x
+809,II,BTCOEX_DBG_A2DP_PSPOLL_DATA_RECV %x %x
+810,III,BTCOEX_DBG_SET_WLAN_STATE WLAN_State:%d btCoexFlags:%x Dev_State:%d
+811,II,BTCOEX_DBG_FE_ANT_TYPE btcoexFeAntType%x opmode:%x
+812,I,Single Ant Switch:%d
+813,I,Dual Antenna:%d
+814,I,Dual Antenna Shared with BT:%d
+815,I,Not Valid  btCoexFrontEndAntConfig:%d
+816,I,BTCOEX_DBG_COLOCATED_BT_DEV %d
+817,II,BTCOEX_DBG_BT_INQUIRY_CMD  btInquiryDataFetchFrequency:%d  protectBmissDurPostBtInquiry:%d
+818,I,BTCOEX_DBG_BT_INQUIRY_CMD %d
+819,II,BTCOEX_DBG_SCO_CONFIG scoSlots:%d scoIdleSlots:%d
+820,II,BTCOEX_DBG_SCO_CONFIG scoFlags:%x linkId:%d
+821,II,BTCOEX_DBG_SCO_PSPOLL_CONFIG scoCyclesForceTrigger:%x scoDataResponseTimeout:%d
+822,II,BTCOEX_DBG_SCO_PSPOLL_CONFIG scoStompDutyCyleVal:%x scoStompDutyCyleMaxVal:%x
+823,I,BTCOEX_DBG_SCO_PSPOLL_CONFIG %d
+824,II,BTCOEX_DBG_SCO_OPTMODE_CONFIG scoStompCntIn100ms:%d scoContStompMax:%d
+825,II,BTCOEX_DBG_SCO_OPTMODE_CONFIG scoMinlowRateMbps:%d scoLowRateCnt:%d
+826,II,BTCOEX_DBG_SCO_OPTMODE_CONFIG scoHighPktRatio:%d scoMaxAggrSize:%d
+827,II,BTCOEX_DBG_A2DP_CONFIG  Info:%x bt_a2dpFlags:%x
+828,II,BTCOEX_DBG_A2DP_PSPOLL_CONFIG a2dpWlanMaxDur:%d a2dpMinBurstCnt:%d
+829,I,BTCOEX_DBG_A2DP_PSPOLL_CONFIG a2dpDataRespTimeout:%d
+830,II,BTCOEX_DBG_A2DP_OPTMODE_CONFIG a2dpMinlowRateMbps:%d a2dpLowRateCnt:%d
+831,II,BTCOEX_DBG_A2DP_OPTMODE_CONFIG a2dpHighPktRatio:%d a2dpMaxAggrSize:%d
+832,I,BTCOEX_DBG_A2DP_OPTMODE_CONFIG a2dpPktStompCnt:%d
+833,II,BTCOEX_DBG_HID_CONFIG %x %x
+834,II,BTCOEX_DBG_HID_CONFIG %d %d
+835,III,mode=%x mode2=%x mode3=%x
+836,II,mode4=%x mode5=%x
+837,,MAC_PCU_BT_BT_ADDRESS:
+838,II,%d: %08x
+839,,MAC_PCU_BT_WL_1_ADDRESS:
+840,II,%d: %08x
+841,,
+842,II,BTCOEX_DBG_ACLCOEX_CONFIG  aclWlanMediumDur:%d aclBtMediumDur:%d
+843,II,BTCOEX_DBG_ACLCOEX_CONFIG  aclDetectTimeout:%d aclPktCntLowerLimit:%d
+844,II,BTCOEX_DBG_ACLCOEX_CONFIG  aclIterForEnDis:%d aclPktCntUpperLimit:%d
+845,I,BTCOEX_DBG_ACLCOEX_CONFIG	aclCoexFlags:%x
+846,I,BTCOEX_DBG_ACLCOEX_PSPOLL_CONFIG  aclDataRespTimeout:%d
+847,II,BTCOEX_DBG_ACLCOEX_OPTMODE_CONFIG  aclCoexMinlowRateMbps:%d aclCoexLowRateCnt:%d
+848,II,BTCOEX_DBG_ACLCOEX_CONFIG  aclCoexHighPktRatio:%d aclCoexMaxAggrSize:%d
+849,I,BTCOEX_DBG_BT_OPERATING_STATUS %x
+850,II,BTCOEX_DBG_A2DP_OPTMODE_CONFIG  Wlan_Max_Dur:%d Min_Burst_Cnt:%d
+851,II,BTCOEX_DBG_A2DP_OPTMODE_CONFIG Wlan_Max_Dur:%d Min_Burst_Cnt:%d
+852,II,BTCOEX_DBG_BT_OPERATING_STATUS scoStateFlags:%x Info:%x
+853,II,BTCOEX_DBG_GET_CONFIG  btProfileType:%d linkId:%d
+854,II,BTCOEX_DBG_MCI  CPU_INT_RX_MSG:%d  MCI_1:%d
+855,II,BTCOEX_DBG_MCI_CPU_INT_RX_MSG i:%d btcoex_context_size:%d
+856,III,_btcoexSendSelfCts: line no:%d  duration_usec:%d eol_val:%d
+857,II,_btcoexCtsCompletion: line no:%d compStatus:%d
+858,III,_btcoexApModeSwitchMediumToWlan: line no:%d  totalBtDur:%d  a2dpAvgBtDurIn100ms:%d
+859,III,_btcoexApModeSwitchMediumToBt: at line no: %d Flags:%x a2dpTotalBtDur:%d
+860,II,_btcoexApModeSetBtState: at line no: %d %x
+861,III,_btcoexApModeScoStatus:line no:%d Bt_Status:%d btCoexWlanState:%d
+862,II,_btcoexApModeScoStatus: line no: %d whalGetRxFilter() - %d
+863,II,_btcoexApModeInquiryStatus: line no: %d bt_status:%d
+864,III,_btcoexApModeA2dpStatus: line no:%d bt_status:%d btCoexWlanState:%d
+865,II,_btcoexApModeWaitForSelfCtsHandler: line no:%d apmode_flags:%x
+866,III,_btcoexApModeScoSelfCtsHandler: line no:%d eol_val:%d curr_time:%d
+867,I,_btcoexApModeBcnTxStompHandler: line no:%d
+868,I,_btcoexApModeScoRtsTimer: line no:%d
+869,II,_btcoexApModeTxDrainComplete: line no:%d dur_usecs:%d ctsDurPending:%d
+870,,_btcoexMacReset
+871,II,BTCOEX_SET_WEIGHTS	weights:%x wlWghtVal:%x
+872,II,BTCOEX_DBG_PM_AWAKE  pmWakeupCnt:%d btCoexFlags:%x
+873,II,BTCOEX_DBG_PM_SLEEP   pmWakeupCnt:%d btCoexFlags:%x
+874,III,_btcoexPmFakeSleepWghtSelect: line no:%d FakeSleepEnable:%x IS_FAKE_SLEEP_ENABLED:%x
+875,II,_btcoexPmFakeSleepWghtSelect: line no:%d discardTime:%x
+876,II,_btcoexPmFakeSleepWghtSelect: line no:%d discardTime:%x
+877,III,_btcoexPmFakeSleepWghtSelect:line no:%d %x %d
+878,II,_btcoexTrailerFrameStatsUpdate: FakeSleepEnableTrailerFrameTime:%d FakeSleepEnableTime: %d
+879,II,_btcoexSetAggrSize:  RxbufferSize:%d a2dpFlags:%x
+880,II,_btcoexBtInquiryDataFetchHandler: BTCOEX_INQUIRY_CONFIG_DATA_FETCH_FREQ(): %d btCoexFlags %x
+881,,_btcoexBmissProtectPostInqHandler
+882,I,_btcoexDataRespTimeoutHandler: line no:%d
+883,I,_btcoexDataRespTimeoutHandler: line no:%d
+884,II,_btcoexDataActivityTimeoutHandler:line no:%d  btCoexFlags:%x
+885,II,_btcoexDataActivityTimeoutHandler:line no:%d IS_PM_Module:%x
+886,II,_btcoexOptModeDetectHandler:  a2dpTotalBurstIn100ms:%d a2dpIteration:%d
+887,II,_btcoexOptModeDetectHandler: a2dpAvgBurstIn100ms:%d a2dpAvgBurstIn500ms:%d
+888,II,_btcoexOptModeDetectHandler: cntTo500ms:%d a2dpSumAvgBurstTo500ms:%d
+889,I,_btcoexOptModeDetectHandler: a2dpAvgBurstIn500ms:%d
+890,I,_btcoexOptModeDetectHandler: veryLowDataRateCount:%d
+891,II,_btcoexOptModeDetectHandler: uplinkDataCnt:%d scoStompCntIn100ms:%d
+892,II,_btcoexOptModeDetectHandler: highRatePktRatio:%d totalReceivePktCnt:%d
+893,II,_btcoexOptModeDetectHandler: lowDataRateCount:%d veryLowDataRateCount:%d
+894,II,_btcoexUpdateDataReceiveStats: bAggr:%x bMoreAggr:%x
+895,II,_btcoexUpdateDataReceiveStats:  rx_unicastRateKbps:%d rxseq:%d
+896,II,_btcoexBtInquiryStatus:  status:%d btCoexFlags:%x
+897,II,BTCOEX_SET_EOL_VAL eolVal:%d wbSyncVal:%d
+898,II,BTCOEX_SET_EOL_VAL  sco_dur:%x sco_half_idle_time:%x
+899,I,BTCOEX_PSPOLL_QUEUED %x
+900,,BTCOEX_PSPOLL_PROCESS
+901,I,BTCOEX_PSPOLL_QUEUED %x
+902,II,_btcoexPspollCompletion: compStatus: %d devid = %d
+903,I,In _btcoexPmAwakeNotify: line no:%d
+904,I,In _btcoexPmSleepNotify:line no:%d
+905,I,BTCOEX_NULL_COMP_CALLBACK %x
+906,II,BTCOEX_NULL_COMP_CALLBACK status:%d  coexModeEnablePending:%d
+907,I,In _btcoexDTIMHandler:line no:%d
+908,II,BTCOEX_WAKEUP_ON_DATA btCoexFlags:%x pmWakeupCnt:%d
+909,II,BTCOEX_SCO_WAKEUP_ON_DATA  btCoexFlags:%x scoStateFlags:%x
+910,II,BTCOEX_WAKEUP_ON_DATA %x %d
+911,I,BTCOEX_SCO_WAKEUP_ON_DATA btCoexFlags:%x
+912,II,BTCOEX_SCO_WAKEUP_ON_DATA  btCoexFlags:%x scoStateFlags:%x
+913,I,BTCOEX_DBG_GO_TO_SLEEP %d
+914,III,_btcoexBtActivity:line no:%d priority:%d aclPktCnt:%d
+915,III,_btcoexBtActivity:line no:%d priority: %d aclPktCnt:%d
+916,III,_btcoexBtActivity:line no:%dpriority: %d aclPktCnt:%d
+917,I,_btcoexBtStomp: priority: %d
+918,II,_btcoexAclCoexStatus: %x ic_opmode: %d
+919,I,BTCOEX_ACL_COEX_DETECTION bEnable: %d
+920,III,_btcoexAclTrafficPresenceTimeoutHandler: line no:%d aclPktCnt:%d aclLowerLimitValue:%d
+921,III,_btcoexAclTrafficPresenceTimeoutHandler: line no:%d aclPktCntReachThresh:%d aclPktCntNotReachThresh:%d
+922,III,_btcoexAclTrafficPresenceTimeoutHandler: line no:%d aclPktCnt:%d aclLowerLimitValue:%d
+923,III,_btcoexAclTrafficPresenceTimeoutHandler: line no:%d aclPktCntReachThresh:%d aclPktCntNotReachThresh:%d
+924,I,BTCOEX_DBG_ACL_BT_MED aclCoexFlags: %x
+925,I,BTCOEX_DBG_ACL_BT_MED coexModeEnablePending:%d
+926,I,BTCOEX_DBG_ACL_WLAN_MED %x
+927,II,BTCOEX_A2DP_COEX_STATUS btCoexFlags:%x status:%d
+928,,a2dp coex on
+929,,Status off
+930,I,BTCOEX_DBG_A2DP_STOMP_BT %d
+931,I,BTCOEX_DBG_A2DP_PKT %d
+932,,BTCOEX_DBG_A2DP_PKT
+933,II,BTCOEX_DBG_A2DP_NOSYNC_SWITCH_2_WLAN %d %x
+934,I,BTCOEX_DBG_A2DP_SLAVE_BT_END %d
+935,,a2dp coex on
+936,,BTCOEX_DBG_A2DP_DUAL_START
+937,I,BTCOEX_DBG_PERFORM_RECONNECT %x
+938,I,BTCOEX_DBG_PERFORM_RECONNECT %x
+939,II,BTCOEX_DBG_A2DP_STOMP_FOR_BCN_RECEPTION  btCoexFlags:%x a2dpFlags:%x
+940,I,BTCOEX_DBG_A2DP_CHAN_OP btCoexFlags:%x
+941,II,BTCOEX_DBG_A2DP_BT_START  btCoexFlags:%x a2dpFlags:%x
+942,II,BTCOEX_DBG_A2DP_USAGE_COMPLETE  btCoexFlags:%x a2dpFlags:%x
+943,I,BTCOEX_DBG_A2DP_USAGE_COMPLETE %x
+944,II,BTCOEX_DBG_A2DP_USAGE_COMPLETE  btCoexFlags:%x a2dpFlags:%x
+945,II,BTCOEX_DBG_A2DP_STOMP_FOR_BCN_HANDLER  btCoexFlags:%x a2dpFlags:%x
+946,I,BTCOEX_DBG_A2DP_FORCE_SCAN %d
+947,,BTCOEX_DBG_DTIM_STOMP_COMP
+948,II,BTCOEX_SCO_STATUS %d %x
+949,II,BTCOEX_DBG_SCO_GET_PER_TIME_DIFF %x %x
+950,I,BTCOEX_DBG_SCO_SYNC %d
+951,II,BTCOEX_DBG_APMODE_SCO_ARM_TIMER %d %d
+952,I,BTCOEX_PTA_PRI_INTR_HANDLER %x
+953,II,BTCOEX_SCO_STOMP %d %d
+954,I,BTCOEX_SCO_SLEEP pmWakeupCnt:%d
+955,I,BTCOEX_DBG_SCO_COEX_ON %x
+956,I,BTCOEX_SCO_MEASURE_TIME_DIFF  %d %x
+957,II,BTCOEX_SCO_MEASURE_TIME_DIFF %d %d
+958,II,BTCOEX_DBG_SWITCH_TO_PSPOLL_ON_MODE  btCoexFlags:%x a2dpFlags:%x
+959,II,BTCOEX_DBG_SWITCH_TO_PSPOLL_OFF_MODE  btCoexFlags:%x a2dpFlags:%x
+960,II,BTCOEX_SCO_TOGGLE_STATE  btCoexFlags:%x a2dpFlags:%x
+961,I,BTCOEX_DBG_WLAN_CONNECT %d
+962,II,BTCOEX_STATUS_CMD %d %d
+963,,BTCOEX_DBG_NULL_FRAME_COMPLERION_TO
+964,I,BTCOEX_DGB_NULL_FRAME_COMPLETION  compStatus:%d
+965,I,BTCOEX_HID_STATUS %d
+966,I,BTCOEX_HID_SCHEME1 %x
+967,I,BTCOEX_HID_SCHEME1 %x
+968,I,BTCOEX_HID_SCHEME2 %x
+969,I,BTCOEX_HID_SCHEME2 %x
+970,II,BTCOEX_DBG_MCI_6 %d %d
+971,II,BTCOEX_DBG_MCI_7 %d %d
+972,I,BTCOEX_DBG_MCI_5 %x
+973,I,BTCOEX_DBG_CO_SELECT_CB %d
+974,II,BTCOEX_DBG_CO_RUN_CB %d %d
+975,I,BTCOEX_DBG_CO_FINISH_CB %d
+976,II,BTCOEX_DBG_SET_AGGR_SIZE %d %d
+977,I,BTCOEX_DBG_QUEUE_SELF_CTS %d
+978,II,BTCOEX_DBG_SCO_SYNC %x %d
+979,II,BTCOEX_DBG_SCO_SYNC %x %d
+980,I,BTCOEX_DBG_SCO_SYNC %x
+981,II,BTCOEX_DBG_SCO_SYNC %x %d
+982,II,BTCOEX_DBG_SCO_SYNC %x %x
+983,II,BTCOEX_DBG_SCO_SYNC %d %x
+984,II,BTCOEX_DBG_SCO_SYNC %d %x
+985,II,BTCOEX_RX_INCOMING Status0_Addr:%x Status1_Addr:%x
+986,II,BTCOEX_RX_INCOMING_CTL Status0_Addr:%x Status1_Addr:%x
+987,II,BTCOEX_RX_INCOMING_MGMT Status0_Addr:%x Status1_Addr:%x
+988,II,BTCOEX_RX_INCOMING_DATA Status0_Addr:%x Status1_Addr:%x
+989,,Rx
+990,II,_btcoexIntrInit btcoex_Ctrl_Addr:%x WBSync_Priority1_Addr:%x
+991,,WARNING: MCI stubbed out
+992,II,_btcoexA2dpIntrs %x %x
+993,II,_btcoexA2dpIntrs Enable:%d IntrMask:%x
+994,II,_btcoexSyncIntrHandler  btCoexFlags:%x a2dpFrameCnt:%d
+995,I,BTCOEX_DBG_MCI_8  aclLongPktCnt:%d
+996,II,BTCOEX_DBG_A2DP_SYNC_INTR	btCoexFlags:%x a2dpFrameCnt:%d
+997,II,BTCOEX_DBG_A2DP_SYNC_INTR curr_time:%d last_timestamp:%d
+998,II,BTCOEX_DBG_A2DP_ROLE_IS_MASTER  diff:%d a2dpFlags:%x
+999,II,BTCOEX_DBG_A2DP_SYNC_INTR  btCoexFlags:%x a2dpFlags:%x
+1000,II,BTCOEX_DBG_A2DP_MASTER_BT_END  btCoexFlags:%x a2dpFrameCnt:%d
+1001,II,_btcoexNoSyncIntrHandler  btCoexFlags:%x a2dpNoSyncCnt:%d
+1002,I,_btcoexNoSyncIntrHandler  a2dpFlags:%x
+1003,II,BTCOEX_DBG_A2DP_ROLE_IS_SLAVE  diff:%d a2dpFlags:%x
+1004,I,_btcoexPriorityIntrHandler aclPktCnt:%d
+1005,II,BTCOEX_DBG_A2DP_NULL  btCoexFlags:%x a2dpFlags:%x
+1006,,BTCOEX_DBG_SCO_STOMP_LOW_PRI
+1007,,BTCOEX_DBG_SCO_STOMP_HIGH_PRI
+1008,II,BTCOEX_DBG_SCO_STOMP_LOW_PRI  currTimeStamp:%x wbSyncVal:%d
+1009,II,BTCOEX_DBG_SCO_STOMP_HIGH_PRI  currTimeStamp:%x wbSyncVal:%d
+1010,II,BTCOEX_DBG_SCO_STOMP_HIGH_PRI  currTimeStamp:%x wbSyncVal:%d
+1011,II,BTCOEX_DBG_A2DP_STOMP_LOW_PRIO_NULL  btCoexFlags:%x a2dpFlags:%x
+1012,I,Pta init, rx_intr=%x
+1013,II,BTCOEX_DBG_WBTIMER_INT_SET %d %x
+1014,I,Timer %x
+1015,I,BTCOEX_DBG_MCI_6 %x
+1016,III,+CE WHAL_M_AP:%d devState:%d rfbEnabled:%d
+1017,I,+Chn%d
+1018,II,+Bl devState:%8x curChanIdx:%d
+1019,II,-Bl curChanIdx:%d bChannelIdx:%d
+1020,III,++BM  bmiss:%d rssi:%d bRssiThold:%d
+1021,I,++BM devState:%8x
+1022,II,--BMXX rssi:%d devState:%8x
+1023,III,OB rssi:%d chanIdx:%d homeChanIdx:%d 
+1024,II, -RF new_quot:%d old_quot:%d
+1025,I,Z1 devState:%8x
+1026,II,LPL_DBG_RATEFALL %x %x
+1027,II,506:LPL_DBG_RATEFALL old_quot:%d new_quot:%d
+1028,I,Z2 %8x
+1029,II,LPL_DBG_RATEFALL %x %x
+1030,II,512:LPL_DBG_RATEFALL old_quot:%d new_quot:%d
+1031,I,Z3 %8x
+1032,II,LPL_DBG_RATEFALL %x %x
+1033,II,521:LPL_DBG_RATEFALL old_quot:%d new_quot:%d
+1034,I,--Z %8x
+1035,II,526:LPL_DBG_RATEFALL old_quot:%d new_quot:%d
+1036,II,LPL_DBG_RATEFALL %x %x
+1037,II,535:LPL_DBG_RATEFALL rfbCount:%d rfbGood:%d
+1038,,+RF@@@
+1039,,RFBE
+1040,,RFBE+
+1041,,RFBE-
+1042,,FORCE***
+1043,I,LPL_DBG_FORCE_CMD lplPolicy:%d
+1044,I,LPL_DBG_FORCE_BDOFF %d
+1045,I,LPL_DBG_FORCE_RFBOFF %d
+1046,,-H 
+1047,,+H
+1048,,+E
+1049,,++E
+1050,,-E
+1051,,+I
+1052,I,LPL_DBG_LOG_MEM_ALLOC_FAILED %d
+1053,I,-I %d
+1054,,+Atch
+1055,I,LPL_DBG_LOG_MEM_ALLOC_FAILED %d
+1056,,-Atch
+1057,II,p2p_go_fw_ps_event_handler_id Event:%d LogInfo:%x
+1058,,P2P GO Check-All-Sta Sleep
+1059,II,p2p_go_set_oppPS_id BuffEnable:%d CT-Window:%d
+1060,I,p2p_go_set_noa_id  Enable:%d
+1061,II,p2p_go_set_noa_id NoA_Interval:%d NoA Start_Offset:%d
+1062,III,Add Noa idx %d, cnt %d, schnum = %d
+1063,III,Add Noa2 duration:%u, interval:%u, start_or_offset:%u
+1064,I, curr_tsf:%u
+1065,I,Del Noa index %d
+1066,II,p2p_notify_GO_state_change_id GO_Present:%x TimeoutMs:%x
+1067,II,p2p_notify_GO_state_change_id GO_Present:%x bOppPS:%x
+1068,II,p2p_process_schedule_id Next_Timeout:%d GO_Awake:%x
+1069,II,p2p_go_ps_schedule_id Num_Schedules:%d OneShotNoA:%x
+1070,I,p2p_go_fw_update_noa_id  type_count:%d
+1071,II,p2p_fw_get_max_timeout_id Type_Count:%d MaxTimeout:%x
+1072,II,p2p_go_ps_schedule_id  next_timeout:%d Info:%x
+1073,II,p2p_grp_init_id GroupFormation:%d CountryCode:%p
+1074,I,p2p_node_age_timeout_id  p2p_dev_count:%d
+1075,,P2P Find Timeout
+1076,I,p2p_fsm_timeout_id  state:%d
+1077,I,p2p_go_neg_failed_id  status:%d
+1078,II,p2p_go_complete_id  GO:%d WPS_Method:%d
+1079,II,p2p_fw_update_go_schedule_id  NoA_IE_CTWindow:%d NoA_IE_Descriptors:%d
+1080,I,p2p_set_powermode_id mode:%d
+1081,,P2P Feature Not Initialized 
+1082,I,p2p_profile_enable_id  enable:%d
+1083,,Unknown state
+1084,,P2P Join
+1085,II,p2p_begin_go_neg_id  GO_Intent:%d WPS_Method:%d
+1086,II,p2p_find_id Type:%d Timeout:%x
+1087,II,p2p_cancel_id Info:%p state:%d
+1088,SII,Country %s, Intent %d, Channel %d 
+1089,II,p2p_invite_id Role:%d WPS_Method:%d
+1090,I,p2p_go_neg_req_cb_id  status:%d
+1091,II,p2p_send_action_cb_id Pending_Action:%d Status:%d
+1092,I,p2p_send_action_start_id  pending_action_state:%d
+1093,II,opmode %x subobmode %x
+1094,I,p2p_set_cmd_id config_id:%d
+1095,,conn ptr null 
+1096,, mem not avail for nodelist
+1097,II,p2fp %d om %d
+1098,II,opmode %x subobmode %x
+1099,II,p2p_build_prov_disc_req_id  Config_Method:%p Len:%d
+1100,I,p2p_process_prov_disc_resp_id  config_methods:%d
+1101,,P2P Device Discovery Request
+1102,,P2P Device Discovery Response
+1103,I,p2p_process_dev_disc_req_id  device_id:%d
+1104,,P2P GO Discovery Request
+1105,II,p2p_process_go_neg_conf_id Status:%d WPS_Method:%d
+1106,II,p2p_process_go_neg_conf_id Status:%d PeerInfo:%x
+1107,II,p2p_process_go_neg_conf_id WPS_Method:%d PeerInfo:%x
+1108,I,p2p_invitation_complete_id  status:%d
+1109,II,p2p_process_invitation_req_id Status:%d Channel:%d
+1110,I,p2p_process_invitation_resp_id status:%d
+1111,,802.11v enable/disable command failed
+1112,,Failed to set 802.11v AP bss max idle period.
+1113,,Failed to set station WNM sleep period
+1114,,Failed to set AP WNM sleep response
+1115,,Received BSS max idle period from AP
+1116,,Sent WNM sleep response to station
+1117,,Station entered WNM sleep moe
+1118,,Station exited WNM sleep mode
+1119,,Received WNM sleep request
+1120,,Received WNM sleep response
+1121,,Re-sent WNM sleep request
+1122,I,app_start(): A_INIT() FAILED at line:%d
+1123,,_init_sharing_flash_partition_table(): init
+1124,II,Erasing partition %d (%d bytes):
+1125,,.
+1126,,Done
+1127,III,Partition %d: offset: %08x, size: %08x
+1128,S, %s
+1129,III,Partition: %d, _partition_start_current = %x, ota_partition_addr = %x
+1130,III,Partition:%d Addr:%x Magic Number %x
+1131,I,Rank %d
+1132,,_ota_partition_select_upgrade_partition(): No upgradable partition available.
+1133,I,Highest rank: %d
+1134,I,Upgrade partition: %d
+1135,,Checksum Verified
+1136,,_ota_partition_verify_checksum(): Checksum Error
+1137,I,current_partition = %d 
+1138,I,upgrade_partition = %d 
+1139,I,Sending Message :%d to Host/App...
+1140,,Session inactive, free packet
+1141,II,Image overflow! wrote %d bytes, rejecting next %d bytes
+1142,,.
+1143,I,Image Received, total bytes: %d
+1144,,Underflow detected
+1145,,Server Request RRQ Timeout.Resending ...
+1146,,Sending Ack ACK Timeout.Resending %d
+1147,,OTA RRQ Packet alloc failed
+1148,I,OTA RRQ Packet LEN %d 
+1149,IIII,Sending to address %u.%u.%u.%u
+1150,,_ota_tftp_pkt_error(): OTA ERROR Packet alloc failed
+1151,,_ota_tftp_pkt_ack(): OTA ACK Packet alloc failed
+1152,,_ota_tftp_init(): Failed registering OTA up-call
+1153,I,Got IP address %08x
+43690,II,PM P2P State1 %x %d
+43691,II,PM P2P State1 %x %d
+43692,I,Current NAV is %d, reset it
+43694,,wmi_target: get available channels cmd
+43695,II,WMI Send Complete: EventClass:%d (Pending:%d) 
+43696,I,WMI Send Complete: calling direct-buffer completion : 0x%X 
+43697,III,WMI_SendEvent: EventID: 0x%4.4X, class:%d action:%d
+43698,I,WMI_SendEvent: Pending wmi events:%d
+43699,I,WARNING. TODO: abf need to be copied for dev=%d
+43700,I,Send PNO event to host bProfileMatch =%d
+43701,II,CM Disconnect Event Reason:%d ReasonStatus:%d
+43702,,Bogus Disconnect
+43703,II,%d %d
+43704,II,CM Connect Request Callback Status:%d BSSID:%x
+43705,, Buffers unavailable to handle data..!!
+43706,I,Tx Pause UAPSD Triggered Data %x
+43707,I,Tx Pause UAPSD Triggered Data %x
+43708,II,txq->axq_qnum = %d, txq->axq_depth = %d
+43709,II,_co_chanop_state_dev_pause(): Value = 0x%x BT DutyCycle = 0x%x
+43710,II,_co_chanop_state_Dev_pause(): Offset = %d Duration=0x%x
+43711,II,Interval: 0x%x Count:%d
+43712,I,_co_chanop_state_dev_pause(): NOA index = %d
+43713,II,GREENTX_DBG_BACKOFF_DECR  currBackOff:%d retries:%d
+43714,II,GREENTX_DBG_BACKOFF_INCR  currBackOff:%d retries:%d
+43715,II,GREENTX_DBG_BACKOFF_DECR  Info:%x forceBackOff:%d
+43716,II,GREENTX_DBG_BACKOFF_DECR  Info:%x currBackOff:%d
+43717,II,dev:0x%x cmd:0x%x
+43718,III,frameType:%d: trafficClass:%d maxRetries:%d
+43719,S,Skipping MODE - %s
+43720,, mem not avail for nodelist
+43721,I,p2p_go_neg_req_cb_id  status:%d
+43722,II,p2p_process_go_neg_conf_id Status:%d PeerInfo:%x
+43723,,P2P Device Discovery Request
+43724,,Open Auth Failed
+43725,II,RO_REFRESH_ROAM_TABLE Info %d %p
+43726,I,RO_BMISS_STATE2  RSSI:%d BmissCount:%d
+43727,I,RO_BMISS_STATE2 RSSI:%d
+43728,II,RO_BMISS_STATE1  RSSI:%d BMissCount:%d
+43729,I,RO_BMISS_STATE1 RSSI:%d
+43730,I,TCP KA offload enable=%d
+43731,,Send TCP KA packet
+43732,,Send TCP KA packet failed
+43733,I,TCP KA offload event reason =%d
+43734,,Receive TCP KA ACK
+43735,II,ar6000WriteMacBBRegs(): freqIndex = %d modeIndex = %d 
+43736,,Invalid sock type, dropping frame
+43737,I,tcp_xout failed, closing socket %x
+43738,I,Send failed: %d
+43739,I,Unknown flags: %x
+43740,I,PKT %x send failed
+43741,I,PKT %x send failed
+43742,III,patch_BTCOEX_EnableCoexCmd: enable=%d mode=%d param1=%d 
+43743,III,profile=%d param2=%d antcfg=%d
+43744,III,BTCOEX_DBG_SET_WLAN_STATE WLAN_State:%d btCoexFlags:%x Dev_State:%d
+43745,,SapOn
+43746,,SapOff
+43747,,Idle
+43748,,ConnStart
+43749,,Conn!
+43750,I,coex cc to g %d
+43751,I,coex cc to a %d
+43752,I,_BTCOEX_BmissNotify  MAC_PCU_BMISS_TIMEOUT_ADDRESS:%x
+43753,I,_BTCOEX_FirstBmissNotify  MAC_PCU_BMISS_TIMEOUT_ADDRESS:%x
+43754,I,BTCOEX_DBG_BT_OPERATING_STATUS %x
+43755,II,patch_btcoex_SchemeSelect event 0x%x btType 0x%x
+43756,II,BTCOEX_DBG_CO_RUN_CB %d %d
+43757,I,BTCOEX_DBG_CO_FINISH_CB %d
+43758,II,BT WEIGHT OVERRIDE [%d]: 0x%08x
+43759,II,WL WEIGHT OVERRIDE [%d]: 0x%08x
+43760,I,patch_btcoexSetCoexWghts weights 0x%x
+43761,II,BTCOEX_SET_WEIGHTS	weights:%x wlWghtVal:%x
+43762,,BTCOEX_DBG_NULL_FRAME_COMPLERION_TO
+43763,III,_btcoexSetAggrSize:  RxbufferSize:%d a2dpFlags:%x rxAggarState:%x
+43764,I,SetCoexState: OS_REG_READ(MAC_PCU_BLUETOOTH_MODE_ADDRESS) 0x%x
+43765,II,Fatal exception (%d): pc=0x%x 
+43766,II,badvaddr=0x%x dump area=0x%x
+43767,II,epc1=0x%x, epc2=0x%x 
+43768,II,epc3=0x%x, epc4=0x%x
+43769,,No route
+43770,I,Socket %x max retries
+43771,II,PENDING_WITH_ARP inuse %d pkt %p
+43772,,Allocation failed m_buff
+43773,I,PKT retry exceeded: %p
+43774,II,PENDING_WITH_ARP inuse %d pkt %p
+43775,,Allocation failed m_buff
+43776,I,PKT retry exceeded: %p
+43777,II,PKT state %d %p
+43778,II,RX_DIAG_RECV_ICMP  dev_id:%d icmp_seq:%x
+

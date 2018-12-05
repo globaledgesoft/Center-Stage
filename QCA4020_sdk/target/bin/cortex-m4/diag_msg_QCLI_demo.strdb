@@ -1,0 +1,115 @@
+#Copyright (c) 2016 by Qualcomm Technologies Incorporated. All Rights Reserved. 
+
+#<Diag String Database>
+
+3388457109:0x%08X
+
+3881020545:GLINK open failed
+
+328253558:MAC PROGRAM ERROR: unknown driver error
+
+749809027:rodata = %d
+
+994539013:Invalid len=%d
+
+201632902:ATH_REG_OP_RMW: Driver_ReadRegDiag fail %d
+
+2453505665:
+DBGLOGS dropped in FW: %d
+4107333003:Net: Tunables not found. Falling back to defaults.
+
+380221709:channel number is invalid
+
+530298382:Custom_Platform_Tunable_Init(): error
+2360976659:ATH_REG_OP_READ: Driver_ReadRegDiag fail %d
+
+1099217557:Net: Socket info alloc failed
+
+540202007:malloc fail
+
+1683116429:Atheros ERROR: mediactl command not valid. command_id=0x%x
+
+905735321: Pool updated : %d
+
+3356571546:MAC PROGRAM ERROR: the driver was unable to complete the request.
+
+2576769185:0x%08X 
+4214398359:
+Diag print failed for pktlog...!!
+3019058981:
+PKTLOG pkt size: %d
+544864678:TX status Host Pending
+
+2242098601:MAC PROGRAM SUCCESS.
+
+2021387946:Net: Socket command %d timed out
+
+1623134509:DIAG:RSP 0
+
+1142784945:
+DBGLOG pkt size: %d
+1015469749:text = %d
+
+1623012918:data = %d
+
+3288320313:TX Idle
+
+3734280765:Net: NS alloc failed
+
+2891686974:Command Failed
+
+4045254709:MAC PROGRAM ERROR: the firmware failed to program the mac address.
+
+1630884673:heap remaining = %d
+
+1797171266:driver ioctl error
+
+1350359862:value=%08x
+
+3014689505: possibly the same MAC address is already programmed.
+
+568518218:ATH_REG_OP_WRITE: Driver_WriteRegDiag fail %d
+
+2213559115:MAC PROGRAM ERROR: Device unknown failure.
+
+923109197:
+ Diag print failed...!!
+3370581327:invalid index value
+
+1123038163:firmware memory stats:
+
+4147283029:invalid max profiles value
+
+1321387993:Invalid MAC address length
+
+499178331:bss = %d
+
+1449662685:Net: Socket function alloc failed
+
+2153867235:Crypto: Tunables not found. Falling back to defaults.
+
+3048478397:diag_cli_process_pkt: received invalid command 
+
+3101465195:
+Custom_Platform_Assert_Handler(): driver assert at line: %d Error: %d 
+
+2361855211:Net: DNSc socket open failed
+
+1783007983:GLINK Q rx intent failed %d
+
+4033816689:Net: Socket handle alloc failed. max# %d
+
+2025813746:Invalid character
+
+3665909621:ATH_REG_OP_RMW: Driver_WriteRegDiag fail %d
+
+3585259510:DIAG:no rsp buf match
+
+1726784631:Net: NS info alloc failed
+
+655963001:literals = %d
+
+4271267962:Invalid result
+
+242174741:TX status WIFI Pending 
+

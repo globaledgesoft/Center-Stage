@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.qualcomm.com/iot"
+    xmlns:tns="http://www.qualcomm.com/iot">
+
+    <element name="iot">
+        <complexType>
+            <all>
+                <element name="metadata" type="tns:complex_metadata"/>
+                <element name="general_properties" type="tns:complex_general_properties"/>
+                <element name="parsegen" type="tns:complex_parsegen"/>
+                <element name="images_list" type="tns:complex_images_list" />
+                <element name="data_provisioning" type="tns:complex_data_provisioning"/>
+            </all>
+        </complexType>
+    </element>
+
+    <complexType name="complex_metadata">
+        <all>
+            <element name="chipset" type="string" maxOccurs="1" minOccurs="0" default="default"/>
+            <element name="version" type="string" maxOccurs="1" minOccurs="0" default="1.0"/>
+        </all>
+    </complexType>
+
+    <complexType name="complex_general_properties">
+        <all>
+            <element name="selected_cert_config" type="string" maxOccurs="1" minOccurs="0" default="iot"/>
+            <element name="selected_signer" type="string" maxOccurs="1" minOccurs="0" default="base"/>
+            <element name="max_cert_size" type="int" maxOccurs="1" minOccurs="0" default="2048"/>
+            <element name="key_size" type="int" maxOccurs="1" minOccurs="0" default="2048"/>
+            <element name="exponent" type="int" maxOccurs="1" minOccurs="0" default="257"/>
+            <element name="num_certs_in_certchain" type="int" maxOccurs="1" minOccurs="0" default="2"/>
+            <element name="num_root_certs" type="int" maxOccurs="1" minOccurs="0" default="1"/>
+            <element name="max_num_root_certs" type="int" maxOccurs="1" minOccurs="0" default="1"/>
+            <element name="msm_part" type="string" maxOccurs="1" minOccurs="0" default="0x00000000"/>
+            <element name="sw_id" type="string" maxOccurs="1" minOccurs="0" default="0x0000000000000000"/>
+            <element name="oem_id" type="string" maxOccurs="1" minOccurs="0" default="0x0000"/>
+            <element name="model_id" type="string" maxOccurs="1" minOccurs="0" default="0x0000"/>
+            <element name="soc_hw_version" type="string" maxOccurs="1" minOccurs="0" default="0x00000000"/>
+            <element name="in_use_soc_hw_version" type="int" maxOccurs="1" minOccurs="0" default="0"/>
+            <element name="use_serial_number_in_signing" type="int" maxOccurs="1" minOccurs="0" default="0"/>
+            <element name="debug" type="string" maxOccurs="1" minOccurs="0" default="0x0000000000000000"/>
+            <element name="hash_algorithm" type="string" maxOccurs="1" minOccurs="0" default="sha256"/>
+            <element name="segment_hash_algorithm" type="string" maxOccurs="1" minOccurs="0" default="sha256"/>
+            <element name="rsa_padding" type="string" maxOccurs="1" minOccurs="0" default="pkcs"/>
+            <element name="hmac" type="boolean" maxOccurs="1" minOccurs="0" default="true"/>
+            <element name="secboot_version" type="string" maxOccurs="1" minOccurs="0" default="1.0"/>
+            <element name="oem_sign" type="boolean" maxOccurs="1" minOccurs="0" default="true"/>
+            <element name="dsa_type" type="string" maxOccurs="1" minOccurs="0" default="rsa"/>
+        </all>
+    </complexType>
+
+    <complexType name="complex_parsegen">
+        <all>
+            <element name="image_types_list" type="tns:complex_image_types_list" maxOccurs="1" minOccurs="0"/>
+        </all>
+    </complexType>
+
+    <complexType name="complex_image_types_list">
+        <sequence>
+            <element name="image_type" type="tns:complex_image_type" maxOccurs="unbounded" minOccurs="0"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="complex_image_type">
+        <all>
+            <element name="file_type" type="string" maxOccurs="1" minOccurs="0" default="elf"/>
+            <element name="mbn_properties" type="tns:complex_mbn_properties" maxOccurs="1" minOccurs="0" />
+            <element name="elf_properties" type="tns:complex_elf_properties" maxOccurs="1" minOccurs="0"/>
+        </all>
+        <attribute name="id" type="string" use="required"/>
+    </complexType>
+
+    <complexType name="complex_mbn_properties">
+        <all>
+            <element name="header_size" type="int" />
+        </all>
+    </complexType>
+
+    <complexType name="complex_elf_properties">
+        <all>
+            <element name="max_elf_segments" type="int" maxOccurs="1" minOccurs="0"/>
+            <element name="hash_seg_placement" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="image_type" type="int" maxOccurs="1" minOccurs="0" default="0"/>
+            <element name="has_hash_table" type="boolean" maxOccurs="1" minOccurs="0" default="true"/>
+            <element name="validate_ph_addrs" type="boolean" maxOccurs="1" minOccurs="0" default="true"/>
+            <element name="validate_vir_addrs" type="boolean" maxOccurs="1" minOccurs="0" default="false"/>
+        </all>
+    </complexType>
+
+    <complexType name="complex_data_provisioning">
+        <all>
+            <element name="base_path" type="string" maxOccurs="1" minOccurs="0"
+                     default="./../../resources/data_prov_assets/"/>
+        </all>
+    </complexType>
+
+    <complexType name="complex_images_list">
+        <sequence>
+            <element name="image" type="tns:complex_image" maxOccurs="unbounded" minOccurs="1" />
+        </sequence>
+    </complexType>
+
+    <complexType name="complex_image">
+        <all>
+            <element name="general_properties_overrides" type="tns:complex_general_properties_overrides" />
+        </all>
+        <attribute name="sign_id" type="string" use="required" />
+        <attribute name="image_type" type="string" use="required" />
+        <attribute name="name" type="string" use="optional" />
+        <attribute name="cert_config" type="string" use="optional" />
+        <attribute name="output_file_name" type="string" use="optional" />
+    </complexType>
+
+    <complexType name="complex_general_properties_overrides">
+        <all>
+            <element name="selected_cert_config" type="string" maxOccurs="1" minOccurs="0" />
+            <element name="selected_signer" type="string" maxOccurs="1" minOccurs="0" />
+            <element name="max_cert_size" type="int" maxOccurs="1" minOccurs="0" />
+            <element name="key_size" type="int" maxOccurs="1" minOccurs="0" />
+            <element name="exponent" type="int" maxOccurs="1" minOccurs="0" />
+            <element name="num_certs_in_certchain" type="int" maxOccurs="1" minOccurs="0" />
+            <element name="num_root_certs" type="int" maxOccurs="1" minOccurs="0" />
+            <element name="max_num_root_certs" type="int" maxOccurs="1" minOccurs="0" />
+            <element name="msm_part" type="string" maxOccurs="1" minOccurs="0" />
+            <element name="sw_id" type="string" maxOccurs="1" minOccurs="0" />
+            <element name="oem_id" type="string" maxOccurs="1" minOccurs="0" />
+            <element name="model_id" type="string" maxOccurs="1" minOccurs="0" />
+            <element name="soc_hw_version" type="string" maxOccurs="1" minOccurs="0" />
+            <element name="in_use_soc_hw_version" type="int" maxOccurs="1" minOccurs="0" />
+            <element name="use_serial_number_in_signing" type="int" maxOccurs="1" minOccurs="0" />
+            <element name="debug" type="string" maxOccurs="1" minOccurs="0" />
+            <element name="hash_algorithm" type="string" maxOccurs="1" minOccurs="0" />
+            <element name="segment_hash_algorithm" type="string" maxOccurs="1" minOccurs="0" />
+            <element name="rsa_padding" type="string" maxOccurs="1" minOccurs="0" />
+            <element name="hmac" type="boolean" maxOccurs="1" minOccurs="0" />
+            <element name="secboot_version" type="string" maxOccurs="1" minOccurs="0" />
+            <element name="oem_sign" type="boolean" maxOccurs="1" minOccurs="0" />
+            <element name="dsa_type" type="string" maxOccurs="1" minOccurs="0" />
+        </all>
+    </complexType>
+
+</schema>

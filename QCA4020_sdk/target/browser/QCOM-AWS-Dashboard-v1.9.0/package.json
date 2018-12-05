@@ -1,0 +1,23 @@
+{
+	"name": "qca-aws-dashboard-app",
+	"version": "1.0.0",
+	"description": "QCA AWS Dashboard App, is a companion app for listing the sensors on QCA boards. For more, refer Document passed along with App.",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"aws-iot-device-sdk": "^2.1.0",
+		"aws-sdk": "^2.140.0",
+		"body-parser": "^1.15.2",
+		"console.logentries": "^1.1.1",
+		"express": "^4.16.2",
+		"express-handlebars": "^3.0.0",
+		"lodash.isequal": "^4.5.0",
+		"mongoose": "^4.5.7",
+		"rootpath": "^0.1.2",
+		"socket.io": "^2.0.4"
+	}
+}

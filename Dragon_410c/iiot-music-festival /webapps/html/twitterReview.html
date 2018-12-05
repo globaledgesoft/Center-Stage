@@ -1,0 +1,56 @@
+<div>
+    <div class="twitter">
+        <div class="row justify-content-end twitter_row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
+                <div class="card">
+                    <i class="material-icons twitter-icon">notifications_active</i>
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <ul>
+                                <li ng-repeat="row in twitter_messages_4" class="twitter_li">
+                                    <div class="row twitter-message-row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 twitter-message">
+                                            <p class="card-subtitle mb-2 text-muted">{{row.heading}} <span class="list_style" ng-style="{'background-color':'{{row.color}}'}"></span></p>
+                                            <p class="card-title"> {{row.message}} </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mainpage">      
+        <div class="sixthPageContent">
+            <div class="card">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="sixthPage-image">
+                            <i class="material-icons alert-icon">error_outline</i>
+                        </div>
+                        <div class="sixthPageContent1 row justify-content-center">
+                            <div class="col-lg-8">
+                                <p> Qualcomm Fest is getting poor reviews on Twitter.</p>
+                            </div>
+                        </div>
+                        <div class="sixthPageContent2 row justify-content-center">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                <p> Will you take over DJ Booth?</p>
+                            </div>
+                        </div>
+                        <div class="sixthPageAction row justify-content-center">
+                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                <button class="btn yes-btn" ng-click="getMusic()"> yes </button>
+                            </div>
+                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                <button class="btn no-btn" ng-click="goToOptimize()"> no </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

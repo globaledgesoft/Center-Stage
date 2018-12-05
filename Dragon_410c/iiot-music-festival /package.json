@@ -1,0 +1,30 @@
+{
+  "name": "Music-Festival",
+  "version": "1.0.0",
+  "description": "Application to maintain the music festivals",
+  "scripts": {
+    "test": "mocha"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "http://owncloud:8088/cloud-team/cloud-vts.git"
+  },
+  "dependencies": {
+    "async": "~2.0.0-rc.3",
+    "body-parser": "1.10.2",
+    "chart.js": "^2.7.2",
+    "consolidate": "^0.13.1",
+    "express": "4.11.1",
+    "knex": "~0.10.0",
+    "merge-descriptors": "^1.0.1",
+    "pg": "^7.5.0",
+    "python-shell": "^1.0.4",
+    "socket.io": "~1.4.6",
+    "sqlite3": "^4.0.3"
+  },
+  "devDependencies": {
+    "should": "^8.2.2",
+    "supertest": "^1.2.0"
+  }
+}

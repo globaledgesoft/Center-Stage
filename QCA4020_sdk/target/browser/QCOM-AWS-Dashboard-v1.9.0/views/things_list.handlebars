@@ -1,0 +1,24 @@
+<main class="mdl-layout__content">
+	<div class="mdl-grid container">
+		<!-- Breadcrumb -->
+		{{> breadcrumb crumbs=crumbs }}
+
+		<!-- Title -->
+		<h4 class="mdl-cell mdl-cell--12-col" align="center"> Device List </h4>					
+
+		<!-- Device List Table -->
+		<table class="mdl-cell mdl-cell--12-col mdl-data-table mdl-js-data-table mdl-shadow--4dp">
+			<thead>
+				<tr>
+					<th class="mdl-data-table__cell--non-numeric mdl-cell mdl-cell--8-col ">Thing Name</th>
+					<th class="mdl-cell mdl-cell--4-col">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each list as |thing|}}					
+					{{> thing_single thing=thing}}
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+</main>			

@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: SecTools-IoT
+Version: 1.0
+Summary: SecImage IoT Tools
+Home-page: https://www.qualcomm.com/
+Author: Qualcomm Technologies, Inc.
+Author-email: sectools.support@qti.qualcomm.com
+License: UNKNOWN
+Description: SecImage IoT Tools
+Platform: Windows
+Platform: Linux/Unix

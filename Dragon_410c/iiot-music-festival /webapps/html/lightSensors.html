@@ -1,0 +1,40 @@
+
+<div>
+    <div class="twitter">
+        <div class="row justify-content-end twitter-row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
+                <div class="card">
+                    <i class="material-icons twitter-icon">notifications_active</i>
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <ul>
+                                <li ng-repeat="row in twitter_messages_4" class="twitter_li">
+                                    <div class="row twitter-message-row">
+                                        <div class="col-lg-10 col-md-10 twitter-message">
+                                            <p class="card-subtitle mb-2 text-muted">{{row.heading}} <span class="list_style" ng-style="{'background-color':'{{row.color}}'}"></span></p>
+                                            <p class="card-title"> {{row.message}} </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mainpage">
+        <div class="content">
+            <div class="card lightSensorCard" ng-click="getAssistance()">
+                <div class="card-body">
+                    <h5 class="card-title">Light sensors are activated!</h5>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            <p>The lights are controlled by the movement of the crowd , so get them moving!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

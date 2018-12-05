@@ -1,0 +1,10 @@
+<div>
+	<h4> {{device.name}} </h4>
+	<div class="cols-sm-6 sensor-reported-data">
+	{{#each device.sensors as |sensor|}}					
+		{{#*inline "reported_data_single"}}
+			
+		{{/inline}}
+	{{/each}}
+	</div>
+</div>

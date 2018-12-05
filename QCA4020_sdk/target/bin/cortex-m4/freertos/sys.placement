@@ -1,0 +1,932 @@
+i15p4_hmi.lib XIP FOM SYS NORMAL
+qmesh.lib XIP FOM SYS NORMAL
+quartzplatform.lib XIP FOM SYS NORMAL
+master_sdcc.lib XIP FOM SYS NORMAL
+EDLManager.lib XIP FOM SYS NORMAL
+core_test.lib XIP FOM SYS NORMAL
+i2s.lib XIP FOM SYS NORMAL
+patch_BTPSKRNL.o XIP FOM SYS NORMAL
+patch_qapi_coex.o XIP FOM SYS NORMAL
+qapi_fw_info.o XIP FOM SYS NORMAL
+mom_patch_table_ARNFRI_qcm.o XIP FOM SYS NORMAL
+patch_HCITRANS.o XIP FOM SYS NORMAL
+som_patch_table_ARNFRI_qcm.o XIP FOM SYS NORMAL
+patch_HCI.o XIP FOM SYS NORMAL
+apss_app.o XIP FOM SYS NORMAL
+patch_coex.o XIP FOM SYS NORMAL
+patch_L2CAP.o XIP FOM SYS NORMAL
+fom_patch_table_ARNFRI_qcm.o XIP FOM SYS NORMAL
+patch_qapi_hmi.o XIP FOM SYS NORMAL
+zb.nwk.nlme.update.o SYS XIP
+qapi_firmware_upgrade.o SYS XIP
+zb.nwk.nlme.nnt.keepalive.o SYS XIP
+zb.zdo.activeep.o SYS XIP
+zcl_time_client.o SYS XIP
+qDIS.o SYS XIP
+http_client.o SYS XIP
+message.o SYS XIP
+qapi_zb_cl_thermostat.o SYS XIP
+zcl_attr_read_req.o SYS XIP
+zcl_doorlock_server.o SYS XIP
+sbl1_error_handler.o SYS RAM SBL
+mac_frame_external.o SYS XIP
+dhcpv6_nt.o SYS XIP
+diag_transport_uart.o SYS XIP FOM
+qapi_heap_status.o SYS XIP
+qIPSP.o SYS XIP
+zcl_touchlink_server.o SYS XIP
+zb.zgp.queue.o SYS XIP
+PLXS.o SYS XIP
+tasks.o SYS FOM RAM
+zb.nwk.nlme.rejoin.o SYS XIP
+qusb_log.o SYS XIP FOM
+zcl_window_server.o SYS XIP
+fs_ffs_sb.o SYS XIP FOM
+HRS.o SYS XIP
+patch_sdio_hcd.o SYS FOM XIP
+devcfg_devcfg_spi1_config.o SYS RAM SOM DEVCFG
+patch_ip6frags.o SYS FOM XIP
+network_data_leader.o SYS XIP
+patch_icmp6.o SYS XIP FOM
+radio.o SYS XIP
+BMS.o SYS XIP
+patch_cust_dbglog.o SYS XIP FOM
+eap_methods.o SYS XIP
+tlmm_boot.o SYS FOM RAM
+zb.startup.blocking.o SYS XIP
+usb_sbl_mem_util.o SYS XIP RAMDUMP SBL
+qapi_csr_generator.o SYS XIP
+qapi_zb_cl_scenes.o SYS XIP
+topology.o SYS XIP
+QCA4025_2p0_D_NVM.o SYS XIP
+joiner.o SYS XIP
+qANS.o SYS XIP
+dnssd.o SYS XIP
+zb.zgp.data.o SYS XIP
+UDS.o SYS XIP
+qapi_crypto_persistent_obj.o SYS XIP
+sdio_mbox.o SYS XIP
+diag_transport_flash.o SYS FOM XIP
+zb.aes.o SYS XIP
+random.o SYS XIP
+devcfg_devcfg_GPIOInt_Config.o SYS RAM SOM DEVCFG
+fs_ffs_freemap.o SYS FOM XIP
+mle_router.o SYS XIP
+x509v3.o SYS XIP
+diag_cli.o SYS FOM XIP
+tlsv1_client_read.o SYS XIP
+CTS.o SYS XIP
+zb.apsme.bind.o SYS XIP
+srp_sw.o SYS XIP
+LNS.o SYS XIP
+dnsclnt.o SYS XIP
+MQTTSubscribeClient.o SYS XIP
+patch_dset.o SYS FOM XIP
+locator.o SYS XIP
+mom.o SYS RAM SOM
+zigbee.extras.zdo.o SYS XIP
+usb_al_hlos_bulk.o SYS FOM APPS XIP
+patch_nettick.o SYS FOM XIP
+websocket.o SYS XIP
+patch_ssl_cert.o SYS FOM XIP
+qPLXS.o SYS XIP
+eap_md5.o SYS XIP
+SharkSslCon_DTLS_hs.o SYS XIP
+tls_internal.o SYS XIP
+fs_helper_m4.o SYS XIP
+cust_ipstack_install.o SYS FOM XIP
+sha1.o SYS XIP
+patch_iface.o SYS FOM XIP
+zb.zdo.powerdesc.o SYS XIP
+zcl_attr_write_req.o SYS XIP
+zcl_attr_report.o SYS XIP
+zigbee.testcase.o SYS XIP
+zb.nwk.nlme.nib.o SYS XIP
+devcfg_devcfg_cfg1.o SYS RAM SOM DEVCFG
+zcl_attr_integer.o SYS XIP
+qTPS.o SYS XIP
+fom_devcfg_uart_quartz_config.o(+RW) SYS FOM RAM DEVCFG
+driver_suspend_resume.o SYS FOM XIP
+qapi_wlan_p2p.o SYS FOM XIP
+zb.zdo.simpledesc.o SYS XIP
+glink_os_utils_qurt.o SYS XIP FOM
+zb.bdb.ib.o SYS XIP
+mqtt_mod.o SYS XIP
+patch_aes_gcm_ghash.o SYS FOM RAM
+qapi_zb_cl_onoff.o SYS XIP
+CPS.o SYS XIP
+meshcop_tlvs.o SYS XIP
+boot_dload_debug.o SYS XIP RAMDUMP SBL
+zb.nwk.nlme.rreq.o SYS XIP
+qIAS.o SYS XIP
+patch_SharkSslCryptoLib.o SYS FOM RAM
+boot_rollback_version_impl.o SYS XIP SBL
+qapi_dhcpv4s.o SYS XIP
+qANCS.o SYS XIP
+zigbee_os_port.o SYS XIP
+LLS.o SYS XIP
+qapi_ua.o SYS XIP
+tlsv1_client.o SYS XIP
+mle.o SYS XIP
+qapi_dhcpv4c.o SYS XIP
+boot_loader_m0.o SYS XIP
+dhcpv6_bld_msg.o SYS XIP
+zcl_groups_server.o SYS XIP
+patch_quadspi.o SYS AON RAM SOM PATCH
+zb.startup.join.o SYS XIP
+fs_diag.o SYS XIP FOM
+patch_CeCL_Clk.o SYS FOM RAM PATCH
+qapi_securefs.o SYS XIP
+sha256-internal.o SYS XIP
+persistent_obj_store.o SYS XIP
+diag_buffer_read.o SYS FOM XIP
+zcl_ota_server.o SYS XIP
+patch_api_init.o SYS FOM XIP
+zcl_level_server.o SYS XIP
+zcl_illum_meas_server.o SYS XIP
+zigbee_sec_port.o SYS XIP
+zcl_attr_discover.o SYS XIP
+qurt_system.o SYS FOM RAM
+qurt_pipe.o SYS FOM RAM
+BCS.o SYS XIP
+qapi_dnssd.o SYS XIP
+zb.nwk.nlme.addr.o SYS XIP
+dhcpv6_utils.o SYS XIP
+qapi_zb_power.o SYS XIP
+zigbee.blocking.o SYS XIP
+chap.o SYS XIP
+qapi_zb_cl_doorlock.o SYS XIP
+qurt_init.o SYS FOM RAM
+tasklet_api.o SYS XIP
+ram_function_table_mom.o SYS RAM SOM
+eap_ttls.o SYS XIP
+sha384-internal.o SYS XIP
+zb.nwk.nlde.o SYS XIP
+ecjpake_hw.o SYS XIP
+netif.o SYS XIP
+qESS.o SYS XIP
+diag_transport.o SYS FOM XIP
+usersetup.o SYS XIP
+qapi_zb_interpan.o SYS XIP
+flash_init_config.o SYS RAM SBL
+qurt_timer.o SYS FOM RAM
+swintr_setup.o SYS XIP
+mld_cmn.o SYS XIP
+qSLoWP.o SYS XIP
+qapi_mom.o SYS RAM SOM
+securefs_lock.o SYS XIP
+qCSCS.o SYS XIP
+qBLS.o SYS XIP
+nsport.o SYS XIP
+usb_client_util.o SYS XIP APPS FOM
+commissioner_api.o SYS XIP
+zcl_window_client.o SYS XIP
+pka_host.o SYS XIP
+zb.nwk.nlme.leave.o SYS XIP
+MQTTConnectServer.o SYS XIP
+wbs_mod.o SYS XIP
+ANS.o SYS XIP
+create_sockets.o SYS XIP
+ce_http.o SYS XIP
+qfprom_fuse_region_4020.o SYS XIP RAMDUMP SBL
+tlsv1_client_ocsp.o SYS XIP
+link_api.o SYS XIP
+usb_client_loopback_diag.o SYS FOM APPS XIP
+som_init_internal.o SYS RAM SOM
+energy_scan_server.o SYS XIP
+qBSC.o SYS XIP
+diag_msg.o SYS FOM XIP
+qLLS.o SYS XIP
+device_info_port.o SYS XIP
+vfsfiles.o SYS XIP
+fs_ffs_buf.o SYS FOM XIP
+eap.o SYS XIP
+qusb_dci_4020.o SYS XIP FOM
+qapi_zb_cl_color_control.o SYS XIP
+leader.o SYS XIP
+zb.nwk.nlde.bcast.o SYS XIP
+platform_version.o SYS RAM SOM
+qapi_twn.o SYS XIP
+wlan_lib_dbg.o SYS XIP
+patch_SharkSslCipher.o SYS FOM RAM
+patch_clock_mom.o SYS AON RAM SOM PATCH
+RSCS.o SYS XIP
+panid_query_client.o SYS XIP
+aes_ecb.o SYS XIP
+patch_ssl_ram.o SYS FOM RAM
+devcfg_devcfg_IPCInt_Config.o(+RW) SYS RAM SOM DEVCFG
+qIPS.o SYS XIP
+fs_desc.o SYS FOM XIP
+cert_stitching.o SYS XIP
+qapi_zb_cl_ias_wd.o SYS XIP
+wlan_lib_event.o SYS XIP
+zb.nwk.nlme.status.o SYS XIP
+md5.o SYS XIP
+port.o SYS FOM RAM
+securefs_cipher.o SYS XIP
+qapi_httpsvr.o SYS XIP
+zigbee_whitelist.o SYS XIP
+qusb_clock.o SYS FOM XIP
+mac_frame_internal.o SYS XIP
+usb_mem_util.o SYS XIP APPS FOM
+zigbee.security.o SYS XIP
+strrcl_dnss.o SYS XIP
+icmp6_api.o SYS XIP
+wakeup_handler.o SYS AON RAM
+patch_cust_api_wmi_rx.o SYS FOM XIP
+otcrypto.o SYS XIP
+dhcp6_server.o SYS XIP
+strrcl_sntpclt.o SYS XIP
+ns_utils.o SYS XIP
+fs_api.o SYS XIP FOM
+qapi_mqttc.o SYS XIP
+patch_tee_master.o SYS XIP FOM
+qapi_fs.o SYS FOM XIP
+TPS.o SYS XIP
+persist.o SYS XIP
+timer_log.o SYS RAM SOM
+tmf_proxy_api.o SYS XIP
+coap_header.o SYS XIP
+mac_internal.o SYS XIP
+zb.nwk.nlme.rrec.o SYS XIP
+diagpkt.o SYS FOM XIP
+tmf_proxy.o SYS XIP
+announce_begin_client.o SYS XIP
+patch_tcp_in.o SYS FOM RAM
+DIS.o SYS XIP
+httpconn.o SYS XIP
+DALConfig_devcfg.o SYS RAM SOM DEVCFG
+tlsv1_cred.o SYS XIP
+httpport.o SYS XIP
+HTS.o SYS XIP
+patch_driver_variables.o SYS FOM XIP
+xport_quartz_config.o SYS FOM XIP
+fs_osal_heap.o SYS XIP FOM
+patch_SharkSSLCon.o SYS FOM RAM
+devcfg_devcfg_InterruptController_Config.o(+RW) SYS RAM SOM DEVCFG
+diag.o SYS FOM XIP
+websocket_client.o SYS XIP
+qapi_zb_cl_level_control.o SYS XIP
+qLNS.o SYS XIP
+ESS.o SYS XIP
+qBCS.o SYS XIP
+zb.startup.config.o SYS XIP
+zb.apsme.o SYS XIP
+atomic.o SYS XIP
+strrcl_dnsc.o SYS XIP
+wlan_lib_port.o SYS XIP
+csr_generator.o SYS XIP
+shared_buffer.o SYS XIP
+croutine.o SYS FOM RAM
+qapi_zb_cl_temp_measure.o SYS XIP
+ns_bridge.o SYS XIP
+patch_cust_api_stack_txrx.o SYS FOM RAM
+mesh_forwarder.o SYS XIP
+zb.nwk.nlme.nnt.directjoin.o SYS XIP
+fs_global_lock.o SYS FOM XIP
+sl_cmn.o SYS XIP
+glink_core_if.o SYS FOM XIP
+zb.apsde.data.o SYS XIP
+qapi_crypto_import.o SYS XIP
+securefs_file.o SYS XIP
+platform_oem.o FOM RAM APPS
+boot_logger_timer.o SYS RAM SBL
+thread_api.o SYS XIP
+zb.zdo.addr.o SYS XIP
+qapi_websocket.o SYS XIP
+zb.nwk.nlme.start.o SYS XIP
+patch_iprcv.o SYS FOM RAM
+asn1.o SYS XIP
+cpu_debug_port.o SYS XIP
+qapi_mdnss.o SYS XIP
+zigbee.o SYS XIP
+zcl_ias_wd_server.o SYS XIP
+zb.bdb.o SYS XIP
+_GAPLE.o SYS XIP
+patch_v2_platcfg_mgr.o SYS FOM RAM PATCH
+HALqfprom.o SYS XIP RAMDUMP SBL
+udp6.o SYS XIP
+SharkSslBigInt.o SYS XIP
+zcl_alarm_server.o SYS XIP
+platform_ram_data_init.o SYS RAM SOM
+qurt_interrupt.o SYS RAM SOM
+AIOS.o SYS XIP
+zb.nwk.nlme.nnt.linkpower.o SYS XIP
+qapi_zb_cl_basic.o SYS XIP
+border_router_api.o SYS XIP
+qBAS.o SYS XIP
+zcl_level_client.o SYS XIP
+boot_mpu.o SYS RAM SBL
+otmac.o SYS XIP
+GAP.o SYS XIP
+malloc_ram.o SYS RAM SOM
+devcfg_devcfg_TsensBsp.o(+RW) SYS RAM SOM DEVCFG
+patch_diag_rom.o SYS RAM SOM PATCH
+srp.o SYS XIP
+zcl.extras.status.o SYS XIP
+zb.startup.form.o SYS XIP
+fs_vnode.o SYS FOM XIP
+list.o SYS FOM RAM
+glink_api.o SYS FOM XIP
+commissioner.o SYS XIP
+tlvs.o SYS XIP
+dns_client.o SYS XIP
+BLS.o SYS XIP
+crypto_internal-cipher.o SYS XIP
+OTS.o SYS XIP
+zigbee.extras.nwk.o SYS XIP
+zcl_command_req.o SYS XIP
+persistent_obj_ecc.o SYS XIP
+network_data_local.o SYS XIP
+ip6_mpl.o SYS XIP
+qapi_webs.o SYS XIP
+HIDS.o SYS XIP
+usb_compile_wrapper.o SYS FOM XIP
+fs_namei.o SYS FOM XIP
+fom_devcfg_uart_quartz_config.o SYS FOM RAM DEVCFG
+zcl_power_server.o SYS XIP
+devcfg_devcfg_AdcBsp.o SYS RAM SOM DEVCFG
+devcfg_devcfg_data.o SYS FIRST RAM SOM DEVCFG
+QCA4020_2p0_CDB_NVM.o SYS XIP
+qapi_delay.o SYS XIP
+zcl_device_temp_client.o SYS XIP
+sbl1_config.o SYS XIP SBL
+zb.nwk.nlde.datareq.o SYS XIP
+zcl_alarm_client.o SYS XIP
+zb.nwk.nlme.joinpolicy.o SYS XIP
+PASS.o SYS XIP
+zb.nwk.nlde.dataind.o SYS XIP
+dtls.o SYS XIP
+patch_bmi.o SYS XIP FOM
+platform_oem_mom.o SYS AON RAM
+qapi_zb_cl_occupancy.o SYS XIP
+patch_SharkSslCon_DTLS.o SYS FOM RAM
+glink_intent_core_setup.o SYS FOM XIP
+b64decoder.o SYS XIP
+zcl_therm_client.o SYS XIP
+qapi_ns_gen_v4.o SYS XIP
+mdnsd.o SYS XIP
+zb.nwk.nlde.dataconf.o SYS XIP
+ieee802154_hdr.o SYS XIP
+ANCS.o SYS XIP
+GLS.o SYS XIP
+obj_import.o SYS XIP
+mschapv2.o SYS XIP
+patch_cust_hw_api.o SYS FOM XIP
+supplicant_quartz.o SYS XIP
+qSCPS.o SYS XIP
+MQTTDeserializePublish.o SYS XIP
+qapi_ssl_cert.o SYS XIP
+otp_tlv_read.o SYS XIP
+ram_function_table_som.o SYS RAM SOM
+patch_uSleep_npa.o SYS RAM SOM PATCH
+zb.nwk.nlme.beacon.o SYS XIP
+zb.startup.rejoin.o SYS XIP
+SharkSslCon_hs.o SYS XIP
+tee_master.o SYS XIP
+tlv_transport.o SYS XIP
+zcl_blocking.o SYS XIP
+BAS.o SYS XIP
+supplicant_glue.o SYS XIP
+patch_spi_sys.o SYS RAM SOM
+fom_devcfg_spi2_config.o SYS FOM RAM DEVCFG
+qusb_dci_4020_hw_apis_sbl1.o SYS FOM XIP
+patch_aes.o SYS FOM RAM
+cust_driver_suspend_resume.o SYS FOM XIP
+qapi_zb_cl_device_temp.o SYS XIP
+pkcs8.o SYS XIP
+http_mod.o SYS XIP
+MQTTUnsubscribeServer.o SYS XIP
+MQTTConnectClient.o SYS XIP
+zcl_onoff_server.o SYS XIP
+SharkSslCert_common.o SYS XIP
+wbscgi.o SYS XIP
+qapi_wlan_prof.o SYS FOM XIP
+webserver.o SYS XIP
+otp_tlv_write.o SYS XIP
+hmac_aes_control.o SYS XIP
+zcl_identify_server.o SYS XIP
+qurt_rmutex.o SYS FOM RAM
+srp_hw.o SYS XIP
+otvirtual.o SYS XIP
+zigbee.extras.string.o SYS XIP
+mldv2.o SYS XIP
+strrcl_iface.o SYS XIP
+devcfg_devcfg_TsensBsp.o SYS RAM SOM DEVCFG
+coap_secure.o SYS XIP
+fom_devcfg_cfg2.o(+RW) SYS FOM RAM DEVCFG
+zb.zdode.o SYS XIP
+boot_logger_ram.o SYS RAM SBL
+qGAP.o SYS XIP
+zcl_fan_server.o SYS XIP
+patch_socket2.o SYS FOM RAM
+network_data_leader_ftd.o SYS XIP
+qapi_wlan_8021x.o SYS FOM RAM
+cust_dset_nvram.o SYS FOM XIP
+dataset_manager_ftd.o SYS XIP
+zb.nwk.nlde.route.o SYS XIP
+patch_driver_diag.o SYS FOM XIP
+boot_loader.o SYS XIP
+usb_isr.o SYS FOM APPS XIP
+zb.zdo.userdesc.o SYS XIP
+glink_core_intent_xport.o SYS FOM XIP
+sdio_patch.o SYS FOM RAM PATCH
+MQTTFormat.o SYS XIP
+zigbee.timer.o SYS XIP
+ec_utils.o SYS XIP
+qfprom.o SYS XIP RAMDUMP SBL
+qapi_zb_cl_illuminance.o SYS XIP
+tlsv1_common.o SYS XIP
+zcl_onoff_client.o SYS XIP
+http.o SYS XIP
+fs_bdev_spinor.o SYS FOM XIP
+hmac_sha256.o SYS XIP
+patch_qapi_socket_txrx.o SYS FOM RAM
+zigbee.persist.o SYS XIP
+data_poll_manager.o SYS XIP
+glink_core_internal.o SYS FOM XIP
+qapi_kpd.o SYS XIP
+diag_binary_log.o SYS FOM XIP
+htc_slave.o SYS XIP
+qusb_dcd_ch9.o SYS FOM XIP
+patch_util.o SYS XIP FOM
+zcl_cluster_persist.o SYS XIP
+qapi_ns_gen_v6.o SYS XIP
+IAS.o SYS XIP
+qTRDS.o SYS XIP
+sbl1_timer.o SYS RAM SBL
+qurt_thread.o SYS FOM RAM
+qHRS.o SYS XIP
+zb.nwk.nlme.associate.o SYS XIP
+patch_api_stack_offload.o SYS FOM XIP
+qapi_zb_cl_rel_humid.o SYS XIP
+patch_flash_common.o SYS AON RAM SOM PATCH
+patch_htc.o SYS FOM XIP
+securefs.o SYS XIP
+glink_core_intent.o SYS FOM XIP
+zb.nwk.nlme.o SYS XIP
+IPSP.o SYS XIP
+platform_omt.o SYS AON RAM
+qapi_zb_cl_time.o SYS XIP
+joiner_api.o SYS XIP
+GAPS.o SYS XIP
+zb.nwk.nlme.orphan.o SYS XIP
+zcl_occupancy_client.o SYS XIP
+RTUS.o SYS XIP
+diagtools.o SYS FOM XIP
+dataset_manager.o SYS XIP
+panid_query_server.o SYS XIP
+sha1-tlsprf.o SYS XIP
+usb_os_util.o SYS XIP APPS FOM
+diag_transport_usb.o SYS XIP FOM
+qRSCS.o SYS XIP
+zcl_ias_ace_server.o SYS XIP
+qRTUS.o SYS XIP
+zcl_therm_server.o SYS XIP
+NDCS.o SYS XIP
+qapi_zb_zdp.o SYS XIP
+zb.zdo.matchdesc.o SYS XIP
+zb.zdo.complexdesc.o SYS XIP
+patch_cust_hw_spi.o SYS XIP FOM
+qHTS.o SYS XIP
+zb.apsde.interpan.o SYS XIP
+zcl_device_temp_server.o SYS XIP
+dhcpv6_port.o SYS XIP
+sbl1_hw_4020.o SYS RAM SBL
+zb.zdo.annce.o SYS XIP
+glink_vector.o SYS FOM XIP
+devcfg_devcfg_InterruptController_Config.o SYS RAM SOM DEVCFG
+mom_aon.o SYS AON RAM
+zcl_ota_client.o SYS XIP
+patch_wmi.o SYS XIP FOM
+omtm_test.o APPS RAM SOM
+zb.apsme.ib.o SYS XIP
+reshost.o SYS XIP
+qWSS.o SYS XIP
+platform_sleep_control.o SYS RAM SOM
+SharkSslECC.o SYS XIP
+fs.o SYS XIP FOM
+b64encoder.o SYS XIP
+timestamp.o SYS XIP
+qfprom_target.o SYS XIP RAMDUMP SBL
+SCPS.o SYS XIP
+patch_CeML.o SYS FOM RAM PATCH
+netdata_api.o SYS XIP
+patch_cust_driver_main.o SYS FOM XIP
+qapi_ssl_control.o SYS XIP
+websocket_close.o SYS XIP
+zb.apsde.frag.o SYS XIP
+dsr_framework_test.o APPS RAM SOM
+qapi_diag_ram.o SYS RAM SOM
+patch_api_ioctl.o SYS XIP FOM
+SLoWP.o SYS XIP
+dhcp6_client.o SYS XIP
+qAIOS.o SYS XIP
+zigbee_leave.o SYS XIP
+settings.o SYS XIP
+dhcpv6_mod.o SYS XIP
+qCTS.o SYS XIP
+crypto_api.o SYS XIP
+MQTTSerializePublish.o SYS XIP
+swintr_perf.o SYS XIP
+tasklet.o SYS XIP
+coap_api.o SYS XIP
+sl_v6.o SYS XIP
+net_devcfg.o SYS XIP
+trickle_timer.o SYS XIP
+dhcpv6_loop.o SYS XIP
+patch_ssl.o SYS FOM XIP
+mld.o SYS XIP
+qapi_ed25519.o SYS XIP
+fom_devcfg_platform_props.o SYS FOM RAM DEVCFG
+devcfg_devcfg_spi1_config.o(+RW) SYS RAM SOM DEVCFG
+zb.zdo.bind.o SYS XIP
+devcfg_devcfg_AdcBsp.o(+RW) SYS RAM SOM DEVCFG
+crypto_devcfg.o SYS XIP FOM
+zb.startup.callbacks.o SYS XIP
+patch_driver_init.o SYS FOM XIP
+eap_common.o SYS XIP
+zcl_test_profile_ep.o SYS XIP
+zgp_proxybasic_client.o SYS XIP
+eap_peap.o SYS XIP
+platform_ramdump_entry.o SYS RAM SOM
+ssl_store_common.o SYS XIP
+boot_rollback_version.o SYS XIP SBL
+child_supervision_api.o SYS XIP
+zcl_occupancy_server.o SYS XIP
+patch_hcd_common.o SYS FOM XIP
+network_diagnostic.o SYS XIP
+missing_strnlen.o SYS XIP
+ieee802154_rssi.o SYS XIP
+wbsupload.o SYS XIP
+zcl_ias_ace_client.o SYS XIP
+qapi_zb_cl_fan_control.o SYS XIP
+patch_op_mgmt.o SYS FOM XIP
+tlsv1_record.o SYS XIP
+patch_spi_hcd.o SYS XIP FOM
+patch_ip6mc.o SYS XIP FOM
+rsa.o SYS XIP
+patch_SharkSSL.o SYS FOM XIP
+zb.nwk.nlme.formation.o SYS XIP
+qOTS.o SYS XIP
+diag_ram.o SYS RAM SOM
+zb.zdo.mgmt.nwk.update.o SYS XIP
+patch_driver_netbuf.o SYS FOM RAM
+qapi_base64.o SYS XIP
+queue.o SYS FOM RAM
+zb.zdo.mgmt.lqi.o SYS XIP
+ns_mod.o SYS XIP
+aes_ccm.o SYS XIP
+zigbee.power.o SYS XIP
+patch_timer.o SYS RAM SOM PATCH
+patch_api_wmi_rx.o SYS XIP FOM
+patch_qcc_digest.o SYS FOM RAM
+qapi_zb_zgp.o SYS XIP
+MQTTUnsubscribeClient.o SYS XIP
+dhcpv6_bld_send_msg.o SYS XIP
+coap.o SYS XIP
+QCA4024_2p0_D_NVM.o SYS XIP
+fom_devcfg_cfg2.o SYS FOM RAM DEVCFG
+zb.apsme.cmd.o SYS XIP
+persistent_obj_mgmt.o SYS XIP
+joiner_router.o SYS XIP
+missing_strlcpy.o SYS XIP
+qNDCS.o SYS XIP
+qCGMS.o SYS XIP
+sbl.o(SBL_VECTOR_TABLE) SYS RAM SBL FIRST
+event_groups.o SYS FOM RAM
+InterruptController_Internal_m4.o SYS RAM SOM
+fs_ffs_iter.o SYS FOM XIP
+zb.zdo.blocking.o SYS XIP
+aes-internal-enc.o SYS XIP
+patch_hmac_aes.o SYS FOM RAM
+qapi_zb_cl_ota.o SYS XIP
+qfprom_test.o SYS XIP RAMDUMP SBL
+zcl_color_server.o SYS XIP
+rfs_server.o SYS FOM XIP
+crypto_internal-modexp.o SYS XIP
+cust_hw_api_ext.o SYS XIP FOM
+sha512-internal.o SYS XIP
+qapi_zb_bdb.o SYS XIP
+zcl_basic_server.o SYS XIP
+patch_M4_QIPC.o SYS FOM RAM PATCH
+jam_detection_api.o SYS XIP
+zb.nwk.nlme.ifc.o SYS XIP
+qusb_al_bulk.o SYS XIP RAMDUMP SBL
+patch_app_ping.o SYS XIP FOM
+zb.nwk.nlme.permitjoin.o SYS XIP
+zb.apsde.ack.o SYS XIP
+zcl_attr.o SYS XIP
+qapi_dnss.o SYS XIP
+aes-internal-dec.o SYS XIP
+zb.nwk.nlme.reset.o SYS XIP
+devcfg_devcfg_GPIOInt_Config.o(+RW) SYS RAM SOM DEVCFG
+dnssrvr.o SYS XIP
+sl_v4.o SYS XIP
+platform_internal.o SYS FOM RAM
+zcl_scenes_server.o SYS XIP
+htmllib.o SYS XIP
+qHPS.o SYS XIP
+ip6_api.o SYS XIP
+patch_cust_api_init.o SYS FOM XIP
+CSCS.o SYS XIP
+qapi_zb_cl_wincover.o SYS XIP
+patch_cksum.o SYS FOM RAM
+eap_tls_common.o SYS XIP
+patch_driver_tunable.o SYS FOM RAM
+zcl_ballast_config_server.o SYS XIP
+eap_peap_common.o SYS XIP
+qapi_attestation.o SYS XIP
+sha256-tlsprf.o SYS XIP
+zb.nwk.nlme.rrep.o SYS XIP
+ieee802154_misc.o SYS XIP
+dhcp6_api.o SYS XIP
+qapi_zb_cl.o SYS XIP
+TRDS.o SYS XIP
+patch_ip6.o SYS FOM XIP
+thread_netif.o SYS XIP
+qapi_zb.o SYS XIP
+qapi_zb_cl_ias_ace.o SYS XIP
+patch_quadspi_osal_qurt.o SYS AON RAM SOM PATCH
+ip6_routes.o SYS XIP
+qapi_sntpc.o SYS XIP
+patch_clock.o SYS RAM SOM PATCH
+zcl_attr_scene.o SYS XIP
+qapi_twn_som.o SYS RAM SOM
+zb.startup.findbind.o SYS XIP
+IPS.o SYS XIP
+ip6.o SYS XIP
+zb.nwk.nlme.discover.o SYS XIP
+boot_config.o SYS XIP SBL
+md5-internal.o SYS XIP
+keypad.o SYS XIP
+patch_nd.o SYS FOM XIP
+zcl_fan_client.o SYS XIP
+zb.nwk.nlme.nnt.o SYS XIP
+otnetif.o SYS XIP
+base64.o SYS XIP
+cust_elf_loader.o SYS XIP FOM
+zb.startup.o SYS XIP
+timers.o SYS FOM RAM
+platform_calibration.o SYS XIP FOM
+zb.zdo.o SYS XIP
+sha256.o SYS XIP
+qusb_fd.o SYS XIP FOM
+SharkSslCon_DTLS_cust_hs.o SYS XIP
+qGAPS.o SYS XIP
+QCA4025_2p0_C_NVM.o SYS XIP
+zb.nwk.nlme.route.o SYS XIP
+qapi_dnsc.o SYS XIP
+qapi_zb_cl_ias_zone.o SYS XIP
+WSS.o SYS XIP
+tlsv1_client_write.o SYS XIP
+diag_transport_glink.o SYS FOM XIP
+qurt_signal.o SYS FOM RAM
+zb.nwk.nlme.sync.o SYS XIP
+zb.aps.o SYS XIP
+securefs_m4.o SYS XIP
+qurt_power_shutdown.o SYS RAM SOM
+sbl1_mc.o SYS RAM SBL
+patch_hmac_hw.o SYS FOM RAM
+zb.zdo.mgmt.bind.o SYS XIP
+zb.zdo.endbind.o SYS XIP
+mac_external.o SYS XIP
+QCA4020_2p0_C_NVM.o SYS XIP
+qapi_zb_cl_power_config.o SYS XIP
+dbgcall.o SYS XIP
+patch_SharkSslCrypto.o SYS FOM RAM
+zcl_attr_float.o SYS XIP
+zb.zdo.mgmt.rtg.o SYS XIP
+zcl_ias_zone_client.o SYS XIP
+patch_api_txrx.o SYS FOM RAM
+http_client_upgrade_module.o SYS XIP
+zcl_time_server.o SYS XIP
+ssl_cert_store.o SYS XIP
+link_quality.o SYS XIP
+logging.o SYS XIP
+missing_strlcat.o SYS XIP
+qapi_zb_whitelist.o SYS XIP
+sbl1_xip.o SYS RAM SBL
+zcl_doorlock_client.o SYS XIP
+qapi_device_info.o SYS XIP
+sntpclnt.o SYS XIP
+patch_timeouts.o SYS FOM XIP
+zcl_basic_client.o SYS XIP
+wlan_qapi_helper.o SYS XIP FOM
+qHIDS.o SYS XIP
+mac_filter.o SYS XIP
+zb.zdo.mgmt.nwk.enh.update.o SYS XIP
+zb_startup_tc_rejoin.o SYS XIP
+zb.zdo.nodedesc.o SYS XIP
+network_data.o SYS XIP
+eap_tls.o SYS XIP
+qapi_zb_cl_alarm.o SYS XIP
+qBMS.o SYS XIP
+zcl_water_content_server.o SYS XIP
+zcl_touchlink_client.o SYS XIP
+qurt_interrupt_asm.o SYS RAM SOM
+bignum.o SYS XIP
+otp_tlv_status.o SYS XIP
+message_api.o SYS XIP
+zcl_temperature_server.o SYS XIP
+qapi_zb_cl_ballast.o SYS XIP
+lowpan.o SYS XIP
+ip6_filter.o SYS XIP
+fs_bdev_ram.o SYS XIP FOM
+address_resolver.o SYS XIP
+wlan_lib_interfaces.o SYS XIP
+cust_qapi.o SYS XIP FOM
+otextnetif.o SYS XIP
+qapi_htc_slave.o SYS XIP
+som_test_app.o APPS RAM SOM
+sbl.o SYS RAM SBL
+crc16.o SYS XIP
+QCA4024_2p0_C_NVM.o SYS XIP
+flash_init.o SYS RAM SBL
+json.o SYS XIP
+platform_ram_data.o SYS RAM SOM
+fs_bdev.o SYS FOM XIP
+DALConfig_fom.o SYS FOM RAM DEVCFG
+AdcPatches.o SYS RAM SOM PATCH
+patch_cust_stack_iniche.o SYS FOM RAM
+qapi_rtc.o SYS XIP
+announce_begin_server.o SYS XIP
+zcl_command_ind.o SYS XIP
+qapi_zb_cl_identify.o SYS XIP
+boot_logger.o SYS RAM SBL
+platform_startup.o SYS FOM RAM
+sha1-prf.o SYS XIP
+patch_osal.o SYS XIP FOM
+qapi_wlan_base.o SYS XIP FOM
+zigbee.extras.status.o SYS XIP
+rfs_server_pkt.o SYS FOM XIP
+zb.zgp.o SYS XIP
+rfs_server_osal_qurt.o SYS XIP FOM
+websocket_port.o SYS XIP
+cust_profiler.o SYS FOM XIP
+qapi_reset.o SYS XIP
+zb.nwk.o SYS XIP
+child_supervision.o SYS XIP
+qapi_wlan_bridge.o SYS XIP
+persistent_obj_rsa.o SYS XIP
+devcfg_devcfg_cfg1.o(+RW) SYS RAM SOM DEVCFG
+eapol_supp_sm.o SYS XIP
+rfs_server_osal.o SYS FOM XIP
+qurt_pimutex.o SYS FOM RAM
+patch_tlmm.o SYS RAM SOM PATCH
+zigbee.extras.aps.o SYS XIP
+diag_msg_ram.o SYS RAM SOM
+border_agent_api.o SYS XIP
+MQTTSubscribeServer.o SYS XIP
+src_match_controller.o SYS XIP
+otdtls.o SYS XIP
+patch_HALtlmm.o SYS RAM SOM PATCH
+qapi_zb_cl_groups.o SYS XIP
+zb.nwk.nlme.nnt.linkstatus.o SYS XIP
+sha256-prf.o SYS XIP
+patch_qapi_slp.o SYS RAM SOM PATCH
+zcl_groups_client.o SYS XIP
+qapi_ns_utils.o SYS XIP
+ip6_headers.o SYS XIP
+mqttc.o SYS XIP
+zb.zdo.mgmt.ieeejoinlist.o SYS XIP
+securefs_hmac.o SYS XIP
+supplicant.o SYS XIP
+fs_mount.o SYS XIP FOM
+patch_platform_util.o SYS RAM SOM PATCH
+dns_api.o SYS XIP
+cust_platform_api.o SYS FOM XIP
+qusb_dci.o SYS FOM XIP
+ram_function_table_fom.o SYS FOM RAM
+dataset_ftd_api.o SYS XIP
+zcl.o SYS XIP
+qCPS.o SYS XIP
+device_info_port_common.o SYS XIP
+zb.zdo.mgmt.permitjoin.o SYS XIP
+zcl_attr_struct.o SYS XIP
+pkcs1.o SYS XIP
+htpers.o SYS XIP
+zb.apsme.groups.o SYS XIP
+aes-internal.o SYS XIP
+border_agent.o SYS XIP
+zcl_color_client.o SYS XIP
+q_HERH.o SYS XIP
+devcfg_fom_data.o SYS FOM FIRST RAM DEVCFG
+ieee802154_ie.o SYS XIP
+zigbee_mac_port.o SYS XIP
+pkcs5.o SYS XIP
+cert_validation.o SYS XIP
+userpass.o SYS XIP
+heap_4.o SYS FOM RAM
+qapi_zb_aps.o SYS XIP
+boot_loader_xip.o SYS XIP
+fs_ffs.o SYS FOM XIP
+patch_hw_api.o SYS FOM XIP
+qapi_socket.o SYS XIP
+patch_driver_txrx.o SYS FOM RAM
+wlan_secboot_sbl.o SYS FOM XIP
+energy_scan_client.o SYS XIP
+zb.nwk.nlme.scan.o SYS XIP
+boot_sahara_impl.o SYS XIP RAMDUMP SBL
+patch_cust_hw_sdio.o SYS XIP FOM
+patch_spi_plat.o SYS RAM SOM
+MQTTPacket.o SYS XIP
+QCA4025_2p0_CDB_NVM.o SYS XIP
+zb.apsde.filter.check.o SYS XIP
+zb.apsde.o SYS XIP
+platform_oem_som.o APPS RAM SOM
+usb_wrapper_api.o SYS XIP APPS FOM
+dhcpv6_process_msg.o SYS XIP
+ip6_address.o SYS XIP
+patch_driver_main.o SYS FOM XIP
+fom_devcfg_platform_props.o(+RW) SYS FOM RAM DEVCFG
+ssl_task.o SYS FOM RAM
+securefs_util.o SYS XIP
+zb.nwk.nlme.blocking.o SYS XIP
+crypto_internal-rsa.o SYS XIP
+QCA4020_2p0_D_NVM.o SYS XIP
+crypto_internal.o SYS XIP
+md4-internal.o SYS XIP
+boot_timer.o SYS XIP
+boot_loader_impl.o SYS XIP
+patch_store_recall.o SYS FOM XIP
+zcl_scenes_client.o SYS XIP
+dataset.o SYS XIP
+qapi_zb_nwk.o SYS XIP
+zb.zdo.mgmt.leave.o SYS XIP
+qGAPLE.o SYS XIP
+zb.zdo.parent.o SYS XIP
+qapi_zb_cl_touchlink.o SYS XIP
+boot_sahara.o SYS XIP RAMDUMP SBL
+dataset_api.o SYS XIP
+ms_funcs.o SYS XIP
+http_nt.o SYS XIP
+ec_curve.o SYS XIP
+udp_api.o SYS XIP
+qapi_zb_tp2.o SYS XIP
+fs_util.o SYS FOM XIP
+slaac_address.o SYS XIP
+zb.apsme.endpt.o SYS XIP
+patch_BSPusleep.o SYS RAM SOM PATCH
+boot_timer_impl.o SYS XIP
+ieee802154_crc.o SYS XIP
+fw_upgrade.o SYS XIP
+ns_v4.o SYS XIP
+fs_ffs_inode.o SYS FOM XIP
+patch_standalone_solver.o SYS RAM SOM PATCH
+qPASS.o SYS XIP
+patch_obj_mgmt.o SYS XIP FOM
+qapi_httpc.o SYS XIP
+HPS.o SYS XIP
+fs_osal.o SYS XIP FOM
+SharkSslPublic.o SYS XIP
+wpabuf.o SYS XIP
+zcl_power_client.o SYS XIP
+qapi_dhcpv6c.o SYS XIP
+qapi_ns_suspend_resume.o SYS XIP
+eap_mschapv2.o SYS XIP
+patch_ip6route.o SYS FOM XIP
+thread_ftd_api.o SYS XIP
+qapi_json.o SYS XIP
+websocket_txrx.o SYS XIP
+zcl_ias_wd_client.o SYS XIP
+dataset_local.o SYS XIP
+icmp6.o SYS XIP
+QCA4024_2p0_CDB_NVM.o SYS XIP
+cust_api_ioctl.o SYS FOM XIP
+zcl_ias_zone_server.o SYS XIP
+zb.apsde.filter.list.o SYS XIP
+key_manager.o SYS XIP
+fs_bdev_sd.o SYS FOM XIP
+patch_qapi_tlmm.o SYS RAM SOM PATCH
+ssl_control.o SYS XIP
+CGMS.o SYS XIP
+qUDS.o SYS XIP
+alarm.o SYS XIP
+wlan_lib_quartz.o SYS XIP
+sha1-internal.o SYS XIP
+qurt_power_shutdown_asm.o SYS RAM SOM
+devcfg_devcfg_IPCInt_Config.o SYS RAM SOM DEVCFG
+smem_list.o SYS FOM XIP
+csr_generator_common.o SYS XIP
+fom_devcfg_spi2_config.o(+RW) SYS FOM RAM DEVCFG
+instance_api.o SYS XIP
+qGLS.o SYS XIP
+BTPSIPv6.o SYS XIP
+fs_ffs_db.o SYS XIP FOM
+timer.o SYS XIP
+cmac_hw.o SYS XIP
+zcl_attr_string.o SYS XIP
+xport_quartz.o SYS FOM XIP
+htauth.o SYS XIP
+SharkSsl_ALPN.o SYS XIP
+cust_wlan_lib.o SYS XIP FOM
+strrcl_socket.o SYS XIP
+qapi_diag.o SYS FOM XIP
+boot_ramdump.o SYS XIP RAMDUMP SBL
+fs_ftl.o SYS FOM XIP
+des-internal.o SYS XIP
+zb.zdo.systemserverdisc.o SYS XIP
+htutils.o SYS XIP
+mdns.o SYS XIP
+fs_ftl_flash.o SYS FOM XIP

@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">QCA OnBoarding</string>
+
+    <string name="menu_scan">Scan</string>
+    <string name="menu_stop">Stop</string>
+    <string name="qr_code">QR Scan</string>
+    <string name="devices_list">Display List</string>
+    <string name="menu_qr_read">QR Scan</string>
+
+    <string name="buttonConnect">Connect</string>
+    <string name="buttonCancel">Cancel</string>
+    <string name="buttonOnBoard">Onboard</string>
+    <string name="buttonGetDBData">List of Coordinator</string>
+
+    <string name="textViewFwVersion">FW Version</string>
+    <string name="textViewChipSet">Chipset</string>
+    <string name="textViewBatteryMode">Power Mode</string>
+    <string name="textViewDeviceInfo">Device Information</string>
+    <string name="textViewOnboarding">OnBoarding</string>
+    <string name="textViewStatus">Device Status</string>
+    <string name="textViewOnboardingDetails">OnBoarding Details</string>
+    <string name="textViewWifiDeviceOBInfo">Wifi Onboarding</string>
+    <string name="textViewZigbeeDeviceOBInfo">ZigBee Onboarding</string>
+    <string name="textViewThreadDeviceOBInfo">Thread Onboarding</string>
+
+    <string name="textViewDeviceName">Device Name</string>
+    <string name="textViewMacAddress">Mac Address</string>
+    <string name="textViewOnboardingMode">OnBoard Mode</string>
+
+    <string name="textViewSsid">SSID</string>
+    <string name="textViewPassword">Password</string>
+    <string name="textViewOnBoardingSuccess">Onboarded Successfully</string>
+
+    <string name="textViewCapability">Capability</string>
+    <string name="textViewSelectCoordinatorDevice">Select Coordinator device</string>
+
+
+    <string name="editTextHintForPassword">Enter the Password</string>
+    <string name="editTextHintForSsid">WiFi AP SSID</string>
+
+    <string name="mainActivityPassword">password</string>
+    <string name="mainActivityConnect">Connect</string>
+    <string name="mainActivityOk">Ok</string>
+
+    <string name="ok">OK</string>
+    <string name="gpsNetworkNotEnabled">Gps Network not Enabled</string>
+    <string name="openLocationSettings">Open Location Settings</string>
+
+    <string name="ssid_select">Please Select SSID</string>
+
+    <string name="passwd_is_big">Password is too Big</string>
+    <string name="passwd_min_char">Password should have minimum 8 characters</string>
+    <string name="no_wifi_device">No wifi device found</string>
+
+    <string name="zigbeeWifiCapability">Capabilities</string>
+    <string name="zigbeeWifiDeviceList">Device List</string>
+
+    <string name="toastPasswordValidation">Password should have minimum 8 characters!</string>
+    <string name="toastSuccessfullOnboard">On-Boarding successful!</string>
+    <string name="toastNotSuccessfullOnboard">On-Boarding is not successful. Please try again!</string>
+    <string name="toastWifiDeviceNotFound">No wifi device found!</string>
+    <string name="toastWifiSuccessfullOnboard">Wifi On-Boarding successful!</string>
+    <string name="toastWrongQRFormat">Wrong QR format!</string>
+    <string name="toastDeviceNotFound">Device not found. Please try again!</string>
+    <string name="toastTcpConnectionError">DHCP failed to get IP Address , Please try again!</string>
+    <string name="toastNoBoardInfo">Could not get Device information!</string>
+    <string name="toastConnectionLoss">Connection Loss! Please try again</string>
+    <string name="toastZigbeeNoData">Could not get Zigbee details. Please try again!</string>
+    <string name="toastZigbeeOnboardNotSuccessfull">Zigbee On-Boarding is not successful. Please try again!</string>
+    <string name="toastThreadNoData">Could not get Thread details. Please try again!</string>
+    <string name="toastThreadOnboardNotSuccessfull">Thread On-Boarding is not successful. Please try again!</string>
+    <string name="toastNoCoordinator">No Coordinator selected</string>
+    <string name="toastNoBorderRouter">No Border Router selected</string>
+    <string name="toastTurnOnWifi">Please Turn On Wifi</string>
+    <string name="toastNoServiceFound">Could not find Service!</string>
+    <string name="toastNotPairing">Pairing is not successful! Please try again</string>
+    <string name="toastNotSuccessfulDelete">Delete not successful!</string>
+
+    <string name="dialogOk">OK</string>
+    <string name="dialogCancel">Cancel</string>
+
+    <string name="ap_password_title">Password for AP: </string>
+    <string name="ap_password_invalid">Password length invalid</string>
+    <string name="ap_password_empty">Password cannot be empty</string>
+    <string name="ap_connect">Connect</string>
+    <string name="no_ssid">SSID not selected</string>
+    <string name="show_paswd">Show Password</string>
+    <string name="wifi_disabled">Please enable WiFi</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab1">Device \n to Provision</string>
+    <string name="tab2">Provisioned Devices</string>
+    <string name="noOnboardingDevice">No device found for onboarding</string>
+    <string name="nosubdevice">No device found \n Please wait..</string>
+    <string name="noProvisionedDevice">No Proviosioned Device</string>
+    <string name="noSensordetail">No Sensor Detail found</string>
+    <string name="noThermodetail">No thermostat Detail found</string>
+
+    <string name="textViewOperatingState">Operating State</string>
+    <string name="textViewCurrentTemprature">Current Temperature</string>
+
+    <string name="textViewOperatingMode">Operating Mode</string>
+    <string name="textViewDesiredTemp">Desired Temperature</string>
+    <string name="textViewAWSConfiguration">(Configured to AWS)</string>
+    <string name="buttonApply">Apply</string>
+
+    <string name="sensor">SENSOR</string>
+    <string name="thermostat">THERMOSTAT</string>
+
+    <string name="accelerometerUnit"><![CDATA[m/s<sup><small>2</small></sup>,]]></string>
+    <string name="nosensordata">No Sensor Details Available</string>
+
+    <string name="ac_on">ac_on</string>
+    <string name="AC_ON">AC_ON</string>
+    <string name="heater_on">heater_on</string>
+    <string name="HEATER_ON">HEATER_ON</string>
+    <string name="auto">auto</string>
+    <string name="STAND_BY">STAND_BY</string>
+    <string name="off">off</string>
+    <string name="OFF">OFF</string>
+    <string name="AUTO">AUTO</string>
+    <string name="APPLYING">APPLYING</string>
+    <string name="APPLY">APPLY</string>
+
+</resources>

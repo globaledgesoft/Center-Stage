@@ -1,0 +1,444 @@
+
+define memory mem with size = 4G;
+
+define region RAM_AON_PATCHROM_RO_MEMORY                        = mem:[from 0x10001600 to 0x10001ac0];
+define region RAM_AON_RO_MEMORY                                 = mem:[from 0x10001ac0 to 0x10001c00];
+define region RAM_AON_ROM_PATCHTABLE_RW_MEMORY                  = mem:[from 0x10001c00 to 0x10001d80];
+define region RAM_AON_DATA_MEMORY                               = mem:[from 0x10001dc0 to 0x10002000];
+
+define region RAM_SOM_BSP_ROM_PATCHTABLE_RW_MEMORY              = mem:[from 0x10002f00 to 0x10003c00];
+define region RAM_SOM_BSP_DATA_MEMORY                           = mem:[from 0x10003c00 to 0x10004100];
+define region RAM_SOM_BSP_ROM2RAM_INDIRECTION_TABLE_RW_MEMORY   = mem:[from 0x10004100 to 0x10004140];
+define region RAM_SOM_DEVCFG_DATA_RW_MEMORY                     = mem:[from 0x10004140 to 0x10004900];
+
+define region RAM_SOM_BSP_STACK_MEMORY                       = mem:[from 0x1000f880 to 0x10010000];
+define region RAM_SOM_BSP_HEAP_MEMORY                        = mem:[from 0x1000e680 to 0x1000f880];
+define region RAM_SOM_BSP_DIAG_BUF_MEMORY                       = mem:[from 0x1000e400 to 0x1000e680];
+
+define region RAM_SOM_BSP_PATCHROM_RO_MEMORY                    = mem:[from 0x10004900 to 0x10005700];
+define region RAM_BSP_VENEER_RO_MEMORY                          = mem:[from 0x10005700 to 0x10006000];
+define region RAM_SOM_BSP_RO_MEMORY                             = mem:[from 0x10006000 to 0x10007600];
+
+define region RAM_SOM_APPS_RO_MEMORY                            = mem:[from 0x10007600 to 0x1000d000];
+define region RAM_SOM_APPS_DATA_MEMORY                          = mem:[from 0x1000d000 to 0x1000e400];
+
+define region RAM_FOM_BSP_ROM_PATCHTABLE_RW_MEMORY              = mem:[from 0x10013400 to 0x10016800];
+define region RAM_FOM_BSP_ROM2RAM_INDIRECTION_TABLE_RW_0_MEMORY = mem:[from 0x10016800 to 0x10016a00];
+define region RAM_FOM_BSP_ROM2RAM_INDIRECTION_TABLE_RW_1_MEMORY = mem:[from 0x10016a00 to 0x10016c00];
+define region RAM_FOM_DEVCFG_DATA_RW_MEMORY                     = mem:[from 0x1001d400 to 0x1001e000];
+
+define region RAM_FOM_BSP_DATA_MEMORY                           = mem:[from 0x10016c00 to 0x1001d400];
+define region RAM_FOM_BSP_HEAP_MEMORY                           = mem:[from 0x10090000 to 0x100af800];
+define region RAM_FOM_BSP_STACK_MEMORY                          = mem:[from 0x100af800 to 0x100b0000];
+
+define region RAM_SBL_RAMDUMP_MEMORY                            = mem:[from 0x1001e000 to 0x10020000];
+
+define region RAM_FOM_BSP_PATCHROM_RO_MEMORY                    = mem:[from 0x10020000 to 0x10025000];
+define region RAM_FOM_BSP_RO_MEMORY                             = mem:[from 0x10025000 to 0x10046000];
+
+define region RAM_FOM_APPS_RO_MEMORY                            = mem:[from 0x10046000 to 0x10080000];
+define region RAM_FOM_APPS_DATA_MEMORY                          = mem:[from 0x10080000 to 0x10090000];
+
+define region RAM_SBL_RO_MEMORY                                 = mem:[from 0x100a0000 to 0x100a2000];
+define region RAM_SBL_RW_MEMORY                                 = mem:[from 0x100a2000 to 0x100a8000];
+define region RAM_SBL_ZI_MEMORY                                 = mem:[from 0x100a8000 to 0x100aa000];
+define region SBL_LOG_META_INFO_RW_MEMORY                       = mem:[from 0x100aa000 to 0x100aa040];
+define region SBL_LOG_BUF_RW_MEMORY                             = mem:[from 0x100aa040 to 0x100ab040];
+
+define region XIP_RO_MEMORY                                        = mem:[from 0x1000000 to 0x1180000];
+
+do not initialize { zi }; 
+
+define overlay XIP_OEM_RO_OVERLAY
+{
+   [XIP FOM APP RO NORMAL]
+   [XIP FOM APPS RO NORMAL]
+   ro section      XIP_OEM_RO_SECTION,
+};
+
+"XIP_OEM_RO_REGION": place in XIP_RO_MEMORY
+{
+  overlay XIP_OEM_RO_OVERLAY
+};
+
+/* RAM_AON_CONFIG_SEGMENT */
+"RAM_AON_PATCHABLE_RW_REGION": place in RAM_AON_ROM_PATCHTABLE_RW_MEMORY
+{
+   [RAM AON SYS RW PATCH]
+   rw section RAM_AON_BSP_RW_SECTION,
+}; 
+
+define overlay AON_PATCHABLE_OVERLAY
+{
+   [RAM AON SYS RO PATCH]
+   ro section RAM_AON_BSP_RO_SECTION,
+};
+
+"RAM_AON_PATCHABLE_RO_REGION": place in RAM_AON_PATCHROM_RO_MEMORY
+{
+   overlay AON_PATCHABLE_OVERLAY
+}; 
+
+define overlay RAM_AON_OVERLAY
+{
+   [RAM AON SYS RO NORMAL]
+   ro section RAM_AON_BSP_RO_SECTION,
+};
+
+"RAM_AON_RO_REGION": place in RAM_AON_RO_MEMORY
+{
+	overlay RAM_AON_OVERLAY
+};
+
+ /* RAM_AON_CONFIG_SEGMENT */
+"RAM_AON_MOM_RW_REGION": place in RAM_AON_DATA_MEMORY
+{
+   [RAM AON SYS RW NORMAL]
+   rw section RAM_AON_MOM_RW_SECTION,
+};
+
+ /* RAM_AON_CONFIG_SEGMENT */
+"RAM_AON_MOM_STACK_REGION": place in RAM_AON_DATA_MEMORY
+{
+
+};
+
+ /* RAM_AON_CONFIG_SEGMENT */
+"RAM_AON_MOM_ZI_REGION": place in RAM_AON_DATA_MEMORY
+{
+   [RAM AON SYS ZI NORMAL]
+   zi section RAM_AON_MOM_ZI_SECTION,
+};
+
+
+/* RAM_SOM_PATCH_DATA_SEGMENT */
+"RAM_SOM_BSP_ROM_PATCHTABLE_RW_REGION": place in RAM_SOM_BSP_ROM_PATCHTABLE_RW_MEMORY
+{
+   [RAM SOM SYS RW PATCH]
+   ro section RAM_SOM_BSP_ROM_PATCHTABLE_RW_SECTION,
+};
+
+/* RAM_SOM_BSP_DATA_SEGMENT */
+"VECTOR_TABLE_RW_REGION": place in RAM_SOM_BSP_DATA_MEMORY
+{
+   rw section VECTOR_TABLE_RW_SECTION,
+};
+
+"RAM_SOM_BSP_ROM2RAM_INDIRECTION_TABLE_RW_REGION": place at start of RAM_SOM_BSP_ROM2RAM_INDIRECTION_TABLE_RW_MEMORY
+{
+   [RAM SOM SYS RW ROM2RAM]
+   /*rw section RAM_SOM_BSP_ROM2RAM_INDIRECTION_TABLE_RW_SECTION, */
+};
+
+"RAM_SOM_BSP_RW_REGION": place in RAM_SOM_BSP_DATA_MEMORY
+{
+   [RAM SOM SYS RW NORMAL]
+   rw section   RAM_SOM_BSP_RW_SECTION,
+};
+
+"RAM_SOM_BSP_ZI_REGION": place in RAM_SOM_BSP_DATA_MEMORY
+{
+   [RAM SOM SYS ZI NORMAL]
+   zi section    .bss.RAM_SOM_BSP_ZI_SECTION,
+};
+
+"RAM_SOM_DEVCFG_DATA_RW_REGION": place at start of RAM_SOM_DEVCFG_DATA_RW_MEMORY
+{
+   [RAM SOM SYS RO DEVCFG]
+   [RAM SOM SYS RW DEVCFG]
+   rw section   RAM_SOM_DEVCFG_DATA_RW_SECTION,
+};
+
+"RAM_SOM_BSP_HEAP_ZI_REGION": place in RAM_SOM_BSP_HEAP_MEMORY
+{
+   [RAM SOM SYS ZI HEAP]
+   zi section RAM_SOM_BSP_HEAP_ZI_SECTION,
+};
+   
+
+/* RAM_SOM_BSP_CODE_SEGMENT */
+define overlay SOM_BSP_RO_OVERLAY
+{
+   [RAM SOM SYS RO NORMAL]
+   [RAM SOM SYS RO ROM2RAM]
+   ro section     RAM_SOM_BSP_RO_SECTION,
+};
+
+"RAM_SOM_BSP_RO_REGION": place in RAM_SOM_BSP_RO_MEMORY
+{
+  overlay SOM_BSP_RO_OVERLAY
+};
+
+   /* RAM_SOM_PATCHROM_CODE_SEGMENT */
+define overlay SOM_BSP_PATCHROM_OVERLAY
+{   
+   [RAM SOM SYS RO PATCH]
+   ro section     RAM_SOM_BSP_PATCHROM_RO_SECTION,
+};
+
+"RAM_SOM_BSP_PATCHROM_RO_REGION": place in RAM_SOM_BSP_PATCHROM_RO_MEMORY
+{ 
+  overlay SOM_BSP_PATCHROM_OVERLAY
+};
+
+   /* RAM_BSP_VENEER_SEGMENT */
+define overlay BSP_VENEER_OVERLAY
+{
+    [RAM SOM SYS RO VENEER]
+};
+
+"RAM_BSP_VENEER_RO_REGION": place in RAM_BSP_VENEER_RO_MEMORY
+{
+  overlay BSP_VENEER_OVERLAY
+};
+
+   /* RAM_SOM_APPS_CODE_SEGMENT */
+define overlay SOM_APPS_OVERLAY
+{
+   [RAM SOM APP RO NORMAL]
+   [RAM SOM APPS RO NORMAL]
+   ro section      RAM_SOM_APPS_RO_SECTION,
+};
+
+"RAM_SOM_APPS_RO_REGION": place in RAM_SOM_APPS_RO_MEMORY 
+{
+  overlay SOM_APPS_OVERLAY
+};  
+
+/* RAM_SOM_APPS_DATA_SEGMENT */
+"RAM_SOM_APPS_RW_REGION": place in RAM_SOM_APPS_DATA_MEMORY
+{
+   [RAM SOM APP RW NORMAL]
+   [RAM SOM APPS RW NORMAL]
+   rw section    RAM_SOM_APPS_RW_SECTION,
+};
+
+"RAM_SOM_APPS_ZI_REGION": place in RAM_SOM_APPS_DATA_MEMORY
+{
+   [RAM SOM APP ZI NORMAL]
+   [RAM SOM APPS ZI NORMAL]
+   zi section    RAM_SOM_APPS_ZI_SECTION,
+};
+
+   /* RAM_FOM_PATCH_DATA_SEGMENT */
+"RAM_FOM_BSP_ROM_PATCHTABLE_RW_REGION": place in RAM_FOM_BSP_ROM_PATCHTABLE_RW_MEMORY
+{
+  [RAM FOM SYS RW PATCH]
+  rw section   RAM_FOM_BSP_ROM_PATCHTABLE_RW_SECTION,
+};
+
+/* RAM_FOM_BSP_DATA_SEGMENT */
+"RAM_FOM_BSP_ROM2RAM_INDIRECTION_TABLE_RW_REGION_0": place at start of RAM_FOM_BSP_ROM2RAM_INDIRECTION_TABLE_RW_0_MEMORY
+{
+  [RAM FOM SYS RW LINK0]
+  rw section   RAM_FOM_BSP_ROM2RAM_INDIRECTION_TABLE_RW_SECTION_0,
+};
+
+"RAM_FOM_BSP_ROM2RAM_INDIRECTION_TABLE_RW_REGION_1": place at start of RAM_FOM_BSP_ROM2RAM_INDIRECTION_TABLE_RW_1_MEMORY
+{
+   [RAM FOM SYS RW LINK1]
+   rw section     RAM_FOM_BSP_ROM2RAM_INDIRECTION_TABLE_RW_SECTION_1,
+};
+
+"RAM_FOM_DEVCFG_DATA_RW_REGION": place at start of RAM_FOM_DEVCFG_DATA_RW_MEMORY
+{
+   [RAM FOM SYS RO DEVCFG]
+   [RAM FOM SYS RW DEVCFG] 
+   rw section    RAM_FOM_DEVCFG_DATA_RW_SECTION,
+};
+
+/* RAM_FOM_BSP_STACK_SEGMENT */
+"RAM_FOM_BSP_STACK_ZI_REGION": place in RAM_FOM_BSP_STACK_MEMORY
+{
+
+};
+
+/* RAM_FOM_PATCHROM_CODE_SEGMENT */
+define overlay BSP_PATCHROM_OVERLAY
+{
+   [RAM FOM SYS RO PATCH]
+};
+
+"RAM_FOM_BSP_PATCHROM_RO_REGION": place in RAM_FOM_BSP_PATCHROM_RO_MEMORY
+{
+   overlay BSP_PATCHROM_OVERLAY
+};
+
+   /* RAM_SBL_RAMDUMP_SEGMENT */
+"RAM_SBL_RAMDUMP_RW_REGION": place in RAM_SBL_RAMDUMP_MEMORY
+{
+   [RAM SBL SYS RW RAMDUMP]
+   rw section     RAM_SBL_RAMDUMP_RW_SECTION,
+};
+
+"RAM_SBL_RAMDUMP_ZI_REGION": place in RAM_SBL_RAMDUMP_MEMORY
+{
+   [RAM SBL SYS ZI RAMDUMP]
+   zi section     RAM_SBL_RAMDUMP_ZI_SECTION,
+};
+
+
+"RAM_SOM_BSP_STACK_ZI_REGION": place in RAM_SOM_BSP_STACK_MEMORY
+{
+   [RAM SOM SYS ZI STACK]
+   zi section .bss.RAM_SOM_BSP_STACK_ZI_SECTION,
+};
+
+define overlay SBL_OVERLAY
+{
+   [RAM SBL SYS RO NORMAL]
+   ro section     RAM_SBL_RO_SECTION,
+};
+"RAM_SBL_RO_REGION": place in RAM_SBL_RO_MEMORY 
+{
+    overlay SBL_OVERLAY
+};
+
+   /* RAM_SBL_DATA_SEGMENT */
+"RAM_SBL_RW_REGION": place in RAM_SBL_RW_MEMORY
+{
+   [RAM SBL SYS RW NORMAL] 
+   rw section     .bss.BOOT_HASH_SEGMENT,
+   rw section     RAM_SBL_DATA_SEGMENT_RW_SECTION,
+};
+
+
+"RAM_SBL_ZI_REGION": place in RAM_SBL_ZI_MEMORY 
+{
+   [RAM SBL SYS ZI NORMAL]
+   zi section     RAM_SBL_ZI_SECTION,
+
+};
+
+"SBL_LOG_META_INFO_RW_SECTION": place in SBL_LOG_META_INFO_RW_MEMORY
+{
+};
+
+"SBL_LOG_BUF_RW_SECTION": place in SBL_LOG_META_INFO_RW_MEMORY
+{
+}; 
+
+
+/* XIP_SEGMENT */
+define overlay XIP_BSP_RO_OVERLAY
+{
+   [XIP FOM SYS RO NORMAL]
+   [XIP SBL SYS RO NORMAL]
+   [XIP SBL SYS RO RAMDUMP] 
+   ro section     XIP_BSP_RO_SECTION,
+};
+
+"XIP_BSP_RO_REGION": place in XIP_RO_MEMORY
+{
+   overlay XIP_BSP_RO_OVERLAY
+};
+
+define overlay FOM_APPS_OVERLAY
+{
+   [RAM FOM APP RO NORMAL]
+   [RAM FOM APPS RO NORMAL]
+   ro data,
+   ro section RAM_FOM_APPS_RO_SECTION,
+};
+
+
+ /* RAM_FOM_APPS_CODE_SEGMENT */
+"RAM_FOM_APPS_RO_REGION": place in RAM_FOM_APPS_RO_MEMORY
+{
+  overlay FOM_APPS_OVERLAY
+};
+
+ /* RAM_FOM_BSP_CODE_SEGMENT */
+define overlay FOM_BSP_OVERLAY
+{
+   ro code,
+   /* Needed for C++ static constructors. See __initialize_cpp__aeabi_ */
+   ro object    *(.init_array*),
+   [RAM FOM SYS RO NORMAL]   
+   ro section RAM_FOM_BSP_RO_SECTION,
+};
+
+ /* RAM_FOM_BSP_CODE_SEGMENT */
+"RAM_FOM_BSP_RO_REGION": place in RAM_FOM_BSP_RO_MEMORY
+{
+  overlay FOM_BSP_OVERLAY
+};
+
+"RAM_FOM_BSP_RW_REGION": place in RAM_FOM_BSP_DATA_MEMORY
+{
+   [RAM FOM SYS RW NORMAL]
+   rw section    RAM_FOM_BSP_RW_SECTION,
+};
+
+"RAM_FOM_BSP_ZI_REGION": place in RAM_FOM_BSP_DATA_MEMORY
+{
+  [RAM FOM SYS ZI NORMAL]
+   zi section RAM_FOM_BSP_ZI_SECTION,
+};
+
+   /* RAM_FOM_APPS_DATA_SEGMENT */
+"RAM_FOM_APPS_RW_REGION": place in RAM_FOM_APPS_DATA_MEMORY
+{
+   [RAM FOM APP RW NORMAL]
+   [RAM FOM APPS RW NORMAL]
+   rw,
+   rw section     RAM_FOM_APPS_RW_SECTION,
+};
+
+"RAM_FOM_APPS_ZI_REGION": place in RAM_FOM_APPS_DATA_MEMORY
+{
+   [RAM FOM APP ZI NORMAL]
+   [RAM FOM APPS ZI NORMAL]
+   zi,
+   zi section     RAM_FOM_APPS_ZI_SECTION,
+};
+
+".ARM.exidx": place in XIP_RO_MEMORY
+{
+   ro object .ARM.exidx*,
+};  
+
+
+/* Export symbols.  */
+ 
+define exported symbol Image$$RAM_SOM_BSP_ZI_REGION$$ZI$$Base       = start(RAM_FOM_BSP_DATA_MEMORY);
+define exported symbol Image$$RAM_SOM_BSP_ZI_REGION$$ZI$$Length     = size(RAM_FOM_BSP_DATA_MEMORY);
+define exported symbol Image$$RAM_FOM_BSP_ZI_REGION$$ZI$$Base       = start(RAM_FOM_BSP_DATA_MEMORY);
+define exported symbol Image$$RAM_FOM_BSP_ZI_REGION$$ZI$$Length     = end(RAM_FOM_BSP_DATA_MEMORY) - start(RAM_FOM_BSP_DATA_MEMORY);
+
+define exported symbol Image$$RAM_FOM_BSP_STACK_ZI_REGION$$ZI$$Base  = start(RAM_FOM_BSP_STACK_MEMORY);
+define exported symbol Image$$RAM_FOM_BSP_STACK_ZI_REGION$$ZI$$Limit = end(RAM_FOM_BSP_STACK_MEMORY);
+define exported symbol Image$$SBL_LOG_META_INFO_RW_SECTION$$Base     = start(SBL_LOG_META_INFO_RW_MEMORY);
+define exported symbol Image$$SBL_LOG_BUF_RW_SECTION$$Base           = start(SBL_LOG_BUF_RW_MEMORY);
+define exported symbol Image$$RAM_SBL_RO_REGION$$RW$$Base            = start(RAM_SBL_RO_MEMORY);
+define exported symbol Image$$RAM_SBL_RO_REGION$$RW$$Limit           = end(RAM_SBL_RO_MEMORY);
+
+define exported symbol Image$$RAM_SOM_BSP_HEAP_REGION$$ZI$$Base         = start(RAM_SOM_BSP_HEAP_MEMORY);
+define exported symbol Image$$RAM_SOM_BSP_HEAP_REGION$$ZI$$Length       = end(RAM_SOM_BSP_HEAP_MEMORY) - start(RAM_SOM_BSP_HEAP_MEMORY);
+
+define exported symbol Image$$RAM_SOM_APPS_ZI_REGION$$ZI$$Base          = start(RAM_SOM_APPS_DATA_MEMORY);
+define exported symbol Image$$RAM_SOM_APPS_ZI_REGION$$ZI$$Length        = end(RAM_SOM_APPS_DATA_MEMORY) - start(RAM_SOM_APPS_DATA_MEMORY);
+
+define exported symbol Image$$RAM_FOM_APPS_ZI_REGION$$ZI$$Base          = start(RAM_FOM_APPS_DATA_MEMORY);
+define exported symbol Image$$RAM_FOM_APPS_ZI_REGION$$ZI$$Length        = end(RAM_FOM_APPS_DATA_MEMORY) - start(RAM_FOM_APPS_DATA_MEMORY);
+
+define exported symbol Image$$RAM_AON_MOM_ZI_REGION$$ZI$$Base           = start(RAM_AON_DATA_MEMORY);
+define exported symbol Image$$RAM_AON_MOM_ZI_REGION$$ZI$$Length         = end(RAM_AON_DATA_MEMORY) - start(RAM_AON_DATA_MEMORY);
+
+
+define exported symbol Load$$RAM_SOM_BSP_HEAP_ZI_REGION$$ZI$$Base       = start(RAM_SOM_BSP_HEAP_MEMORY);
+
+define exported symbol Image$$RAM_SOM_BSP_DIAG_BUF_REGION$$ZI$$Base     = start(RAM_SOM_BSP_DIAG_BUF_MEMORY);
+define exported symbol Image$$RAM_SOM_BSP_DIAG_BUF_REGION$$ZI$$Length   = end(RAM_SOM_BSP_DIAG_BUF_MEMORY) - start(RAM_SOM_BSP_DIAG_BUF_MEMORY);
+
+define exported symbol Image$$RAM_SOM_BSP_STACK_REGION$$ZI$$Base        = start(RAM_SOM_BSP_STACK_MEMORY);
+define exported symbol Image$$RAM_SOM_BSP_STACK_REGION$$ZI$$Limit       = end(RAM_SOM_BSP_STACK_MEMORY);
+
+/*For Free RTOS, RTOS_HEAP_SIZE should match the config value in freertosconfig.h*/
+define exported symbol RTOS_HEAP_SIZE	= 0x0000;
+define exported symbol Image$$RAM_FOM_BSP_RTOS_HEAP_REGION$$ZI$$Base	 = end(RAM_FOM_APPS_DATA_MEMORY);	
+define exported symbol Image$$RAM_FOM_BSP_HEAP_REGION$$ZI$$Base         = RTOS_HEAP_SIZE + Image$$RAM_FOM_BSP_RTOS_HEAP_REGION$$ZI$$Base;
+
+define exported symbol Image$$RAM_FOM_BSP_STACK_REGION$$ZI$$Base        = start(RAM_FOM_BSP_STACK_MEMORY);
+define exported symbol Image$$RAM_FOM_BSP_STACK_REGION$$ZI$$Limit       = end(RAM_FOM_BSP_STACK_MEMORY);
+

@@ -1,0 +1,455 @@
+This Notice.txt file contains certain notices of software components included 
+with the software that Qualcomm Atheros, Inc. (“Qualcomm Atheros”) is required 
+to provide you. Except where prohibited by the open source license, the content 
+of this notices file is only provided to satisfy Qualcomm Atheros's attribution 
+and notice requirement; your use of these software components together with the 
+Qualcomm Atheros software (Qualcomm Atheros software hereinafter referred to as 
+“Software”) is subject to the terms of your agreement from Qualcomm Atheros. 
+Compliance with all copyright laws and software license agreements included in 
+the notice section of this file are the responsibility of the user. Except as may 
+be granted by separate express written agreement, this file provides no license 
+to any patents, trademarks, copyrights, or other intellectual property of Qualcomm 
+Incorporated or any of its subsidiaries. 
+
+Qualcomm is a trademark of Qualcomm Incorporated, registered in the United States 
+and other countries. All Qualcomm Incorporated trademarks are used with permission. 
+Other products and brand names may be trademarks or registered trademarks of their 
+respective owners.
+
+
+NOTICES:
+
+=============================================================================
+
+Copyright [2018] [Qualcomm Technologies Inc.]
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+=============================================================================
+/*!
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ *//*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+ =============================================================================
+ /*!
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under the MIT license
+ */
+ =============================================================================
+ /*! jQuery v3.2.1 | (c) JS Foundation and other contributors | jquery.org/license */
+ =============================================================================
+ /**
+ * material-design-lite - Material Design Components in CSS, JS and HTML
+ * @version v1.3.0
+ * @license Apache-2.0
+ * @copyright 2015 Google, Inc.
+ * @link https://github.com/google/material-design-lite
+ */
+
+ =============================================================================
+  /* Notify.js - http://notifyjs.com/ Copyright (c) 2015 MIT */
+ =============================================================================
+
+/* webclib.c
+ *
+ * Part of the Webio Open Source lightweight web server.
+ *
+ * Copyright (c) 2007 by John Bartas
+ * All rights reserved.
+ *
+ * Use license: Modified from standard BSD license.
+ * 
+ * Redistribution and use in source and binary forms are permitted
+ * provided that the above copyright notice and this paragraph are
+ * duplicated in all such forms and that any documentation, advertising 
+ * materials, Web server pages, and other materials related to such
+ * distribution and use acknowledge that the software was developed
+ * by John Bartas. The name "John Bartas" may not be used to 
+ * endorse or promote products derived from this software without 
+ * specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED ``AS IS'' AND WITHOUT ANY EXPRESS OR
+ * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
+ * WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+ */
+ 
+=============================================================================
+
+
+/*
+ * Copyright (c) 2011 Qualcomm Atheros, Inc.
+ * All Rights Reserved.
+ * Qualcomm Atheros Confidential and Proprietary.
+ * Notifications and licenses are retained for attribution purposes only.
+ */
+
+/*
+ * Qualcomm Atheros, Inc. has chosen to take code licensed under either 
+ * the GPL or BSD licenses subject only to the BSD license and 
+ * distributes only under the terms of the BSD license.
+ */
+
+/*
+ * AES (Rijndael) cipher
+ *
+ * Modifications to public domain implementation:
+ * - support only 128-bit keys
+ * - cleanup
+ * - use C pre-processor to make it easier to change S table access
+ * - added option (AES_SMALL_TABLES) for reducing code size by about 8 kB at
+ *   cost of reduced throughput (quite small difference on Pentium 4,
+ *   10-25% when using -O1 or -O2 optimization)
+ *
+ * Copyright (c) 2003-2005, Jouni Malinen <jkmaline@cc.hut.fi>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation.
+ *
+ * Alternatively, this software may be distributed under the terms of BSD
+ * license.
+ *
+ * See README and COPYING for more details.
+ */
+
+/*
+ * rijndael-alg-fst.c
+ *
+ * @version 3.0 (December 2000)
+ *
+ * Optimised ANSI C code for the Rijndael cipher (now AES)
+ *
+ * @author Vincent Rijmen <vincent.rijmen@esat.kuleuven.ac.be>
+ * @author Antoon Bosselaers <antoon.bosselaers@esat.kuleuven.ac.be>
+ * @author Paulo Barreto <paulo.barreto@terra.com.br>
+ *
+ * This code is hereby placed in the public domain.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHORS ''AS IS'' AND ANY EXPRESS
+ * OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHORS OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+ * BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+ * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+ 
+=============================================================================
+
+/*
+ * v4.0 July 5, 2011 ipmc/ipopt.c
+ * Distributed per ref US2611-2
+ */
+/*
+ * FILENAME: ipopt.c
+ *
+ * Copyright 1997- 2002 By InterNiche Technologies Inc. All rights reserved
+ *
+ * This file contains the code to handle IP multicast options
+ *
+ *
+ * MODULE: IPMC
+ *
+ * ROUTINES: ip_setmoptions(), ip_getmoptions(), 
+ * ROUTINES: ip_freemoptions(), 
+ *
+ * PORTABLE: yes
+ */
+
+/* Additional Copyrights: */
+
+/*
+ * Copyright (c) 1982, 1986 Regents of the University of California.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. [rescinded 22 July 1999]
+ * 4. Neither the name of the University nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+ 
+
+=============================================================================
+
+/******************************************************************************
+ * Copyright 2013, Qualcomm Innovation Center, Inc.
+ *
+ *    All rights reserved.
+ *    This file is licensed under the 3-clause BSD license in the NOTICE.txt
+ *    file for this project. A copy of the 3-clause BSD license is found at:
+ *
+ *        http://opensource.org/licenses/BSD-3-Clause.
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the license is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the license for the specific language governing permissions and
+ *    limitations under the license.
+ ******************************************************************************/
+
+
+=========================================================================================
+
+
+/*
+ * FILE:        sha2.h
+ * AUTHOR:      Aaron D. Gifford - http://www.aarongifford.com/
+ *
+ * Copyright (c) 2000-2001, Aaron D. Gifford
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of the copyright holder nor the names of contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTOR(S) ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTOR(S) BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ *
+ * $Id: sha2.h,v 1.1 2001/11/08 00:02:01 adg Exp adg $
+ */
+
+=========================================================================================
+/*
+ * Qualcomm Atheros, Inc. has chosen to take code licensed under either 
+ * the GPL or BSD licenses subject only to the BSD license and 
+ * distributes only under the terms of the BSD license.
+ */
+/*
+ * Host AP crypt: host-based TKIP encryption implementation for Host AP driver
+ *
+ * Copyright (c) 2003-2004, Jouni Malinen <jkmaline@cc.hut.fi>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation. See README and COPYING for
+ * more details.
+ *
+ * Alternatively, this software may be distributed under the terms of BSD
+ * license.
+ */
+===============================================================================
+/*
+ * v4.0 July 5, 2011 h/socket.h
+ * Distributed per ref US2611-2
+ */
+/*
+ * FILENAME: socket.h
+ *
+ * Copyright 1997 - 2000 By InterNiche Technologies Inc. All rights reserved
+ *
+ *
+ * MODULE: TCP
+ *
+ *
+ * PORTABLE: yes
+ */
+
+/* Additional Copyrights: */
+/*
+ * Copyright (c) 1982, 1986 Regents of the University of California.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. [rescinded 22 July 1999]
+ * 4. Neither the name of the University nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+ =======================================================================================
+ /*
+ * v4.0 July 5, 2011 h/nameser.h
+ * Distributed per ref US2611-2
+ */
+/*
+ * FILENAME: nameser.h
+ *
+ * Copyright  2000 By InterNiche Technologies Inc. All rights reserved
+ *
+ *
+ * MODULE: DNS
+ *
+ *
+ * PORTABLE: yes
+ */
+
+/* Additional Copyrights: */
+
+/*
+ * Copyright (c) 1982, 1986 Regents of the University of California.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. [rescinded 22 July 1999]
+ * 4. Neither the name of the University nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ *
+ *
+ * Portions Copyright (c) 1993 by Digital Equipment Corporation.
+ * 
+ * Permission to use, copy, modify, and distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies, and that
+ * the name of Digital Equipment Corporation not be used in advertising or
+ * publicity pertaining to distribution of the document or software without
+ * specific, written prior permission.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS" AND DIGITAL EQUIPMENT CORP. DISCLAIMS ALL
+ * WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES
+ * OF MERCHANTABILITY AND FITNESS.   IN NO EVENT SHALL DIGITAL EQUIPMENT
+ * CORPORATION BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+ * DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR
+ * PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS
+ * ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
+ * SOFTWARE.
+ * -
+ * --Copyright--
+ */
+ =========================================================================================
+ /*
+ * v4.0 July 5, 2011 h/igmp.h
+ * Distributed per ref US2611-2
+ */
+/*
+ * FILENAME: igmp.h
+ *
+ * Copyright 1997- 2000 By InterNiche Technologies Inc. All rights reserved
+ *
+ *
+ * MODULE: IPMC
+ *
+ *
+ * PORTABLE: yes
+ */
+/* Additional Copyrights: */
+/*
+ * FILENAME: igmp.h
+ *
+ *
+ * Internet Group Management Protocol (IGMP) definitions.
+ *
+ * Copyright (c) 1988 Stephen Deering.
+ * Copyright (c) 1982, 1986 Regents of the University of California.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. [rescinded 22 July 1999]
+ * 4. Neither the name of the University nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ *
+ * @(#)igmp.h 8.1 (Berkeley) 6/10/93
+ */
+ 
+
+ 

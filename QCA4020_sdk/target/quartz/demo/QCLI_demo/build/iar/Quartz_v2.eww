@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\QCA402X_AWS.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\Quartz_4020_v2.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\Quartz_4024_v2.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\Quartz_4025_v2.ewp</path>
+    </project>
+    <batchBuild />
+</workspace>

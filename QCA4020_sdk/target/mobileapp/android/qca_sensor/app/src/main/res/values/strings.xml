@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">QualcommSensors</string>
+    <string name="editTextHintForUserName">USER NAME</string>
+    <string name="editTextHintForPassword">PASSWORD</string>
+
+    <string name="textViewAWSCognitoLogin">AWS Cognito Login</string>
+    <string name="buttonLogin">Login</string>
+
+    <string name="buttonCancel">Cancel</string>
+    <string name="buttonApply">Apply</string>
+    <string name="textViewOperatingMode">Operating Mode</string>
+    <string name="textViewDesiredTemp">Desired Temperature</string>
+
+    <string name="textViewListOfThings">List Of Things</string>
+    <string name="textViewListOfThermostat">List Of Thermostat</string>
+
+    <string name="textViewCurrentTemprature">Current Temperature</string>
+    <string name="textViewOperatingState">Operating State</string>
+
+
+    <string name="drawerOpen">Drawer Open</string>
+    <string name="drawerClose">Drawer Close</string>
+    <string name="Region">Region</string>
+
+    <string name="dialogAwsTitle">AWS Credentials File Required</string>
+    <string name="dialogAwsMessage">This application needs IAM user credentials file(credentials.csv) to authenticate with AWS cloud.</string>
+    <string name="dialogInfoTitle">AWS Credentials File(credentials.csv)</string>
+    <string name="clearCredentials">Clear Credentials</string>
+    <string name="clearAlertMessage">Are You sure You want to clear credentials?</string>
+
+    <string name="QualcommSensors">QualcommSensors</string>
+    <string name="credentials">Select Credentials File</string>
+    <string name="searchCredentials">Looking for (credentials.csv) files...</string>
+    <string name="regionEndpoint">Select Region Endpoint</string>
+    <string name="updateRegion">Update Region Endpoint</string>
+    <string name="internetConnected">Internet is not connected</string>
+
+    <string name="sensor">SENSOR</string>
+    <string name="thermostat">THERMOSTAT</string>
+
+    <string name="ac_on">ac_on</string>
+    <string name="AC_ON">AC_ON</string>
+    <string name="heater_on">heater_on</string>
+    <string name="HEATER_ON">HEATER_ON</string>
+    <string name="auto">auto</string>
+    <string name="STAND_BY">STAND_BY</string>
+    <string name="off">off</string>
+    <string name="OFF">OFF</string>
+    <string name="AUTO">AUTO</string>
+    <string name="APPLYING">APPLYING</string>
+    <string name="APPLY">APPLY</string>
+
+    <string name="endpoint_failure">End Point not found</string>
+
+    <string name="toastNoInternetConnection">No Internet Connection!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="accelerometerUnit"><![CDATA[m/s<sup><small>2</small></sup>,]]></string>
+
+</resources>

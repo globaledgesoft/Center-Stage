@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.561316238/BOARD_VARIANT/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.561316238/BOARD_VARIANT/operation=append
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.561316238/BOARD_VARIANT/value=cdb
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.561316238/append=true
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.561316238/appendContributed=true
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.919104661/BOARD_VARIANT/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.919104661/BOARD_VARIANT/operation=append
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.919104661/BOARD_VARIANT/value=cdb
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.919104661/append=true
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.919104661/appendContributed=true

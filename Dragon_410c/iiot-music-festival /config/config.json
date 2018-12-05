@@ -1,0 +1,29 @@
+{
+	"SERIAL_COMM":{
+		"serial_port":"/dev/ttyUSB1",
+		"start_4020_app":"4 4 1",
+		"start_music":"4 4 3",
+		"stop_music": "4 4 2",
+		"duration_in_sec" : "3",
+		"frequency_threshold" : "3"
+	},
+	"AWS_IOT_CLIENT":{
+		"host" : "a11hq9a0r6cqjs-ats.iot.eu-west-1.amazonaws.com",
+		"rootCAPath" : "root-CA.crt",
+		"certificatePath" : "QCA4020_MUSIC_FTV.cert.pem",
+		"privateKeyPath" : "QCA4020_MUSIC_FTV.private.key",
+		"clientId" : "QCA_Music_410c_Client_India",
+		"topic" : "pir_timestamp",
+		"mode" : "publish"
+	},
+	"APP_DB_CONFIG" :{
+		"dbConfig" : {
+        		"dialect": "sqlite3",
+        		"schemaName": "music_festival",
+        		"connection": {
+            			"filename": "./demo2.db"
+        		}
+    		},
+		"port" : "8000"
+	}
+}

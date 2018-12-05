@@ -1,0 +1,331 @@
+
+/**
+ * Copyright (c) 2018 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ **/
+
+ 
+#update_time_header {
+  padding-top: 10px;
+}
+
+.container {
+  margin: 0px 90px;
+}
+
+.nav {
+  border: none;
+  background: transparent;
+  padding: 0 20px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.updateform {
+  padding: 16px 16px 16px 50px;;
+  margin-bottom: 40px;
+}
+
+.nav>li {
+  width: 100%;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;  
+  margin-bottom: 10px;
+  cursor: pointer; 
+}
+.nav>li a {
+  color: white; 
+}
+.nav>li.active>a, .nav>li.active>a:focus, .nav>li.active>a:hover {
+  border: none;
+  color: black; 
+}
+
+.mdl-button {    
+  text-transform: capitalize !important;
+}
+
+.loadButton {
+  /* vertical-align: inline-grid; */
+  margin-top: 20px;
+}
+
+.sensorCard h6 {
+  margin: 0;
+  padding-left: 15px;
+  color: white;
+  line-height: 35px;
+}
+
+.sensorCard>div {
+  padding: 10px 0px 0px 5px;
+}
+
+.thermoCard h6 {
+  margin: 0;
+  padding-left: 15px;
+  color: white;
+  line-height: 35px;
+}
+.thermoCard ul {
+  margin-top: 5px; 
+}
+.thermodata {
+  display: block;
+  padding: 0px 20px;
+}
+
+.thermodata h4 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.col-in {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.col-in li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0px 20px;
+  height: 50px; 
+}
+
+.col-in li.thermostat_icon, .col-in li.dimmer_icon {
+  padding-top: 10px;
+}
+
+.col-in li.col-last h4 {
+  line-height: 0px;
+  font-size: 21px;
+  float: right;
+}
+
+.col-in li.col-middle h4 {
+  line-height: 0px;
+  font-size: 18px;
+}
+
+
+ol.breadcrumbs {
+  padding: 0px 0px 0px 40px;
+  margin: 0px;
+} 
+
+ol.breadcrumbs li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ol.breadcrumbs li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ol.breadcrumbs li a {
+   color: #0275d8; 
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ol.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+
+#loader {
+	display: none;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 45%;
+	padding: 2px;
+	z-index: 999;
+}
+
+.graphspace {
+  margin-bottom: 10px;
+}
+
+#thermostat-update, #dimmer-update, #light-update {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+
+/* Bootstrap toggle */
+
+.btn-toggle {
+  margin: 0 4rem;
+  padding: 0;
+  position: relative;
+  border: none;
+  height: 1.5rem;
+  width: 3rem;
+  border-radius: 1.5rem;
+  color: #6b7381;
+  background: #bdc1c8;
+}
+.btn-toggle:focus,
+.btn-toggle.focus,
+.btn-toggle:focus.active,
+.btn-toggle.focus.active {
+  outline: none;
+}
+.btn-toggle:before,
+.btn-toggle:after {
+  line-height: 1.5rem;
+  width: 4rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: absolute;
+  bottom: 0;
+  transition: opacity .25s;
+}
+.btn-toggle:before {
+  content: 'Off';
+  left: -4rem;
+}
+.btn-toggle:after {
+  content: 'On';
+  right: -4rem;
+  opacity: .5;
+}
+.btn-toggle > .handle {
+  position: absolute;
+  top: 0.1875rem;
+  left: 0.1875rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 1.125rem;
+  background: #fff;
+  transition: left .25s;
+}
+.btn-toggle.active {
+  transition: background-color 0.25s;
+}
+.btn-toggle.active > .handle {
+  left: 1.6875rem;
+  transition: left .25s;
+}
+.btn-toggle.active:before {
+  opacity: .5;
+}
+.btn-toggle.active:after {
+  opacity: 1;
+}
+
+.btn-toggle:before,
+.btn-toggle:after {
+  color: #6b7381;
+}
+.btn-toggle.active {
+  background-color: #29b5a8;
+}
+.btn-toggle.btn-lg {
+  margin: 0 5rem;
+  padding: 0;
+  position: relative;
+  border: none;
+  height: 2.5rem;
+  width: 5rem;
+  border-radius: 2.5rem;
+}
+.btn-toggle.btn-lg:focus,
+.btn-toggle.btn-lg.focus,
+.btn-toggle.btn-lg:focus.active,
+.btn-toggle.btn-lg.focus.active {
+  outline: none;
+}
+.btn-toggle.btn-lg:before,
+.btn-toggle.btn-lg:after {
+  line-height: 2.5rem;
+  width: 5rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: absolute;
+  bottom: 0;
+  transition: opacity .25s;
+}
+.btn-toggle.btn-lg:before {
+  content: 'Off';
+  left: -5rem;
+}
+.btn-toggle.btn-lg:after {
+  content: 'On';
+  right: -5rem;
+  opacity: .5;
+}
+.btn-toggle.btn-lg > .handle {
+  position: absolute;
+  top: 0.3125rem;
+  left: 0.3125rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 1.875rem;
+  background: #fff;
+  transition: left .25s;
+}
+.btn-toggle.btn-lg.active {
+  transition: background-color 0.25s;
+}
+.btn-toggle.btn-lg.active > .handle {
+  left: 2.8125rem;
+  transition: left .25s;
+}
+.btn-toggle.btn-lg.active:before {
+  opacity: .5;
+}
+.btn-toggle.btn-lg.active:after {
+  opacity: 1;
+}
+.btn-toggle.btn-lg.btn-sm:before,
+.btn-toggle.btn-lg.btn-sm:after {
+  line-height: 0.5rem;
+  color: #fff;
+  letter-spacing: .75px;
+  left: 0.6875rem;
+  width: 3.875rem;
+}
+.btn-toggle.btn-lg.btn-sm:before {
+  text-align: right;
+}
+.btn-toggle.btn-lg.btn-sm:after {
+  text-align: left;
+  opacity: 0;
+}
+.btn-toggle.btn-lg.btn-sm.active:before {
+  opacity: 0;
+}
+.btn-toggle.btn-lg.btn-sm.active:after {
+  opacity: 1;
+}
+.btn-toggle.btn-lg.btn-xs:before,
+.btn-toggle.btn-lg.btn-xs:after {
+  display: none;
+}
+
+#switchStatus {
+  margin-top: 25px;
+}
+.centered {
+  text-align: center;
+}
+.centered h4 {
+  font-weight: 300;
+}
