@@ -231,11 +231,13 @@ body:before{
     margin: 0px;
 }
 .twitter .card-subtitle{
-    font-size: 0.75rem;
+   /*  font-size: 0.75rem; */
+    font-size: 1.5rem;
     font-family: qualcommThin;
 }
 .twitter .card-title{
-    font-size: 0.8rem;
+   /*  font-size: 0.8rem; */
+    font-size: 2rem;
     font-weight: bold;
     font-family: qualcommRegular;
 }
