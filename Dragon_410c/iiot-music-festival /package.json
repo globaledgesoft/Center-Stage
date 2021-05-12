@@ -13,7 +13,7 @@
   "dependencies": {
     "async": "~2.0.0-rc.3",
     "body-parser": "1.10.2",
-    "chart.js": "^2.7.2",
+    "chart.js": "^2.9.4",
     "consolidate": "^0.13.1",
     "express": "4.11.1",
     "knex": "~0.10.0",
