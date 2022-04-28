@@ -11,7 +11,7 @@
     "url": "http://owncloud:8088/cloud-team/cloud-vts.git"
   },
   "dependencies": {
-    "async": "~2.0.0-rc.3",
+    "async": "~2.6.4",
     "body-parser": "1.10.2",
     "chart.js": "^2.7.2",
     "consolidate": "^0.13.1",
